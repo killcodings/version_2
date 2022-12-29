@@ -1,0 +1,20 @@
+.header-mobile-buttons {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+
+  &_showed {
+    display: flex;
+  }
+
+  &__button {
+    width: 80%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+  }
+}

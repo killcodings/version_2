@@ -1,0 +1,59 @@
+.version-deposit {
+  padding: 12px 16px;
+  background: linear-gradient(60deg, var(--buttons-gradiend-start) 57%, var(--buttons-gradiend-end) 45%);
+  color: var(--buttons-gradiend-color);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  flex-basis: 100%;
+  margin: -10px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--heading-color);
+  }
+
+  &__subtitle {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--subtitle-color);
+    white-space: nowrap;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 14px;
+      content: '';
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC1SURBVHgBnZMhDsMwDEXtocEeoUcYLCwsHBzMEXacwcHBwcLAwR0hcHBwLPtWf6WqKrBryXIs6z9Z/oqII2qtV2Tamh0c4iOfLd5DGKCqP5QH0moHSBcCEPJBGdkOgLQhACFvlMz2AkgTAhCSUQxkd0l2H7ULo2lkX5TQBhvxVQkGNj6jnEyMvIU2gLhfiO9msRtA/3u2T4gN4nOBls3iDHGZZ94NkkzWvWiluAGLv1AgHtfzP+mkQzrCEZjCAAAAAElFTkSuQmCC") center no-repeat;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 49px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    border-radius: 5px;
+    margin-left: 16px;
+    width: 90%;
+    padding: unset;
+  }
+}

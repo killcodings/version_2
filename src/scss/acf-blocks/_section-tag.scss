@@ -1,0 +1,40 @@
+.section-tag {
+  padding: 2rem 0;
+  background-color: var(--background-color);
+
+  @media (max-width: 650px) {
+    padding: 1rem 0;
+  }
+
+  & .section-tag {
+    padding: 1rem 0 0;
+  }
+
+  &_breadcrumbs {
+    padding-top: 10px;
+  }
+
+  h2 {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      width: 100%;
+      max-width: 150px;
+      height: 3px;
+      background-color: var(--accent-color);
+
+      @media (max-width: 650px) {
+        content: none;
+      }
+    }
+
+    &.has-text-align-center::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

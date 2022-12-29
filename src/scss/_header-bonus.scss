@@ -1,0 +1,64 @@
+@use "arrow";
+
+@mixin size($w) {
+  width: $w;
+  height: $w;
+}
+
+.header-bonus {
+  display: none;
+  background: var(--background);
+  position: absolute;
+  width: 100%;
+  padding: 4px 0;
+  
+  @media (max-width: 600px) {
+    display: block;
+  }
+
+  &__block {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-heading);
+  }
+
+  &__logo {
+    border-radius: 50%;
+    overflow: hidden;
+    @include size(34px);
+
+    .image-func {
+
+      img {
+        @include size(34px);
+      }
+    }
+  }
+
+  &__button {
+    all: unset;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    text-decoration: underline;
+    color: var(--color-link);
+  }
+}

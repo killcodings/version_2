@@ -1,0 +1,54 @@
+@mixin size($w) {
+  width: $w;
+  height: $w;
+}
+
+.version-page-app {
+  margin: -10px;
+  background: var(--background);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3px;
+  align-items: center;
+
+  &__content {
+    color: var(--text-color);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+
+  &__subtitle {
+    position: relative;
+    text-indent: 22px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    &:before {
+      content: '';
+      left: 0;
+      top: 0;
+      transform: translate(0, 6%);
+      position: absolute;
+      @include size(18px);
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAClSURBVHgBtZBvEcIwDMVTDgF1wBwgYcMBDhgKJgELoAAcgAPAAQ7YHMxB97J73bI/X/Zhuftd2iSvTSJCCyEU4A1OJpaCJ7jE2EZ6y5xzB/iEYhUewVlzA4G+BOf50gfk5AUKUyOOB01+zW8p/Th22/JSgr9J7kE9E/MqqNirZ5FaIlPLwFXY3x3sYgbn3G4r1nRDL7H1BXFLP/BAn4OkzmKu7cANQkZQsfQ4N50AAAAASUVORK5CYII=") no-repeat var(--bg-icon) 50% 45%;
+      border-radius: 50px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+  }
+}

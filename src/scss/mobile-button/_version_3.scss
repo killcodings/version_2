@@ -1,0 +1,32 @@
+.version-logo {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  grid-template-rows: auto;
+  gap: 16px;
+  background: var(--background, #00000000);
+  padding: 10px 24px;
+  margin: -10px;
+
+  &__logo {
+
+    .image-func {
+      width: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+  }
+
+  &__button {
+    padding: unset;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+  }
+}

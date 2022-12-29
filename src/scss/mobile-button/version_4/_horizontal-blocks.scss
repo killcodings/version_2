@@ -1,0 +1,6 @@
+.horizontal-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  margin-bottom: 4px;
+  width: 100%;
+}

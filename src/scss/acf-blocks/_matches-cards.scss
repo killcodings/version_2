@@ -1,0 +1,56 @@
+.matches-cards {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  @media (max-width: 1050px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--accent-color);
+    border-radius: 7px;
+    padding: 1rem 1rem 1rem calc(70px + 2rem);
+    color: var(--accent-color-text);
+    box-shadow: 0 0 6px 2px rgb(0 0 0 / 0.4);
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 70px;
+    aspect-ratio: 1/1;
+  }
+
+  &__date {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    color: var(--accent-color-text);
+    font-size: 14px;
+    align-self: flex-start;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

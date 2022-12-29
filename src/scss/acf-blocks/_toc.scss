@@ -1,0 +1,152 @@
+.toc {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.1);
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 10px;
+
+  &__title {
+    margin-bottom: 0;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &__show {
+    position: absolute;
+    top: 17px;
+    right: 1rem;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 3px 5px;
+    border-radius: 5px;
+
+    &:hover,
+    &:focus {
+      border: 1px solid rgb(0 0 0 / 0.1);
+    }
+  }
+
+  ol {
+    padding-left: 0;
+  }
+
+  &__list {
+    margin-top: 1rem;
+    padding-left: 0;
+    display: none;
+
+    &_columns {
+      column-count: 3;
+
+      @media (max-width: 1000px) {
+        column-count: 2;
+      }
+      @media (max-width: 780px) {
+        column-count: 1;
+      }
+
+      & > .level-1 > ol {
+        display: none;
+      }
+    }
+
+    &_showed {
+      display: block;
+    }
+
+    li {
+      margin: 0;
+      list-style: none;
+
+      &:before {
+        margin-right: 5px;
+      }
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #151515;
+    }
+
+    .level-1 {
+      margin-top: 0.5rem;
+      position: relative;
+      width: 90%;
+
+      &:not(:last-of-type) {
+        margin-bottom: 0.5rem;
+      }
+
+      &.show {
+        & > ol {
+          display: block;
+        }
+
+        .sub-arrow {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      .sub-arrow {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8 9.585l4.793-4.79a1 1 0 011.414 1.415l-5.5 5.496a1 1 0 01-1.414 0l-5.5-5.496a1 1 0 011.414-1.415L8 9.585z' fill='%23000'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: inline-block;
+        height: 10px;
+        line-height: 0;
+        position: absolute;
+        right: -5px;
+        top: 10px;
+        transform: translateY(-50%);
+        width: 10px;
+        cursor: pointer;
+      }
+    }
+
+    .level-2 {
+      margin-left: 20px;
+      margin-top: 0.5rem;
+    }
+
+    .level-3 {
+      margin-left: 30px;
+      margin-top: 0.5rem;
+    }
+
+    .level-1 {
+      counter-increment: point;
+      counter-reset: sublist;
+
+      &:before {
+        content: counter(point) ". ";
+        display: inline-block;
+      }
+    }
+
+    .level-2 {
+      counter-reset: sublist2;
+
+      &:before {
+        content: counter(point) "." counter(sublist) ". ";
+        counter-increment: sublist;
+      }
+    }
+
+    .level-3 {
+      counter-reset: sublist3;
+
+      &:before {
+        content: counter(point) "." counter(sublist) "." counter(sublist2) ". ";
+        counter-increment: sublist2;
+      }
+    }
+  }
+}

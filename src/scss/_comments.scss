@@ -1,0 +1,142 @@
+.comments-container {
+  padding: 2rem 0;
+}
+
+.comment-form {
+  max-width: 800px;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  &__form {
+    margin: .5rem -1rem -1rem -1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__field {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    margin: 1rem;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+
+  &__input {
+    width: calc(100% / 2 - 2rem);
+
+    @media (max-width: 600px) {
+      width: calc(100% - 2rem);
+    }
+  }
+
+  &__textarea {
+    appearance: none;
+    width: calc(100% - 2rem);
+  }
+
+  &__button {
+    margin: 1rem;
+    border-radius: 0;
+    appearance: none;
+  }
+}
+
+.comments {
+  margin-top: 2rem;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 10px 10px 10px calc(100px + 1rem);
+  border-radius: 50px;
+  min-height: 100px;
+  background-color: #f1f1f1;
+
+  @media (max-width: 650px) {
+    padding-left: calc(50px + 2rem);
+    border-radius: 10px;
+  }
+
+  &_child {
+    margin-left: 100px;
+
+    @media (max-width: 650px) {
+      margin-left: 0;
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  &__avatar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @media (max-width: 650px) {
+      width: 50px;
+      height: 50px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__author {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+
+    @media (max-width: 650px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__date {
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: 6px;
+
+    @media (max-width: 650px) {
+      width: 100%;
+      margin: 5px 0 0 0;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
+}

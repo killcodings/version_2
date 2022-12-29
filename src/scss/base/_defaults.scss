@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+h4, h5, h6 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1.5rem;
+    line-height: 125%;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    line-height: 125%;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    line-height: 125%;
+    font-weight: 500;
+  }
+
+  h4, h5, h6 {
+    font-size: 1.05rem;
+    line-height: 125%;
+    font-weight: 500;
+  }
+}
+
+main {
+  p, ul {
+    margin: 1rem 0;
+  }
+
+  p:last-of-type {
+    margin: 1rem 0 0 0;
+  }
+
+  ol, ul {
+    li {
+      position: relative;
+      margin: 1.5rem 0;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: 20px;
+
+    li {
+      padding-left: 0;
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  ul {
+    li {
+      padding-left: 25px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 0;
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+
+        @media (max-width: 750px) {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.8rem;
+
+    @media (max-width: 650px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  p, ul {
+    margin: 1rem 0;
+  }
+
+  a {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+
+  .has-white-color a, .has-white-color {
+    color: #fff;
+  }
+
+  .has-black-color a {
+    color: #000;
+  }
+}
+
+.has-text-align-center {
+  text-align: center;
+}

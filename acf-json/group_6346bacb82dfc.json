@@ -1,0 +1,1112 @@
+{
+    "key": "group_6346bacb82dfc",
+    "title": "Мобильная кнопка",
+    "fields": [
+        {
+            "key": "field_6346bc699a3b6",
+            "label": "Настроить кнопку для страницы",
+            "name": "is_enable_mobile_button_page",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6362abb1de351",
+            "label": "Тип мобильной кнопки",
+            "name": "mobile_button_type",
+            "type": "select",
+            "instructions": "Версия 1 - Контент слева - кнопка справа, заливка градиентом; <br\/>\r\nВерсия 2 - Логотип, бонус, рейтинг кнопка снизу;<br\/>\r\nВерсия 3 - Логотип, кнопка;<br\/>\r\nВерсия 4 - Горизонтальные блоки, кнопка;<br\/>\r\nВерсия 5 - Текст, кнопка снизу;<br\/>\r\nВерсия 6 - Заголовок, подзаголовок, кнопка",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6346bc699a3b6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "main": "Основная",
+                "version_1": "Версия 1",
+                "version_2": "Версия 2",
+                "version_3": "Версия 3",
+                "version_4": "Версия 4",
+                "version_5": "Версия 5",
+                "version_page_app": "Версия 6"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6363e3c32ba49",
+            "label": "Настройки",
+            "name": "mobile_button_page",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6346bc699a3b6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6363e53b2ba4a",
+                    "label": "Горизонтальные блоки",
+                    "name": "horizontal_blocks",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_4"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "wpml_cf_preferences": 1,
+                    "sub_fields": [
+                        {
+                            "key": "field_6363e5612ba4b",
+                            "label": "Название бонуса 1",
+                            "name": "title_1",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6363e5832ba4c",
+                            "label": "Бонус 1",
+                            "name": "bonus_1",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6363e5a32ba4d",
+                            "label": "Название бонуса 2",
+                            "name": "title_2",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6363e5c92ba4e",
+                            "label": "Бонус 2",
+                            "name": "bonus_2",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6363e6152ba4f",
+                    "label": "Иконка 1",
+                    "name": "icon_1",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_4"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_6363e6d62ba50",
+                    "label": "Иконка 2",
+                    "name": "icon_2",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_4"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_6363e70e2ba51",
+                    "label": "Цвет текста бонуса",
+                    "name": "color_text_bonus",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_4"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_6363e7522ba52",
+                    "label": "Логотип",
+                    "name": "logo",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_2"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_3"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_5"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_6363e7ba2ba55",
+                    "label": "Заголовок",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_1"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_2"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_5"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_page_app"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6363e8202ba58",
+                    "label": "Цвет заголовка",
+                    "name": "heading_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_1"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_2"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_5"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_page_app"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_636a4ab9eef06",
+                    "label": "Фон иконки",
+                    "name": "bg_icon",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_5"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_page_app"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_6363e8ae2ba5b",
+                    "label": "Цвет стрелки",
+                    "name": "bg_arrow",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_5"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#126413",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_6363e9102ba5c",
+                    "label": "Подзаголовок",
+                    "name": "subtitle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_1"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_2"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_page_app"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6363e9652ba5e",
+                    "label": "Цвет подзаголовка",
+                    "name": "subtitle_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_1"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "rgba(255, 255, 255, 0.5)",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_6363e9ec2ba60",
+                    "label": "Иконка",
+                    "name": "icon",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_6363ea8b2ba61",
+                    "label": "Рейтинг",
+                    "name": "rating",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_2"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_4"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "5.0",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "1.0",
+                    "max": "5.0",
+                    "step": "0.1",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_6363eae72ba63",
+                    "label": "Фон",
+                    "name": "background",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_2"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_3"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_4"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_5"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_page_app"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6363ebc22ba67",
+                    "label": "Фон горизонтальных блоков",
+                    "name": "bg-blocks",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_4"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#EEEEEE",
+                    "enable_opacity": 1,
+                    "return_format": "string",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_6363ec522ba68",
+                    "label": "Градиент",
+                    "name": "linear-gradient",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "wpml_cf_preferences": 1,
+                    "sub_fields": [
+                        {
+                            "key": "field_6363ec6e2ba69",
+                            "label": "Color 1",
+                            "name": "color_1",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "wpml_cf_preferences": 1
+                        },
+                        {
+                            "key": "field_6363ecaa2ba6a",
+                            "label": "Color 2",
+                            "name": "color_2",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "wpml_cf_preferences": 1
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6363ed3a2ba6b",
+                    "label": "Ввести или выбрать партнерскую ссылку?",
+                    "name": "choose",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "input_link": "Ввести ссылку",
+                        "chose_link": "Выбрать партнерскую"
+                    },
+                    "default_value": "input_link",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "wpml_cf_preferences": 1,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6363ed972ba6c",
+                    "label": "Ввести ссылку",
+                    "name": "input_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6363ed3a2ba6b",
+                                "operator": "==",
+                                "value": "input_link"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_6363ee042ba6d",
+                    "label": "Выбрать партнерскую",
+                    "name": "text_image_choose_link",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6363ed3a2ba6b",
+                                "operator": "==",
+                                "value": "chose_link"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [],
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "wpml_cf_preferences": 3,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6363ee782ba6e",
+                    "label": "Заголовок кнопки",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6363ee9b2ba6f",
+                    "label": "Relations",
+                    "name": "relations",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "nofollow": "Nofollow",
+                        "norefferer": "Norefferer"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 1,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6363ef0b2ba70",
+                    "label": "Стиль кнопки",
+                    "name": "button_style",
+                    "type": "select",
+                    "instructions": "Цвет и градиент берутся из настроек темы.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "outline": "Cплошной цвет",
+                        "gradient": "Градиент",
+                        "custom_color": "Выбрать цвет"
+                    },
+                    "default_value": "outline",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "wpml_cf_preferences": 3,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6363ef522ba71",
+                    "label": "Цвет",
+                    "name": "colors",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6363ef0b2ba70",
+                                "operator": "==",
+                                "value": "custom_color"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "wpml_cf_preferences": 1,
+                    "sub_fields": [
+                        {
+                            "key": "field_6363ef712ba72",
+                            "label": "Фон",
+                            "name": "background",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "wpml_cf_preferences": 1
+                        },
+                        {
+                            "key": "field_6363f01e2ba73",
+                            "label": "Фон при наведении",
+                            "name": "background_hover",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "wpml_cf_preferences": 1
+                        },
+                        {
+                            "key": "field_6363f0622ba74",
+                            "label": "Текст",
+                            "name": "color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "wpml_cf_preferences": 1
+                        },
+                        {
+                            "key": "field_6363f0a02ba75",
+                            "label": "Текст при наведении",
+                            "name": "color_hover",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "wpml_cf_preferences": 1
+                        },
+                        {
+                            "key": "field_6363f0d22ba76",
+                            "label": "Обводка",
+                            "name": "border",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "wpml_cf_preferences": 1
+                        },
+                        {
+                            "key": "field_6363f1202ba77",
+                            "label": "Обводка при наведении",
+                            "name": "border_hover",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "wpml_cf_preferences": 1
+                        },
+                        {
+                            "key": "field_6363f14a2ba78",
+                            "label": "Тип обводки",
+                            "name": "border_style",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "dashed": "Точки",
+                                "solid": "Сплошной"
+                            },
+                            "default_value": "dashed",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "wpml_cf_preferences": 1,
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1667916831
+}

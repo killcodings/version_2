@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "name": "Белый",
+          "slug": "white",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "Черный",
+          "slug": "black",
+          "color": "#000"
+        }
+      ]
+    }
+  }
+}
+

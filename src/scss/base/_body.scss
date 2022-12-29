@@ -1,0 +1,15 @@
+body {
+  hyphens: auto;
+
+  &.no-scroll {
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden !important;
+  }
+
+  @media (max-width: 1000px) {
+
+    .page-header__logo {
+      width: 95px;
+    }
+  }
+}

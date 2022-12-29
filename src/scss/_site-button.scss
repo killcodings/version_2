@@ -1,0 +1,61 @@
+.site-button {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: var(--buttons-border-radius);
+  min-width: calc(175px - 2rem);
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: 250ms all;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+
+  &__icon {
+    width: 25px;
+    background-size: contain;
+    aspect-ratio: 1/1;
+    background-position: center;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 650px) {
+    padding: 0.5rem;
+  }
+
+  &_gradient {
+    background: linear-gradient(240.87deg, var(--buttons-gradiend-start) 34.31%, var(--buttons-gradiend-end) 141.87%);
+    color: var(--buttons-gradiend-color);
+
+    &:hover, &:focus {
+      color: var(--buttons-gradiend-color-hover);
+      background: linear-gradient(240.87deg, var(--buttons-gradiend-start) 4.31%, var(--buttons-gradiend-end) 141.87%);
+
+    }
+  }
+
+  &_outline {
+    background-color: var(--buttons-background);
+    border: 1px var(--buttons-border-style) var(--buttons-border);
+    color: var(--buttons-color);
+
+    &:hover, &:focus {
+      background-color: var(--buttons-background-hover);
+      color: var(--buttons-color-hover);
+      border: 1px var(--buttons-border-style) var(--buttons-border-hover);
+    }
+  }
+
+  &_custom_color {
+    background-color: var(--background-color);
+    color: var(--color);
+    border: 1px var(--border-style) var(--border);
+
+    &:hover, &:focus {
+      background-color: var(--background-color-hover);
+      color: var(--color-hover);
+      border: 1px var(--border-style) var(--border-hover);
+    }
+  }
+}

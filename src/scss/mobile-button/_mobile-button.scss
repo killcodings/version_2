@@ -1,0 +1,29 @@
+@use "../../scss/mobile-button/version_1";
+@use "../../scss/mobile-button/version_2";
+@use "../../scss/mobile-button/version_3";
+@use "../../scss/mobile-button/version_4/version_4";
+@use "../../scss/mobile-button/version_5";
+@use "../../scss/mobile-button/version-page-app";
+
+.mobile-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: none;
+  transform: translateY(170px);
+  transition: 250ms all;
+
+  &.showed {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 850px) {
+    display: block;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

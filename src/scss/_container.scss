@@ -1,0 +1,25 @@
+.container {
+  --offsets: 30px;
+  max-width: calc(1470px - (30px * 2));
+  padding: 0 var(--offsets);
+  margin: 0 auto;
+
+  & .container {
+    padding: 0;
+  }
+
+  @media (max-width: 1000px) {
+    --offsets: 25px;
+    max-width: calc(1470px - (25px * 2));
+  }
+
+  @media (max-width: 750px) {
+    --offsets: 20px;
+    max-width: calc(1470px - (20px * 2));
+  }
+
+  @media (max-width: 500px) {
+    --offsets: 1rem;
+    max-width: calc(1470px - (1rem * 2));
+  }
+}

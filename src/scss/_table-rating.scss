@@ -1,0 +1,30 @@
+.table-rating {
+  display: flex;
+  align-items: center;
+
+  &__value {
+    margin-right: 13px;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #006a4e;
+  }
+
+  &__stars {
+    --percent: calc(100% / 5 * var(--rating, 5));
+    --end-gradient: calc(100% - var(--percent, 100%));
+    background: linear-gradient(90deg, #FCBB14 var(--percent), #CECECEFF var(--end-gradient));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .table-rating {
+    margin: 0 auto 10px;
+
+    &__value {
+      font-size: 1.5rem;
+    }
+  }
+}

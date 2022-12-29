@@ -1,0 +1,83 @@
+.hidden-text {
+  outline: none;
+  max-width: 1000px;
+  margin: 1rem auto;
+
+  &:nth-of-type(1) {
+    margin-top: 1rem;
+  }
+
+  &_faq {
+    background-color: #fff;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 0.1);
+    max-width: 850px;
+    margin-top: 1.5rem;
+    border-radius: 25px;
+    box-sizing: border-box;
+    padding: 1rem 1.5rem;
+
+    @media (max-width: 650px) {
+      padding: 0.5rem 1rem;
+    }
+
+    .hidden-text__title {
+      border-bottom: none;
+      max-width: 100%;
+      padding: 0 55px 0 0;
+
+      @media (max-width: 750px) {
+        font-size: 1rem;
+      }
+
+      &::after {
+        right: 20px;
+      }
+    }
+  }
+
+  &_div {
+    .hidden-text__content {
+      height: 0;
+      overflow: hidden;
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    border-bottom: 1px dotted #000;
+    padding: 1rem 30px 1rem 0;
+    display: block;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 0;
+
+    &::after {
+      content: '\e802';
+      font-family: 'fontello';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%) rotateZ(180deg);
+      transition: 250ms all;
+    }
+  }
+
+  &[open], &_open {
+    .hidden-text__title::after {
+      transform: translateY(-50%) rotateZ(0deg);
+    }
+
+    .hidden-text__content {
+      height: auto;
+      margin-top: 1rem;
+    }
+  }
+
+  &__content {
+    margin-top: 1rem;
+    line-height: 1.25rem;
+  }
+}

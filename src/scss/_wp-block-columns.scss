@@ -1,0 +1,15 @@
+.wp-block-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.wp-block-column {
+  flex: 1;
+}
+
+@media (max-width: 1000px) {
+  .wp-block-column {
+    flex: 100%;
+  }
+}
