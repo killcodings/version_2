@@ -1,0 +1,14 @@
+{
+  "name": "acf/testimonial",
+  "title": "Кнопки",
+  "description": "Buttons",
+  "style": [ "file:./test.css" ],
+  "category": "formatting",
+  "icon": "button",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "buttons.php"
+  },
+  "align": "full"
+}

@@ -26,7 +26,7 @@ else:
                               placeholder="<?= Translate::get('placeholder_comment') ?>"
                               aria-label="<?= Translate::get('placeholder_comment') ?>"></textarea>
                     <input type="hidden" name="post_ID" value="<?= $post->ID ?>">
-                    <button type="button" class="site-button site-button_gradient comment-form__button"><?= Translate::get('comment_button') ?></button>
+                    <button type="button" class="button button_gradient comment-form__button"><?= Translate::get('comment_button') ?></button>
                     <span class="comment-form__alert"></span>
                 </form>
             </div>

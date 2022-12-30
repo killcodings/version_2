@@ -1,36 +1,11 @@
 <?php
 $header_panel_colors = get_field( 'header_panel_colors', 'options' );
 
-$page_header_class = 'page-header';
-
-$is_logo_in_center = get_field( 'header_logotype_in_center', 'options' ) ?? false;
-if ( $is_logo_in_center ) {
-	$page_header_class .= ' page-header_logo-centered';
-}
-
-$mostbetbd_lang_link = false;
-$url = ( ( ! empty( $_SERVER['HTTPS'] ) ) ? 'https' : 'http' ) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-if (strpos($url, 'mostbetbd.net') !== false) {
-	$mostbetbd_lang_link = true;
-    $href = 'https://mostbetbr.net/';
-}
-
-
 ?>
-<header class="<?= $page_header_class ?>">
+<header class="header">
     <div class="header-panel" style="--background-color: <?= $header_panel_colors['background'] ?: '#000' ?>">
         <div class="container">
 			<?php
-			$header_logotype = get_field( 'header_logotype', 'options' );
-
-			if ( $header_logotype ):
-				?>
-                <div class="header-panel__logo">
-                    <a href="<?= home_url() ?>" title="Main page">
-						<?= app_get_image( [ 'id' => $header_logotype ] ) ?>
-                    </a>
-                </div>
-			<?php endif;
 
 			$primary_nav_buttons           = get_field( 'primary_nav_buttons', 'options' );
 			$is_change_primary_nav_buttons = get_field( 'is_change_header_button', $post->ID );
@@ -52,7 +27,7 @@ if (strpos($url, 'mostbetbd.net') !== false) {
 							$button['url'] = $button['primary_nav_buttons_choose_link'];
 						}
 						$button_style  = $button['style'] ?: 'outline';
-						$button_class  = "header-panel__button site-button site-button_custom_color";
+						$button_class  = "header-panel__button button button_custom_color";
 						$button_colors = [
 							'background'       => $header_panel_colors['buttons_background'],
 							'background_hover' => $header_panel_colors['buttons_background_hover'],
@@ -74,16 +49,6 @@ if (strpos($url, 'mostbetbd.net') !== false) {
     <div class="container">
         <div class="page-header__block">
 			<?php
-			wp_nav_menu( [
-				'theme_location'  => 'primary',
-				'fallback_cb'     => false,
-				'container'       => 'nav',
-				'container_class' => 'primary-nav',
-				'container_id'    => '',
-				'menu_class'      => 'primary-nav__list',
-				'menu_id'         => '',
-				'walker'          => new My_Walker_Nav_Menu()
-			] );
 			dynamic_sidebar( 'language-flags' );
 
 			if ( $is_enabled_mobile_buttons ):
@@ -99,7 +64,7 @@ if (strpos($url, 'mostbetbd.net') !== false) {
 							$button['url'] = $button['primary_nav_buttons_choose_link'];
 						}
 						$button_style = $button['style'] ?: 'outline';
-						$button_class = "header-mobile-buttons__button site-button_$button_style";
+						$button_class = "header-mobile-buttons__button button_$button_style";
 						echo app_get_button( $button, $button_class, $button['relations'] );
 					}
 					?>
@@ -110,27 +75,6 @@ if (strpos($url, 'mostbetbd.net') !== false) {
                     <span></span><span></span><span></span>
                 </div>
 			<?php endif; ?>
-            <?php if($mostbetbd_lang_link) :
-	            if (strpos($url, 'mostbetbd.net/bn/') !== false) { ?>
-                    <div class ="widget-language-link">
-                        <a class="widget-language-link__item" href="https://mostbetbd.net">
-                            <img class="wpml-ls-flag" src="../wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt="English">
-                        </a>
-                        <a class="widget-language-link__item" href="<?= $href ?>">
-                            <img src="../wp-content/plugins/sitepress-multilingual-cms/res/flags/pt-br.png" alt="Português">
-                        </a>
-                    </div>
-	            <?php } else { ?>
-                    <div class ="widget-language-link">
-                        <a class="widget-language-link__item" href="https://mostbetbd.net/bn/">
-                            <img class="wpml-ls-flag" src="../wp-content/plugins/sitepress-multilingual-cms/res/flags/bn.png" alt="বাংলাদেশ">
-                        </a>
-                        <a class="widget-language-link__item" href="<?= $href ?>">
-                            <img src="../wp-content/plugins/sitepress-multilingual-cms/res/flags/pt-br.png" alt="Português">
-                        </a>
-                    </div>
-                <?php } ?>
-            <?php endif; ?>
         </div>
     </div>
 
@@ -146,4 +90,40 @@ if (strpos($url, 'mostbetbd.net') !== false) {
 	        get_template_part( "theme-parts/components/header-bonus", null, $settings );
         }
 	endif; ?>
+</header>
+
+
+<header class="header">
+    <div class="container">
+        <div class="header__block">
+            <div class="header__logo logo">
+                <?php
+                $header_logotype = get_field( 'header_logotype', 'options' );
+                if ( $header_logotype ): ?>
+                <a class="logo__link" href="<?= home_url() ?>">
+                    <?= app_get_image( [ 'id' => $header_logotype, 'classes' => 'logo__image' ] ) ?>
+                </a>
+                <?php endif; ?>
+            </div>
+
+            <div class="header__primary-nav primary-nav">
+		        <?php
+		        wp_nav_menu( [
+			        'theme_location'  => 'primary',
+			        'fallback_cb'     => false,
+			        'container'       => 'nav',
+			        'container_class' => 'primary-nav',
+			        'container_id'    => '',
+			        'menu_class'      => 'primary-nav__list',
+			        'menu_id'         => '',
+			        'walker'          => new My_Walker_Nav_Menu()
+		        ] ); ?>
+            </div>
+
+            <?php dynamic_sidebar( 'language-flags' ); ?>
+            <div class="header__burger burger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
 </header>

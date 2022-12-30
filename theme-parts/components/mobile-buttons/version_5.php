@@ -16,7 +16,7 @@ $style_str = implode(';', $style_array);
         <h3 class="version-content-button__content-title"><?= $args['heading'] ?></h3>
     </div>
     <?= app_get_button( $args['button'],
-        "site-button version-content-button__button {$args['button_style']}",
+        "button version-content-button__button {$args['button_style']}",
         $args['relations'],
         $args['custom_colors'], app_get_image( [ 'id' => $args['logo']] ));
     ?>

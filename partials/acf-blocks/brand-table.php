@@ -24,7 +24,7 @@ if ( $brand_setup === 'custom' ) {
 		$button                     = app_get_button( [
 			'url'   => $button_url,
 			'title' => $partner_link_title
-		], 'site-button_outline', $item['link_relations'] );
+		], 'button_outline', $item['link_relations'] );
 		$table_item['partner_link'] = $button ?? false;
 		$table_item['counter']      = $index + 1;
 		$table_arr[]                = $table_item;
@@ -54,7 +54,7 @@ if ( $brand_setup === 'custom' ) {
 			}
 			$button                     = app_get_button(
 				[ 'url' => $button_url, 'title' => $partner_link_title ],
-				'site-button_outline',
+				'button_outline',
 				$brand_setup['link_relations']
 			);
 			$table_item['partner_link'] = $button;

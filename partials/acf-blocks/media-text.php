@@ -57,7 +57,7 @@ acf_block_before( 'Изображение и текст', $is_preview );
                     <div class="media-text__buttons">
 						<?php
 						foreach ( $buttons as $button ):
-							$button_style = $button['button_style'] ? 'site-button_' . $button['button_style'] : 'site-button_outline';
+							$button_style = $button['button_style'] ? 'button_' . $button['button_style'] : 'button_outline';
 
                             // Откуда берется URL для кнопки: из глобальных настроек (choose_link) или ввести в инпуте (input_link)
 							$choose_link = $button['choose'];
@@ -77,13 +77,13 @@ acf_block_before( 'Изображение и текст', $is_preview );
                                 $button_icon       = '';
                                 $icon_url          = wp_get_attachment_image_url($button['button_icon']);
                                 $icon_url          = app_get_image_url( $icon_url );
-                                $button_icon       = "<span class = 'site-button__icon' style = 'background-image: url($icon_url);'></span>";
+                                $button_icon       = "<span class = 'button__icon' style = 'background-image: url($icon_url);'></span>";
                                 // $button_icon       = app_get_image( [ 'id' => $button['button_icon'] ] );
                             }
 
 							if ( $is_link_button ):
 								echo app_get_button( $button,
-									"$button_class site-button $button_icon_class {$button_style}",
+									"$button_class button $button_icon_class {$button_style}",
 									$button['relations'],
 									$custom_colors, $button_icon );
 							else:
@@ -98,7 +98,7 @@ acf_block_before( 'Изображение и текст', $is_preview );
                                     </div>
 									<?php if ( $button['is_enable_link'] ) {
 										echo app_get_button( $button,
-											"$button_class site-button {$button_style}",
+											"$button_class button {$button_style}",
 											$button['relations'],
 											$custom_colors );
 									} ?>

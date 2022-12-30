@@ -21,7 +21,7 @@ function register_my_widgets() {
 	register_sidebar( array(
 		'name'          => "Виджет для флажков языков",
 		'id'            => 'language-flags',
-		'before_widget' => '<div class="flags-widget">',
+		'before_widget' => '<div class="header__widget widget">',
 		'after_widget'  => '</div>',
 	) );
 }

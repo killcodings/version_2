@@ -2,7 +2,7 @@
 
 	$settings = $args['settings'];
 
-	$button_style  = $settings['button_style'] ? 'site-button_' . $settings['button_style'] : 'site-button_outline';
+	$button_style  = $settings['button_style'] ? 'button_' . $settings['button_style'] : 'button_outline';
 
 	$choose_link = $settings['choose'];
 	if ( $choose_link === 'input_link' ) {

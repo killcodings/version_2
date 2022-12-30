@@ -13,7 +13,7 @@ $style_str = implode(';', $style_array);
         <?= app_get_image( [ 'id' => $args['logo'] ] ) ?>
     </div>
     <?= app_get_button( $args['button'],
-        "site-button version-logo__button {$args['button_style']}",
+        "button version-logo__button {$args['button_style']}",
         $args['relations'],
         $args['custom_colors']);
     ?>

@@ -1,3 +1,8 @@
+// Components
+@use "src/scss/components/header/header";
+@use "src/scss/components/button/button";
+
+
 @import "base/fontello";
 @import "base/reset";
 @import "base/defaults";
@@ -20,9 +25,9 @@
 @import "acf-blocks/icon-block";
 
 @import "container";
-@import "site-button";
+
 @import "page-header";
-@import "primary-nav";
+//@import "primary-nav";
 @import "flags-widget";
 @import "burger";
 @import "header-mobile-buttons";
@@ -53,4 +58,4 @@
 @import "top-button";
 @import "footer-copyright";
 @import "mobile-button/mobile-button";
-@import "wpml";
+//@import "wpml";

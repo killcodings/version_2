@@ -7,23 +7,6 @@
     align-items: center;
   }
 
-  &__logo {
-    width: var(--logo-max-width);
-    height: 50px;
-
-    * {
-      height: 100%;
-    }
-
-    a {
-      display: block;
-    }
-
-    img {
-      object-fit: contain;
-    }
-  }
-
   &__buttons {
     margin: 0 -1rem 0 auto;
   }

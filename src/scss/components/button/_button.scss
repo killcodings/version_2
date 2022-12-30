@@ -1,28 +1,46 @@
-.site-button {
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 1rem;
+@use "./../../base/mixins";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: var(--position-btn);
+  font-size: 16px;
+  line-height: normal;
+  font-family: Inter, sans-serif;
   border-radius: var(--buttons-border-radius);
-  min-width: calc(175px - 2rem);
-  display: inline-block;
+  max-width: var(--button-width, 100%);
   text-align: center;
   text-decoration: none;
   transition: 250ms all;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
   border: none;
+  position: relative;
+  transition: 0.25s;
+  min-height: 48px;
+  padding-left: 8px;
+  padding-right: 8px;
+  $this: &;
 
-  &__icon {
-    width: 25px;
-    background-size: contain;
+  &:hover,
+  &:focus {
+    color: var(--buttons-color-hover);
+    background: var(--buttons-background-hover);
+  }
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__image {
+    @include mixins.sizeRatio(20px);
+    background-size: cover;
     aspect-ratio: 1/1;
     background-position: center;
     margin-right: 5px;
   }
 
-  @media (max-width: 650px) {
-    padding: 0.5rem;
-  }
 
   &_gradient {
     background: linear-gradient(240.87deg, var(--buttons-gradiend-start) 34.31%, var(--buttons-gradiend-end) 141.87%);
@@ -57,5 +75,16 @@
       color: var(--color-hover);
       border: 1px var(--border-style) var(--border-hover);
     }
+  }
+
+  &_icon {
+
+    &:after {
+      content: "\e803";
+      font-family: "fontello";
+      transform: rotate(45deg);
+      margin-left: 15px;
+    }
+
   }
 }

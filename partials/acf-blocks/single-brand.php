@@ -36,7 +36,7 @@ acf_block_before( 'Блок одного бренда', $is_preview );
 						$button['url'] = $brand_setup['brand_setup_choose_link'];
 				}
 
-				echo app_get_button( $button, 'site-button site-button_gradient', $brand_setup['link_relations'] );
+				echo app_get_button( $button, 'button button_gradient', $brand_setup['link_relations'] );
 				?>
             </div>
         </div>

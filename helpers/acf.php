@@ -108,3 +108,5 @@ add_action( 'acf/init', function () {
 		acf_create_block( 'matches-cards', 'Карточки матчей', 'matches-cards' );
 	}
 } );
+
+register_block_type( get_template_directory() . '/partials/acf-blocks/buttons' );

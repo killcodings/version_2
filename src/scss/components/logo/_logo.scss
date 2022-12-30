@@ -1,0 +1,15 @@
+.logo {
+  width: var(--logo-max-width);
+  display: flex;
+  align-items: center;
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    object-fit: contain;
+  }
+}

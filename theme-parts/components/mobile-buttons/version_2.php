@@ -27,7 +27,7 @@ $style_str = implode(';', $style_array);
         </div>
     </div>
     <?= app_get_button( $args['button'],
-        "site-button version-logo-content__button {$args['button_style']}",
+        "button version-logo-content__button {$args['button_style']}",
         $args['relations'],
         $args['custom_colors']);
     ?>

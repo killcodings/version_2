@@ -1,0 +1,62 @@
+@use "src/scss/base/mixins";
+
+.widget {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+
+  .wpml-ls {
+
+    &-item-toggle {
+      display: flex;
+      align-items: stretch;
+      @include mixins.sizeRatio(23px);
+      margin-right: 9px;
+      padding: 0 !important;
+
+      &:after {
+        right: -40px !important;
+      }
+    }
+    &-legacy-dropdown-click {
+      width: unset;
+      max-width: unset;
+    }
+
+    &-sub-menu {
+      display: none;
+      position: absolute;
+      right: -55px;
+      &-active {
+        display: block;
+      }
+    }
+
+    &-native {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+  }
+
+  &-select {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--header-nav-menu-color);
+    margin: 0 9px 0 0;
+  }
+
+  &-icon {
+    transition: .3s;
+    &:before {
+      margin: 0;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &-open {
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
