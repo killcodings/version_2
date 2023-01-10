@@ -1,12 +1,13 @@
 .toc {
-  background-color: #fff;
-  padding: 1rem;
-  box-shadow: 0 4px 16px rgb(0 0 0 / 0.1);
-  margin: 1rem 0;
+  background-color: #F7F7F7;
+  padding: 16px;
+  margin-top: var(--section-offsets);
   position: relative;
-  border-radius: 10px;
 
   &__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     margin-bottom: 0;
 
     &::after {
@@ -15,20 +16,13 @@
   }
 
   &__show {
-    position: absolute;
-    top: 17px;
-    right: 1rem;
-    background: none;
-    outline: none;
-    font-size: 1rem;
-    cursor: pointer;
-    border: 1px solid transparent;
-    padding: 3px 5px;
-    border-radius: 5px;
 
-    &:hover,
-    &:focus {
-      border: 1px solid rgb(0 0 0 / 0.1);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    &.burger {
+      display: flex;
     }
   }
 

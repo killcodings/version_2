@@ -1,45 +1,5 @@
-.page-header {
-  background-color: var(--primary-nav-background, #006A4E);
 
-  &__block {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 20px 0;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    gap: 25px;
-    @media (max-width: 1000px) {
-      justify-content: center;
-    }
-  }
-
-  &_logo-centered {
-    .page-header__block {
-      justify-content: center;
-      .flags-widget {
-        right: 60px;
-        @media (max-width: 650px) {
-          right: unset;
-        }
-      }
-    }
-
-    .header-panel {
-      .container {
-        flex-direction: column;
-
-        .header-panel__logo {
-          margin: 0;
-        }
-
-        .header-panel__buttons {
-          margin: 1rem 0 0 0;
-        }
-      }
-    }
-  }
-}
+/*
 
 @media (max-width: 1150px) {
   .page-header {
@@ -73,3 +33,4 @@
     }
   }
 }
+*/

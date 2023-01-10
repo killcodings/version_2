@@ -11,6 +11,7 @@ import FeedbackForm from "./feedback-form";
 import MobileButton from './mobile-button';
 import BonusButton from "./bonus-button";
 import HeaderBonus from "./header-bonus";
+import Widget from "./widget";
 
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -58,7 +59,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         headerBonus: {
             init: () => new HeaderBonus,
             selectors: ['.header-bonus']
-        }
+        },
+        widget: {
+            init: () => new Widget(),
+            selectors: ['.widget']
+        },
     }
 
     Object.keys(window.refs).forEach((ref) => {

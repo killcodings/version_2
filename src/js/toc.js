@@ -72,7 +72,8 @@ export default class Toc {
       tocShowNav.addEventListener("click", function (e) {
         if (
           e.target.classList.contains("toc__show") ||
-          e.target.classList.contains("toc__title")
+          e.target.classList.contains("toc__title") ||
+          (e.target.tagName === "SPAN" && !e.target.classList.contains("sub-arrow"))
         ) {
           const tocList = document.querySelector(".toc__list");
           tocList.classList.toggle("toc__list_showed");

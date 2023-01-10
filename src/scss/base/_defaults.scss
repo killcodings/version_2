@@ -71,13 +71,6 @@ p, li {
 }
 
 main {
-  p, ul {
-    margin: 1rem 0;
-  }
-
-  p:last-of-type {
-    margin: 1rem 0 0 0;
-  }
 
   ol, ul {
     li {
@@ -121,18 +114,6 @@ main {
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1.8rem;
-
-    @media (max-width: 650px) {
-      margin-bottom: 1rem;
-    }
-  }
-
-  p, ul {
-    margin: 1rem 0;
-  }
-
   a {
     color: var(--accent-color);
     text-decoration: underline;
@@ -149,4 +130,9 @@ main {
 
 .has-text-align-center {
   text-align: center;
+}
+
+.max-width {
+  max-width: 855px;
+  margin: 0 auto;
 }

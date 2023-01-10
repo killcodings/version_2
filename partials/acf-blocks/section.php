@@ -2,10 +2,21 @@
 $tag            = get_field( 'section_tag' ) ?? 'section';
 $section_anchor = get_field( 'section_anchor' );
 $section_class  = 'section-tag';
+$background_image = get_field('background_image');
+$bg_url_img   = wp_get_attachment_image_url( $background_image );
+$bg_url_img   = app_get_image_url( $bg_url_img );
 $style_array    = [];
 
 if ( get_field( 'background_color' ) ) {
 	$style_array['background_color'] = "--background-color:" . get_field( 'background_color' );
+}
+
+if ( $background_image ) {
+	$style_array['background_image'] = "--background-image: url({$bg_url_img})";
+}
+
+if ( get_field('padding_bottom') ) {
+	$section_class .= ' section-tag_pb';
 }
 
 if ( ! isset( $GLOBALS['breadcrumbs_showed'] ) ) {

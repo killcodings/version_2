@@ -101,7 +101,7 @@ function app_get_button( $button, $class = '', $relations = null, $custom_colors
 		$border_hover     = $custom_colors['border_hover'] ?: '#fff';
 		$border_style     = $custom_colors['border_style'] ?: 'solid';
 		$border_radius    = $custom_colors['border_radius'] ?? '5';
-		$style_string     = "style='--background-color:{$background};--background-color-hover:{$background_hover};--color:{$color};--color-hover:{$color_hover};--border:{$border};--border-hover:{$border_hover};--border-style:{$border_style};--border-radius:{$border_radius}px'";
+		$style_string     = "style='--background-color:{$background};--background-color-hover:{$background_hover};--color:{$color};--color-hover:{$color_hover};--border:{$border};--border-hover:{$border_hover};--border-style:{$border_style};--border-radius:{$border_radius}px;'";
 	}
 
 	$relations_string = '';
@@ -461,4 +461,14 @@ function app_links( $apps_array, $title, $priopity_app ) {
             </div>
         </section>
 	<?php endif;
+}
+
+function the_component($name, $args) {
+	return get_template_part("theme-parts/components/$name", null, $args);
+}
+
+function get_component($name, $args) {
+	ob_start();
+	the_component($name, $args);
+	return ob_get_clean();
 }

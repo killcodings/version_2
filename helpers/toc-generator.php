@@ -15,8 +15,11 @@ function render_toc_auto() {
     <div class="container">
         <nav class="toc">
             <h2 class="toc__title"><?= get_field( 'toc_title' ) ?></h2>
-            <button type="button" class="toc__show"><?= Translate::get('toc_show') ?></button>
-            <ol class="toc__list <?= $admin_toc_class, $toc_list_class ?>">
+            <div class="toc__show burger">
+                <span></span><span></span><span></span>
+            </div>
+
+            <ol class="toc__list toc__list_columns <?= $admin_toc_class, $toc_list_class ?>">
 				<?php
                 $toc_content = get_field( 'toc_content' );
                 $replace_str = 'href="' . get_permalink($post->ID);

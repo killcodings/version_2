@@ -4,8 +4,20 @@
   display: flex;
   cursor: pointer;
   align-items: center;
+  width: 63px;
+  $this:&;
+
+  @media (max-width: 1100px) {
+    margin-right: 10px;
+  }
 
   .wpml-ls {
+
+    &-sub-menu {
+      border: unset;
+      display: none;
+      visibility: hidden !important;
+    }
 
     &-item-toggle {
       display: flex;
@@ -23,39 +35,35 @@
       max-width: unset;
     }
 
-    &-sub-menu {
-      display: none;
-      position: absolute;
-      right: -55px;
-      &-active {
-        display: block;
-      }
-    }
-
     &-native {
       font-size: 16px;
       line-height: 22px;
     }
 
-  }
+    &-link {
+      padding: 0;
+      @include mixins.sizeRatio(23px);
+      border: none;
+      line-height: normal;
 
-  &-select {
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--header-nav-menu-color);
-    margin: 0 9px 0 0;
-  }
-
-  &-icon {
-    transition: .3s;
-    &:before {
-      margin: 0;
-      font-size: 12px;
-      line-height: 16px;
+      .wpml-ls-native, .wpml-ls-display {
+        display: none;
+      }
     }
-    &-open {
-      &:before {
+
+  }
+
+  &.open {
+
+    .wpml-ls-sub-menu {
+      display: flex;
+      visibility: visible !important;
+    }
+    .wpml-ls-item-toggle {
+      background: red;
+      &:after {
         transform: rotate(180deg);
+        top: calc(20% - 0.175em);
       }
     }
   }

@@ -15,30 +15,30 @@ export default class PrimaryNav {
             });
 
             let scrollPosition = 0;
-            const pageHeader = document.querySelector('.page-header');
-            window.addEventListener('scroll', function () {
-                const scrollTop = document.documentElement.scrollTop;
-                if (scrollTop > scrollPosition) {
-                    pageHeader.classList.remove('page-header_fixed_active');
-
-                    if (scrollTop >= pageHeader.offsetHeight) {
-                        pageHeader.classList.add('page-header_hidden');
-                        pageHeader.classList.add('page-header_fixed');
-                        document.body.style.paddingTop = pageHeader.offsetHeight + 'px';
-                    }
-                } else if (scrollTop < scrollPosition) {
-                    pageHeader.classList.remove('page-header_hidden');
-                    pageHeader.classList.add('page-header_fixed_active');
-                }
-
-                if (scrollTop === 0) {
-                    pageHeader.classList.remove('page-header_fixed_active');
-                    pageHeader.classList.remove('page-header_hidden');
-                    pageHeader.classList.remove('page-header_fixed');
-                    document.body.style.paddingTop = '0';
-                }
-                scrollPosition = scrollTop;
-            });
+            const pageHeader = document.querySelector('.header');
+            // window.addEventListener('scroll', function () {
+            //     const scrollTop = document.documentElement.scrollTop;
+            //     if (scrollTop > scrollPosition) {
+            //         pageHeader.classList.remove('page-header_fixed_active');
+            //
+            //         if (scrollTop >= pageHeader.offsetHeight) {
+            //             pageHeader.classList.add('page-header_hidden');
+            //             pageHeader.classList.add('page-header_fixed');
+            //             document.body.style.paddingTop = pageHeader.offsetHeight + 'px';
+            //         }
+            //     } else if (scrollTop < scrollPosition) {
+            //         pageHeader.classList.remove('page-header_hidden');
+            //         pageHeader.classList.add('page-header_fixed_active');
+            //     }
+            //
+            //     if (scrollTop === 0) {
+            //         pageHeader.classList.remove('page-header_fixed_active');
+            //         pageHeader.classList.remove('page-header_hidden');
+            //         pageHeader.classList.remove('page-header_fixed');
+            //         document.body.style.paddingTop = '0';
+            //     }
+            //     scrollPosition = scrollTop;
+            // });
 
             const primaryNavList = primaryNav.querySelector('.primary-nav__list');
             const burger = document.querySelector('.burger');
@@ -50,10 +50,10 @@ export default class PrimaryNav {
                 document.querySelector('body').classList.toggle('no-scroll');
                 if (!burgerClicked) {
                     burgerClicked = true;
-                    const headerLogo = document.querySelector('.header-panel__logo');
+                    const headerLogo = document.querySelector('.header__logo');
                     if (headerLogo) {
                         const copyHeaderLogo = headerLogo.cloneNode(true);
-                        copyHeaderLogo.classList.remove('header-panel__logo');
+                        copyHeaderLogo.classList.remove('header__logo');
                         copyHeaderLogo.classList.add('primary-nav__logo');
                         primaryNav.prepend(copyHeaderLogo);
                     }

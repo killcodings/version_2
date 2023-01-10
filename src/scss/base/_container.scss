@@ -1,0 +1,39 @@
+@use "src/scss/acf-blocks/toc/toc";
+@use "src/scss/acf-blocks/acf-innerblocks-container/acf-innerblocks-container";
+
+.container {
+  --divider-color: #EAECF0;
+  max-width: 1366px;
+  padding: 0 var(--offsets);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+
+  >*:not(.header__block):not(.author-badge):not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (max-width: 600px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 var(--offsets);
+  }
+
+  & .container {
+    padding: 0;
+  }
+
+  &_divider-after {
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: calc(var(--section-offsets)*-1);
+      left: var(--offsets);
+      right: calc(var(--offsets) * 1);
+      border-bottom: 1px solid var(--divider-color);
+    }
+  }
+}

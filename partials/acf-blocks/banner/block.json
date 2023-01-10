@@ -1,14 +1,14 @@
 {
-  "name": "acf/buttons",
-  "title": "Кнопки Block",
-  "description": "Buttons",
+  "name": "acf/banner",
+  "title": "Баннер Block",
+  "description": "Banner",
   "style": [ "file:./test.css" ],
   "category": "formatting",
-  "icon": "button",
+  "icon": "laptop",
   "keywords": ["testimonial", "quote"],
   "acf": {
     "mode": "preview",
-    "renderTemplate": "buttons.php"
+    "renderTemplate": "banner.php"
   },
   "align": "full"
 }

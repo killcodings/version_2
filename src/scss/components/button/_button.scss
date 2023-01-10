@@ -9,7 +9,7 @@
   line-height: normal;
   font-family: Inter, sans-serif;
   border-radius: var(--buttons-border-radius);
-  max-width: var(--button-width, 100%);
+  min-width: var(--button-width, 100%);
   text-align: center;
   text-decoration: none;
   transition: 250ms all;
@@ -34,7 +34,7 @@
   }
 
   &__image {
-    @include mixins.sizeRatio(20px);
+    @include mixins.sizeRatio(45px);
     background-size: cover;
     aspect-ratio: 1/1;
     background-position: center;

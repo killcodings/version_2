@@ -10,6 +10,12 @@ $font                  = get_field( 'font', 'options' ) ?: 'Montserrat';
 ?>
 <style>
     :root {
+        --offsets: 64px;
+
+
+        --section-offsets: 48px;
+
+
         --body-font: <?= $font ?>;
         --logo-max-width: <?= $logo_max_width - 20 ?: '140' ?>px;
         --accent-color: <?= $accent_color ?: '#000' ?>;
@@ -49,5 +55,17 @@ $font                  = get_field( 'font', 'options' ) ?: 'Montserrat';
      $body_colors = get_field('body_colors', 'options'); ?> --body-background: <?= $body_colors['background'] ?: '#000' ?>;
         --body-color: <?= $body_colors['color'] ?: '#fff' ?>;
     <?php endif; ?>
+    }
+
+    @media (max-width: 600px) {
+        :root {
+            --offsets: 16px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        :root {
+            --section-offsets: 32px;
+        }
     }
 </style>

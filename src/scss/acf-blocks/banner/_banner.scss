@@ -1,0 +1,23 @@
+@use "src/scss/components/badge/badge";
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 112px 0;
+  //width: var(--content-width);
+  color: var(--color-text);
+
+  &__label {
+    margin: var(--label-position);
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+    padding: 50px 16px;
+  }
+}

@@ -109,4 +109,12 @@ add_action( 'acf/init', function () {
 	}
 } );
 
-register_block_type( get_template_directory() . '/partials/acf-blocks/buttons' );
+
+
+function register_acf_blocks() {
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/banner' );
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/buttons' );
+}
+add_action( 'init', 'register_acf_blocks' );
+
+
