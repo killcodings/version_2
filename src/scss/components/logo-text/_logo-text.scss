@@ -1,0 +1,23 @@
+@use "../../base/mixins";
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  grid-area: logo;
+
+  &__logo {
+    @include mixins.sizeRatio(var(--logo-text-size));
+    margin-right: 12px;
+
+    .image-func {
+      background: var(--background-color-logo-text);
+    }
+
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

@@ -24,7 +24,6 @@
     grid-template-rows: auto;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-area: buttons;
-
     position: relative;
     grid-gap: 40px;
     padding: 20px;
@@ -60,6 +59,10 @@
       gap: 25px;
       padding: 0 0 8px;
       border: none;
+    }
+
+    .button {
+      min-width: var(--button-width, 100%);
     }
   }
 }

@@ -2,6 +2,7 @@
 $tag            = get_field( 'section_tag' ) ?? 'section';
 $section_anchor = get_field( 'section_anchor' );
 $section_class  = 'section-tag';
+$opacity        = get_field('opacity') ?? '0';
 $background_image = get_field('background_image');
 $bg_url_img   = wp_get_attachment_image_url( $background_image );
 $bg_url_img   = app_get_image_url( $bg_url_img );
@@ -12,7 +13,7 @@ if ( get_field( 'background_color' ) ) {
 }
 
 if ( $background_image ) {
-	$style_array['background_image'] = "--background-image: url({$bg_url_img})";
+	$style_array['background_image'] = "--background-image: url({$bg_url_img});--opacity-bg:$opacity";
 }
 
 if ( get_field('padding_bottom') ) {

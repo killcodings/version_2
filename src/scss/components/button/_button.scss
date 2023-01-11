@@ -9,7 +9,6 @@
   line-height: normal;
   font-family: Inter, sans-serif;
   border-radius: var(--buttons-border-radius);
-  min-width: var(--button-width, 100%);
   text-align: center;
   text-decoration: none;
   transition: 250ms all;
@@ -17,7 +16,7 @@
   border: none;
   position: relative;
   transition: 0.25s;
-  min-height: 48px;
+  height: 48px;
   padding-left: 8px;
   padding-right: 8px;
   $this: &;
@@ -39,6 +38,22 @@
     aspect-ratio: 1/1;
     background-position: center;
     margin-right: 5px;
+  }
+
+
+  &__icon {
+    &-arrow {
+      margin-left: 16px;
+    }
+  }
+
+  &:hover {
+    .button__icon-arrow {
+      path {
+        transition: 0.25s;
+        stroke: var(--buttons-color-hover);
+      }
+    }
   }
 
 

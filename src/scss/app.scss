@@ -4,11 +4,14 @@
 // Components
 @use "src/scss/components/header/header";
 @use "src/scss/components/button/button";
+@use "src/scss/components/wp-block-table/wp-block-table";
+@use "src/scss/components/logo-text/logo-text";
 
 
 // ACF Block
 @use "acf-blocks/banner/banner";
 @use "acf-blocks/buttons/buttons";
+@use "acf-blocks/media-text/media-text";
 
 @import "base/fontello";
 @import "base/reset";
@@ -19,7 +22,7 @@
 @import "fonts";
 
 // ACF Blocks
-@import "acf-blocks/media-text";
+
 @import "acf-blocks/brand-table/brand-table";
 @import "acf-blocks/brand-table/simple-brand-table";
 @import "acf-blocks/section-tag";
@@ -43,7 +46,7 @@
 @import "pros-list";
 @import "site-table";
 @import "breadcrumbs";
-@import "wp-block-table";
+
 @import "header-panel";
 @import "author-section";
 @import "posts";

@@ -76,7 +76,9 @@ export default class Toc {
           (e.target.tagName === "SPAN" && !e.target.classList.contains("sub-arrow"))
         ) {
           const tocList = document.querySelector(".toc__list");
+          const tocShow = document.querySelector(".toc__show");
           tocList.classList.toggle("toc__list_showed");
+          tocShow.classList.toggle("burger_active");
         }
       });
     }

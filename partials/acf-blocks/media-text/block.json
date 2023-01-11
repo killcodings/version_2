@@ -1,0 +1,14 @@
+{
+  "name": "acf/media-text",
+  "title": "Media text Block",
+  "description": "media-text",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "embed-photo",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "media-text.php"
+  },
+  "align": "full"
+}

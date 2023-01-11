@@ -85,7 +85,7 @@ HTML;
 	return "";
 }
 
-function app_get_button( $button, $class = '', $relations = null, $custom_colors = null, $button_icon = false ): string {
+function app_get_button( $button, $class = '', $relations = null, $custom_colors = null, $button_image = false, $button_icon = false ): string {
 	$partner_links_type = get_field( 'out_links_type', 'options' ) ?? 'link';
 	if ( $button['url'] === '' ) {
 		return false;
@@ -110,13 +110,13 @@ function app_get_button( $button, $class = '', $relations = null, $custom_colors
 	}
 
 	if ( $button_url_parse['host'] === parse_url( home_url() )['host'] ) {
-		return "<a class='button $class' href='{$button['url']}' $style_string>$button_icon{$button['title']}</a>";
+		return "<a class='button $class' href='{$button['url']}' $style_string>$button_image{$button['title']}$button_icon</a>";
 	}
 	if ( $partner_links_type === 'link' ) {
-		return "<a class='button $class' href='{$button['url']}' $style_string rel='nofollow'>$button_icon{$button['title']}</a>";
+		return "<a class='button $class' href='{$button['url']}' $style_string rel='nofollow'>$button_image{$button['title']}$button_icon</a>";
 	}
 
-	return "<button class='button click-button $class' $style_string type='button' data-link='{$button['url']}'>$button_icon{$button['title']}</button>";
+	return "<button class='button click-button $class' $style_string type='button' data-link='{$button['url']}'>$button_image{$button['title']}$button_icon</button>";
 }
 
 function app_get_video( $args ) {
