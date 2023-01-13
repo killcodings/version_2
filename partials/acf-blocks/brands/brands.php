@@ -1,0 +1,229 @@
+<?php
+$table_setup                = get_field( 'table_setup' );
+$brand_setup                = $table_setup['brand_setup'];
+//$background_font_icon       = $brand_setup['background-font-icon'] ?: 'var(--accent-color)';
+$is_enable_brand_title_link = $table_setup['enable_brand_title_link'] ?? false;
+$partner_link_title         = $table_setup['partner_link_title'] ?: 'Download';
+$table_items                = get_field( $brand_setup );
+//$simple_table               = $table_setup['is_simple_table'] ?? false;
+$table_arr                  = [];
+
+if ( $brand_setup === 'custom' ) {
+	foreach ( $table_items['brands'] as $index => $item ) {
+		$table_item['icon']            = $item['icon'];
+		$table_item['icon_background'] = $item['icon_background'] ?: 'none';
+		$table_item['page_link']       = $item['page_link'] ?: false;
+		$table_item['name']            = $item['name'];
+		$table_item['rating']          = $item['rating'];
+		$table_item['bonus']           = $item['bonus'];
+		$table_item['cons']            = $item['cons'];
+		if ( $item['choose_link'] === 'input_link' ) {
+			$button_url = $item['input_link'];
+		} else {
+			$button_url = $item['custom_table_setup_choose_link'];
+		}
+		$button                     = app_get_button( [
+			'url'   => $button_url,
+			'title' => $partner_link_title
+		], 'button_outline', $item['link_relations'] );
+		$table_item['partner_link'] = $button ?? false;
+		$table_item['counter']      = $index + 1;
+		$table_arr[]                = $table_item;
+	}
+} else {
+	if ( $brand_setup === 'choose_posts' ) {
+		$chosen_brands       = get_field( 'choose_posts' );
+		$chosen_brands_pages = $chosen_brands['posts'];
+	} elseif ( $brand_setup === 'global' ) {
+		$brand_table_global_setup = get_field( 'brand_table_global_setup', 'options' );
+		$chosen_brands_pages      = $brand_table_global_setup['posts'];
+	}
+	if ( $chosen_brands_pages ) {
+		foreach ( $chosen_brands_pages as $index => $brand_page_id ) {
+			$brand_setup                   = get_field( 'brand_setup', $brand_page_id );
+			$table_item['icon']            = $brand_setup['icon'];
+			$table_item['icon_background'] = $brand_setup['icon_background'] ?: 'none';
+			$table_item['page_link']       = get_permalink( $brand_page_id );
+			$table_item['name']            = $brand_setup['name'];
+			$table_item['rating']          = $brand_setup['rating'];
+			$table_item['bonus']           = $brand_setup['bonus'];
+
+            $table_item['brands-bonus-title'] = $brand_setup['brands-bonus-title'];
+			$table_item['brands-bonus-description'] = $brand_setup['brands-bonus-description'];
+
+			$table_item['cons']            = $brand_setup['cons'];
+			if ( $brand_setup['choose_link'] === 'input_link' ) {
+				$button_url = $brand_setup['input_link'];
+			} else {
+				$button_url = $brand_setup['brand_setup_choose_link'];
+			}
+			$button                     = app_get_button(
+				[ 'url' => $button_url, 'title' => $partner_link_title ],
+				'button_outline',
+				$brand_setup['link_relations']
+			);
+			$table_item['partner_link'] = $button;
+			$table_item['counter']      = $index + 1;
+			$table_arr[]                = $table_item;
+		}
+	}
+}
+
+acf_block_before( 'Таблица брендов', $is_preview );
+
+if ( !$simple_table ): ?>
+    <div class="filters">
+        <select class="filter">
+            <option class="filter__option">Filter 1</option>
+            <option class="filter__option">Filter 2</option>
+        </select>
+        <select class="filter">
+            <option class="filter__option">Filter 1</option>
+            <option class="filter__option">Filter 2</option>
+        </select>
+        <select class="filter">
+            <option class="filter__option">List item and 5 more</option>
+            <option class="filter__option">List item and 4 more</option>
+        </select>
+        <select class="filter">
+            <option class="filter__option">List item and 1 more</option>
+            <option class="filter__option">List item and 2 more</option>
+        </select>
+    </div>
+    <table class="brands">
+        <thead class="brand-head">
+        <tr class="brands-head__row">
+            <th class="brands__icon brands-head__icon">Brand</th>
+            <th class="brands__highlights brands-head__highlights">Highlights</th>
+            <th class="brands__bonus brands-head__bonus">Bonus</th>
+            <th class="brands__rating brands-head__rating">Rating</th>
+            <th class="brands__download brands-head__download">Link</th>
+        </tr>
+        </thead>
+        <tbody class="brands__body">
+		<?php foreach ( $table_arr as $item ): ?>
+            <tr class="brands__row" style="">
+                <td class="brands__counter">
+                    <?= $item['counter'] ?>
+                    <svg class="brands__counter-icon" width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.605 7.445L2 12L4.5 10.5L7 12L6.395 7.44M8 4.5C8 6.433 6.433 8 4.5 8C2.567 8 1 6.433 1 4.5C1 2.567 2.567 1 4.5 1C6.433 1 8 2.567 8 4.5Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </td>
+
+                <td class="brands__icon">
+                    <div class="brands__icon-image" style="--brands-icon-background-color:<?= $item['icon_background'] ?>">
+	                    <?= app_get_image( [ 'id' => $item['icon'] ] ) ?>
+                    </div>
+	                <?php if ( $is_enable_brand_title_link && $item['page_link'] ): ?>
+                        <a href="<?= $item['page_link'] ?>" class="brands__icon-title"><?= $item['name'] ?></a>
+	                <?php else: ?>
+                        <span class="brands__icon-title"></span>
+	                <?php endif; ?>
+                </td>
+
+                <td class="brands__highlights">
+                    <div class="list">
+                        <h3 class="brands__highlights-title list__title"><?= $item['name'] ?> Highlights</h3>
+	                    <?php if ( $item['cons'] ): ?>
+                            <ul class="brands__highlights-lists list__items">
+	                            <?php foreach ( $item['cons'] as $con ): ?>
+                                    <li class="list__item">
+                                        <svg class="list__icon" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.57129 3.48926L4.07129 5.98926L8.07129 1.98926" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                        <?= $con['item'] ?>
+                                    </li>
+	                            <?php endforeach; ?>
+                            </ul>
+	                    <?php endif; ?>
+                    </div>
+                </td>
+
+                <td class="brands__bonus">
+	                <?php if ($item['brands-bonus-title']) : ?>
+                    <h3 class="brands__bonus-title"><?= $item['brands-bonus-title'] ?></h3>
+	                <?php endif; ?>
+
+	                <?php if ($item['bonus']) : ?>
+                    <div class="brands__bonus-value">
+                        <div class="brands__bonus-icon">
+                            <svg class="brands__bonus-resize" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_5585_42168)">
+                                    <path d="M13.2575 7.95447V14.5833H2.65144V7.95447M7.95447 14.5833V4.64008M7.95447 4.64008H4.97152C4.532 4.64008 4.11049 4.46548 3.7997 4.1547C3.48892 3.84391 3.31432 3.4224 3.31432 2.98288C3.31432 2.54336 3.48892 2.12185 3.7997 1.81107C4.11049 1.50028 4.532 1.32568 4.97152 1.32568C7.29159 1.32568 7.95447 4.64008 7.95447 4.64008ZM7.95447 4.64008H10.9374C11.3769 4.64008 11.7985 4.46548 12.1092 4.1547C12.42 3.84391 12.5946 3.4224 12.5946 2.98288C12.5946 2.54336 12.42 2.12185 12.1092 1.81107C11.7985 1.50028 11.3769 1.32568 10.9374 1.32568C8.61735 1.32568 7.95447 4.64008 7.95447 4.64008ZM1.32568 4.64008H14.5833V7.95447H1.32568V4.64008Z" stroke="white" stroke-width="1.32841" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_5585_42168">
+                                        <rect width="15.9091" height="15.9091" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <?= $item['bonus'] ?>
+                    </div>
+			        <?php endif; ?>
+
+                    <?php if ($item['brands-bonus-description']) : ?>
+                    <p class="brands__bonus-description"> <?= $item['brands-bonus-description'] ?></p>
+                    <?php endif; ?>
+                </td>
+
+                <td class="brands__rating">
+                    <div class="brands__rating-top">
+                        <div class="brands__rating-value"><?= $item['rating'] ?></div>
+                        <div class="brands__rating-stars" style="--rating: <?= $item['rating'] ?>">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    </div>
+                    <a href="<?= $item['page_link'] ?>" class="brands__rating-title">Read review</a>
+
+                </td>
+
+
+				<?php
+				if ( $item['partner_link'] ): ?>
+                    <td class="brand-table__button">
+						<?= $item['partner_link'] ?>
+                    </td>
+				<?php endif; ?>
+            </tr>
+		<?php endforeach; ?>
+        </tbody>
+    </table>
+<?php else: ?>
+    <table class="simple-brand-table">
+        <thead class="simple-brand-table__thead">
+        <tr>
+            <th>Rank</th>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Bonus</th>
+            <th>Link</th>
+        </tr>
+        </thead>
+        <tbody class="simple-brand-table__body">
+		<?php foreach ( $table_arr as $item ): ?>
+            <tr class="simple-brand-table__item">
+                <td class="simple-brand-table__counter"><?= $item['counter'] ?></td>
+                <td class="simple-brand-table__icon">
+                    <div class="simple-brand-table__icon-image">
+		                <?= app_get_image( [ 'id' => $item['icon'] ] ) ?>
+                    </div>
+                </td>
+                <td class="simple-brand-table__name">
+					<?php if ( $is_enable_brand_title_link && $item['page_link'] ): ?>
+                        <a href="<?= $item['page_link'] ?>" class="simple-brand-table__page-link"><?= $item['name'] ?></a>
+					<?php else: ?>
+                        <span class="simple-brand-table__page-link"><?= $item['name'] ?></span>
+					<?php endif; ?>
+                </td>
+                <td class="simple-brand-table__bonus"><?= $item['bonus'] ?></td>
+				<?php if ( $item['partner_link'] ): ?>
+                    <td class="simple-brand-table__button">
+						<?= $item['partner_link'] ?>
+                    </td>
+				<?php endif; ?>
+            </tr>
+		<?php endforeach; ?>
+        </tbody>
+    </table>
+<?php
+endif;
+acf_block_after( $is_preview );

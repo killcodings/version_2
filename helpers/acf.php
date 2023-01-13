@@ -96,7 +96,10 @@ add_action( 'acf/init', function () {
 	if ( function_exists( 'acf_register_block_type' ) ) {
 		acf_create_block( 'image', 'Изображение', 'image' );
 
-		acf_create_block( 'brand-table', 'Таблица брендов', 'brand-table' );
+//
+		acf_create_block( 'brand-table', 'Таблица брендов', 'brands/brands' );
+//
+
 		acf_create_block( 'section', 'Секция', 'section', true );
 		acf_create_block( 'hidden-text', 'Скрытый текст (FAQ)', 'hidden-text', true );
 		acf_create_block( 'single-brand', 'Блок одного бренда', 'single-brand', true );

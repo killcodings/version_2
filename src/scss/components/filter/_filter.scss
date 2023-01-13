@@ -1,0 +1,20 @@
+.filter {
+  padding: 12px 13px;
+  appearance: none;
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 1.48926L7.5 7.48926L13.5 1.48926' stroke='%23475467' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") no-repeat 95% 50% transparent;
+  border: 1px solid #EAECF0;
+  font-size: 16px;
+  line-height: 24px;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &__option {
+    padding: 5px;
+  }
+
+  &:checked {
+    background: red;
+  }
+}

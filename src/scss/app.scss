@@ -1,5 +1,6 @@
 // Base
 @use "src/scss/base/container";
+@use "src/scss/base/fonts";
 
 // Components
 @use "src/scss/components/header/header";
@@ -12,6 +13,8 @@
 @use "acf-blocks/banner/banner";
 @use "acf-blocks/buttons/buttons";
 @use "acf-blocks/media-text/media-text";
+@use "acf-blocks/brands/brands";
+
 
 @import "base/fontello";
 @import "base/reset";
@@ -19,12 +22,12 @@
 @import "base/body";
 @import "base/body-changed-colors";
 @import "base/image-func";
-@import "fonts";
+
 
 // ACF Blocks
 
-@import "acf-blocks/brand-table/brand-table";
-@import "acf-blocks/brand-table/simple-brand-table";
+//@import "acf-blocks/brand-table/brand-table";
+//@import "acf-blocks/brand-table/simple-brand-table";
 @import "acf-blocks/section-tag";
 @import "acf-blocks/hidden-text";
 @import "acf-blocks/single-brand";

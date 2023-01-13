@@ -1,0 +1,22 @@
+
+
+@mixin row-grid {
+  --border-right-row: 1px solid #EAECF0;
+  position: relative;
+  display: grid;
+  grid-template-areas: "icon highlights bonus rating download";
+  grid-template-columns: 103px 1fr 1fr 165px 1fr;
+  grid-template-rows: auto;
+  grid-gap: 35px;
+  padding: 16px 16px 16px 32px;
+  width: 100%;
+  color: var(--text-color);
+
+  &:not(:last-of-type), &:first-child {
+    margin-bottom: 20px;
+  }
+
+  &:first-child {
+    --border-right-row: 1px solid rgb(234 236 240 / 30%);
+  }
+}
