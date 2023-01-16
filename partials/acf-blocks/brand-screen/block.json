@@ -1,0 +1,14 @@
+{
+  "name": "acf/brand-screen",
+  "title": "Блок бренда",
+  "description": "brand-screen",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "welcome-view-site",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "brand-screen.php"
+  },
+  "align": "full"
+}

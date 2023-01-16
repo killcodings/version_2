@@ -5,7 +5,7 @@ $position_badge  = get_field( 'position_badge' ) ?? 'auto';
 $text_badge      = get_field('text_badge');
 $class_name      = $block['className'] ?? '';
 
-acf_block_before( 'Баннер I', $is_preview );
+acf_block_before( 'Баннер', $is_preview );
 ?>
     <div class="banner <?= $class_name ?>" style="--color-text:#fff;">
         <?php if ($is_badge): ?>

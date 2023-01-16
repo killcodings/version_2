@@ -29,6 +29,10 @@ if ( $reverse ) {
 	$main_class .= ' media-text_reverse';
 }
 
+if (!$is_logo_text && $is_horizontally) {
+	$main_class .= ' media-text_no-logo-text';
+}
+
 /*
 $is_add_buttons = get_field( 'is_add_buttons' ) ?? false;
 $button_class   = 'media-text__button';

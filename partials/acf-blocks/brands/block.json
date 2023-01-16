@@ -1,0 +1,14 @@
+{
+  "name": "acf/brands",
+  "title": "Бренды",
+  "description": "brands",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "editor-table",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "brands.php"
+  },
+  "align": "full"
+}

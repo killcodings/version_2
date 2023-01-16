@@ -6,6 +6,7 @@
             "key": "field_61b3086623e9f",
             "label": "Настройка таблицы",
             "name": "table_setup",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -21,6 +22,7 @@
                     "key": "field_61b31b444f9e1",
                     "label": "Настройка брендов",
                     "name": "brand_setup",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -47,6 +49,7 @@
                     "key": "field_61b31bb64f9e3",
                     "label": "Название партнерской ссылки",
                     "name": "partner_link_title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -66,6 +69,7 @@
                     "key": "field_61b31bc74f9e4",
                     "label": "Включать ссылку в названии бренда?",
                     "name": "enable_brand_title_link",
+                    "aria-label": "",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -87,6 +91,7 @@
             "key": "field_61b30e6523ea0",
             "label": "Глобальная настройка",
             "name": "global_setup",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -110,6 +115,7 @@
                     "key": "field_61b30e9123ea1",
                     "label": "Количество брэндов",
                     "name": "counter",
+                    "aria-label": "",
                     "type": "range",
                     "instructions": "",
                     "required": 0,
@@ -132,6 +138,7 @@
             "key": "field_61b30fd623ea2",
             "label": "Выбрать страницы",
             "name": "choose_posts",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -155,6 +162,7 @@
                     "key": "field_61b3100723ea3",
                     "label": "Страницы",
                     "name": "posts",
+                    "aria-label": "",
                     "type": "relationship",
                     "instructions": "",
                     "required": 0,
@@ -182,6 +190,7 @@
             "key": "field_61b3105423ea4",
             "label": "Кастомная настройка",
             "name": "custom",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -205,6 +214,7 @@
                     "key": "field_61b3107923ea5",
                     "label": "Добавить бренд",
                     "name": "brands",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -219,11 +229,13 @@
                     "max": 0,
                     "layout": "block",
                     "button_label": "Добавить бренд",
+                    "rows_per_page": 20,
                     "sub_fields": [
                         {
                             "key": "field_61b3109723ea6",
                             "label": "Иконка",
                             "name": "icon",
+                            "aria-label": "",
                             "type": "image",
                             "instructions": "Прозрачная PNG обрезанная по размеру иконки. Цвет фона задается в настройках справа.",
                             "required": 0,
@@ -242,12 +254,14 @@
                             "max_width": "",
                             "max_height": "",
                             "max_size": "",
-                            "mime_types": ""
+                            "mime_types": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_61b315b15c8cb",
                             "label": "Цвет фона иконки",
                             "name": "icon_background",
+                            "aria-label": "",
                             "type": "color_picker",
                             "instructions": "",
                             "required": 0,
@@ -259,12 +273,14 @@
                             },
                             "default_value": "",
                             "enable_opacity": 1,
-                            "return_format": "string"
+                            "return_format": "string",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_61b310bb23ea8",
                             "label": "Ссылка на страницу бренда",
                             "name": "page_link",
+                            "aria-label": "",
                             "type": "page_link",
                             "instructions": "",
                             "required": 0,
@@ -288,12 +304,14 @@
                             "taxonomy": "",
                             "allow_null": 0,
                             "allow_archives": 0,
-                            "multiple": 0
+                            "multiple": 0,
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_61b310b123ea7",
                             "label": "Название",
                             "name": "name",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -307,12 +325,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_61b353e64002a",
                             "label": "Рейтинг",
                             "name": "rating",
+                            "aria-label": "",
                             "type": "range",
                             "instructions": "",
                             "required": 0,
@@ -327,12 +347,14 @@
                             "max": 5,
                             "step": "0.1",
                             "prepend": "",
-                            "append": ""
+                            "append": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_63c547f63b335",
                             "label": "Название бонуса",
                             "name": "brands-bonus-title",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -347,12 +369,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_61b310dd23ea9",
                             "label": "Бонус",
                             "name": "bonus",
+                            "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
                             "required": 0,
@@ -367,12 +391,14 @@
                             "placeholder": "",
                             "maxlength": "",
                             "rows": 1,
-                            "new_lines": ""
+                            "new_lines": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_63c548a53b336",
                             "label": "Описание бонуса",
                             "name": "brands-bonus-description",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -387,12 +413,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_61b310e923eaa",
                             "label": "Преимущества",
                             "name": "cons",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -407,11 +435,13 @@
                             "max": 0,
                             "layout": "table",
                             "button_label": "Добавить преимущество",
+                            "rows_per_page": 20,
                             "sub_fields": [
                                 {
                                     "key": "field_61b3111323eab",
                                     "label": "Добавить",
                                     "name": "item",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -425,14 +455,17 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_61b310e923eaa"
                                 }
-                            ]
+                            ],
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_61b705f0adf28",
                             "label": "Ввести или выбрать партнерскую ссылку?",
                             "name": "choose_link",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
@@ -452,12 +485,14 @@
                             "ui": 1,
                             "ajax": 0,
                             "return_format": "value",
-                            "placeholder": ""
+                            "placeholder": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_61b7063cadf29",
                             "label": "Ввести ссылку",
                             "name": "input_link",
+                            "aria-label": "",
                             "type": "url",
                             "instructions": "",
                             "required": 0,
@@ -476,12 +511,14 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": ""
+                            "placeholder": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_61b7064badf2a",
                             "label": "Выбрать партнерскую",
                             "name": "custom_table_setup_choose_link",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
@@ -506,12 +543,14 @@
                             "ui": 0,
                             "return_format": "value",
                             "ajax": 0,
-                            "placeholder": ""
+                            "placeholder": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_63c54a25e6cc2",
                             "label": "Включить иконку в кнопке?",
                             "name": "button_icon",
+                            "aria-label": "",
                             "type": "true_false",
                             "instructions": "",
                             "required": 0,
@@ -526,12 +565,14 @@
                             "default_value": 0,
                             "ui": 0,
                             "ui_on_text": "",
-                            "ui_off_text": ""
+                            "ui_off_text": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         },
                         {
                             "key": "field_61b70d6321888",
                             "label": "Relations для ссылки",
                             "name": "link_relations",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
@@ -551,7 +592,8 @@
                             "ui": 1,
                             "ajax": 0,
                             "return_format": "value",
-                            "placeholder": ""
+                            "placeholder": "",
+                            "parent_repeater": "field_61b3107923ea5"
                         }
                     ]
                 }
@@ -563,7 +605,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/brand-table"
+                "value": "acf\/brands"
             }
         ]
     ],
@@ -576,5 +618,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673874755
+    "modified": 1673880251
 }

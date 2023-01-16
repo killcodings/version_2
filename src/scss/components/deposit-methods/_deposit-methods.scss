@@ -1,0 +1,47 @@
+.deposit-methods {
+
+  &-text {
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__subtitle {
+      margin-bottom: 20px;
+    }
+  }
+  &__items {
+    display: flex;
+
+    @media (max-width: 1000px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-func {
+      //@include image-func.sizeImage(46px, 16px);
+
+      img {
+        object-fit:contain;
+        width: 50px;
+      }
+    }
+  }
+
+  &__item.border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 138px;
+    width: 100%;
+    height: 88px;
+    border: 1px solid #EAECF0;
+    margin: -1px -1px -1px 0;
+
+  }
+}

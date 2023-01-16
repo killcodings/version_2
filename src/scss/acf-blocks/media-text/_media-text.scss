@@ -2,7 +2,7 @@
 //@use "../../components/logo-text/logo-text";
 
 
-
+/**/
 .media-text {
   margin-top: 1rem;
 
@@ -131,7 +131,7 @@
   }
 }
 
-
+/**/
 
 
 
@@ -217,6 +217,10 @@
     &:first-child {
       padding-top: 28px;
     }
+  }
+
+  &_no-logo-text {
+    gap: 0 64px;
   }
 
   &_reverse {
