@@ -109,14 +109,21 @@ function app_get_button( $button, $class = '', $relations = null, $custom_colors
 		$relations_string .= 'rel="' . implode( ', ', $relations ) . '"';
 	}
 
-	if ( $button_url_parse['host'] === parse_url( home_url() )['host'] ) {
-		return "<a class='button $class' href='{$button['url']}' $style_string>$button_image{$button['title']}$button_icon</a>";
-	}
-	if ( $partner_links_type === 'link' ) {
-		return "<a class='button $class' href='{$button['url']}' $style_string rel='nofollow'>$button_image{$button['title']}$button_icon</a>";
+	$button_icon_str    = '';
+	if ( $button_icon ) {
+		$button_icon_str = '
+        <span class ="button__icon">
+            <svg class="button__icon-arrow" width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83526 9.22628L10.1649 0.890646M10.1649 0.890646L1.83154 0.892944M10.1649 0.890646L10.1686 9.22398" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>';
 	}
 
-	return "<button class='button click-button $class' $style_string type='button' data-link='{$button['url']}'>$button_image{$button['title']}$button_icon</button>";
+	if ( $button_url_parse['host'] === parse_url( home_url() )['host'] ) {
+		return "<a class='button $class' href='{$button['url']}' $style_string>$button_image{$button['title']}$button_icon_str</a>";
+	}
+	if ( $partner_links_type === 'link' ) {
+		return "<a class='button $class' href='{$button['url']}' $style_string rel='nofollow'>$button_image{$button['title']}$button_icon_str</a>";
+	}
+	return "<button class='button click-button $class' $style_string type='button' data-link='{$button['url']}'>$button_image{$button['title']}$button_icon_str</button>";
 }
 
 function app_get_video( $args ) {

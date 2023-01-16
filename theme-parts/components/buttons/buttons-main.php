@@ -44,17 +44,11 @@ $style = "style = '--position-buttons:$position_buttons;$button_width'";
 		}
 
 		$is_button_icon = $button['button_icon'] ?? false;
-		$button_icon    = '';
-		if ( $is_button_icon ) {
-			$button_icon = '
-        <span class ="button__icon">
-            <svg class="button__icon-arrow" width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83526 9.22628L10.1649 0.890646M10.1649 0.890646L1.83154 0.892944M10.1649 0.890646L10.1686 9.22398" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>';
-		}
+
 		?>
         <div>
 
-			<?php echo app_get_button( $button['button'], "buttons__item button_{$button_style} $position_image", null, $buttons_setting, $button_image, $button_icon ); ?>
+			<?php echo app_get_button( $button['button'], "buttons__item button_{$button_style} $position_image", null, $buttons_setting, $button_image, $is_button_icon ); ?>
 
         </div>
 		<?php } ?>

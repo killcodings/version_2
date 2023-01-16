@@ -22,6 +22,12 @@ acf_block_before( 'Баннер I', $is_preview );
 
         <?php
 
+        $buttons_main_setting = [
+	        'add_buttons'            => $add_buttons,
+	        'buttons_setting'        => $buttons_setting,
+	        'columns'                => $columns
+        ];
+
         echo get_component( 'buttons/buttons-main', $buttons_main_setting );
 
         ?>

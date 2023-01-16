@@ -44,31 +44,6 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_61b31b864f9e2",
-                    "label": "Какую ссылку выводить в кнопке?",
-                    "name": "button_link_type",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "apk": "APK",
-                        "page": "Ссылка на страницу"
-                    },
-                    "default_value": "page",
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
-                },
-                {
                     "key": "field_61b31bb64f9e3",
                     "label": "Название партнерской ссылки",
                     "name": "partner_link_title",
@@ -91,25 +66,6 @@
                     "key": "field_61b31bc74f9e4",
                     "label": "Включать ссылку в названии бренда?",
                     "name": "enable_brand_title_link",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 0,
-                    "ui_on_text": "",
-                    "ui_off_text": ""
-                },
-                {
-                    "key": "field_6273b8d597042",
-                    "label": "Упрощенный вид таблицы?",
-                    "name": "is_simple_table",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -374,6 +330,26 @@
                             "append": ""
                         },
                         {
+                            "key": "field_63c547f63b335",
+                            "label": "Название бонуса",
+                            "name": "brands-bonus-title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_61b310dd23ea9",
                             "label": "Бонус",
                             "name": "bonus",
@@ -382,15 +358,36 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "30",
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 1,
                             "default_value": "",
                             "placeholder": "",
                             "maxlength": "",
                             "rows": 1,
                             "new_lines": ""
+                        },
+                        {
+                            "key": "field_63c548a53b336",
+                            "label": "Описание бонуса",
+                            "name": "brands-bonus-description",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
                             "key": "field_61b310e923eaa",
@@ -502,10 +499,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": {
-                                "https:\/\/google.com": "Google",
-                                "https:\/\/ya.ru": "Yandex"
-                            },
+                            "choices": [],
                             "default_value": false,
                             "allow_null": 0,
                             "multiple": 0,
@@ -513,6 +507,26 @@
                             "return_format": "value",
                             "ajax": 0,
                             "placeholder": ""
+                        },
+                        {
+                            "key": "field_63c54a25e6cc2",
+                            "label": "Включить иконку в кнопке?",
+                            "name": "button_icon",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_61b70d6321888",
@@ -562,5 +576,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651778580
+    "modified": 1673874755
 }

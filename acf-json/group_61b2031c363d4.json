@@ -366,6 +366,26 @@
                     "placeholder": ""
                 },
                 {
+                    "key": "field_63c531f3f7255",
+                    "label": "Иконка",
+                    "name": "button_icon",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_61baf6feef317",
                     "label": "Информация о бренде",
                     "name": "",
@@ -617,5 +637,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673625723
+    "modified": 1673873634
 }

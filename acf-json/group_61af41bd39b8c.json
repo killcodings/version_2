@@ -164,197 +164,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_61cafa8a46b38",
-            "label": "Настройки верхней панели (с логотипом)",
-            "name": "header_panel_colors",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 1,
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_61cafaba46b39",
-                    "label": "Цвет фона",
-                    "name": "background",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "#000",
-                    "enable_opacity": 0,
-                    "return_format": "string"
-                },
-                {
-                    "key": "field_61cafae246b3a",
-                    "label": "Цвет фона кнопок",
-                    "name": "buttons_background",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "enable_opacity": 1,
-                    "return_format": "string"
-                },
-                {
-                    "key": "field_61cafb7546b3d",
-                    "label": "Цвет фона при наведении",
-                    "name": "buttons_background_hover",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "enable_opacity": 1,
-                    "return_format": "string"
-                },
-                {
-                    "key": "field_61cafafb46b3b",
-                    "label": "Цвет текста кнопок",
-                    "name": "buttons_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "enable_opacity": 0,
-                    "return_format": "string"
-                },
-                {
-                    "key": "field_61cafb8f46b3e",
-                    "label": "Цвет текста при наведении",
-                    "name": "buttons_color_hover",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "enable_opacity": 0,
-                    "return_format": "string"
-                },
-                {
-                    "key": "field_61cafba546b3f",
-                    "label": "Цвет обводки кнопок",
-                    "name": "buttons_border_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "enable_opacity": 1,
-                    "return_format": "string"
-                },
-                {
-                    "key": "field_61cafbbb46b40",
-                    "label": "Цвет обводки при наведении",
-                    "name": "buttons_border_color_hover",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "enable_opacity": 1,
-                    "return_format": "string"
-                },
-                {
-                    "key": "field_61cafb0e46b3c",
-                    "label": "Тип обводки кнопок",
-                    "name": "buttons_border_style",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "choices": {
-                        "dashed": "Точки",
-                        "solid": "Сплошной"
-                    },
-                    "default_value": "solid",
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 1,
-                    "ajax": 0,
-                    "return_format": "value",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_61cafefddbaf2",
-                    "label": "Радиус обводки",
-                    "name": "buttons_border_radius",
-                    "type": "range",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "min": 0,
-                    "max": 50,
-                    "step": 3,
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
-        },
-        {
             "key": "field_61af5df1b1451",
             "label": "Настройки меню",
             "name": "primary_nav_colors",
@@ -889,6 +698,27 @@
                             "return_format": "string"
                         }
                     ]
+                },
+                {
+                    "key": "field_6390aea9d5187",
+                    "label": "Колонки",
+                    "name": "columns",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "min": 1,
+                    "max": 3,
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         },
@@ -1034,6 +864,174 @@
                     "return_format": "string"
                 }
             ]
+        },
+        {
+            "key": "field_638e3f667e6d6",
+            "label": "Настройки мобильной версии меню",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_638e3f8e7e6d7",
+            "label": "Кнопки в ряд",
+            "name": "btn_row",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_638e4271bfd88",
+            "label": "Кнопки по центру и шириной минимального контента",
+            "name": "center",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "center": "Center"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_638e9953a7307",
+            "label": "Расположение кнопок",
+            "name": "position_buttons_mobile",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "top": "Вверху",
+                "bottom": "Внизу",
+                "header": "В шапке"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_638e9849ef32e",
+            "label": "Добавить виджет языка",
+            "name": "is_widget_lanuage",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_638ea06ce5ded",
+            "label": "Добавить бордер снизу\/сверху пунктов меню",
+            "name": "is_border_menu_item",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_638ea68a77791",
+            "label": "Показать\/скрыть иконки",
+            "name": "is_icon_menu_item",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_638eb033ec7fd",
+            "label": "Включить блок с рейтингом",
+            "name": "is_rating_stars",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": 0,
+            "message": "",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -1054,5 +1052,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658399818
+    "modified": 1673866517
 }
