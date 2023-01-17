@@ -1,5 +1,6 @@
 @use "../../components/block-bonuses/block-bonuses";
 @use "../../components/deposit-methods/deposit-methods";
+@use "../../base/mixins";
 
 
 .brand-screen {
@@ -21,7 +22,8 @@
 }
 
 .brand-screen-top {
-  background: var(--accent-color);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, var(--opacity-bg, 0)) 0%, rgba(0, 0, 0, var(--opacity-bg, 0)) 100%);
+  background-color: var(--background-brand-screen-logo);
   margin-top: 57px;
   padding: 48px var(--offsets);
 
@@ -32,8 +34,8 @@
   &__logo {
     margin: 0 auto;
     margin-top: -85px;
-    width: 74px;
-    height: 74px;
+    @include mixins.sizeRatio(74px);
+    background: var(--background-brand-screen-logo);
   }
 
   &__info {
@@ -41,6 +43,18 @@
     color: var(--text-color);
   }
 
+  &__title {
+    text-align: center;
+    color: var(--text-color);
+  }
+
+  .bonus {
+
+    &__icon {
+      //--opacity-bg: var(--opacity-bg);
+      background: linear-gradient(to bottom, rgba(0,0,0,calc(var(--opacity-bg) - 0.2)) 0%,rgba(0,0,0,calc(var(--opacity-bg) - 0.2)) 100%) var(--background-brand-screen-logo);
+    }
+  }
 }
 
 .brand-screen-bottom {

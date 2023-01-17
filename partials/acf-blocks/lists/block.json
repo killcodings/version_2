@@ -1,0 +1,14 @@
+{
+  "name": "acf/lists",
+  "title": "Список с настройками",
+  "description": "lists",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "editor-ul",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "lists.php"
+  },
+  "align": "full"
+}

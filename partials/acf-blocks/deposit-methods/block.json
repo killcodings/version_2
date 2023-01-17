@@ -1,0 +1,14 @@
+{
+  "name": "acf/deposit-methods",
+  "title": "Депозитные методы",
+  "description": "deposit-methods",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "money-alt",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "deposit-methods.php"
+  },
+  "align": "full"
+}

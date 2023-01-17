@@ -119,6 +119,10 @@ function register_acf_blocks() {
 
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/brand-screen' );
 
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/lists' );
+
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/deposit-methods' );
+
 //	acf_create_block( 'media-text', 'Текст и изображение', 'media-text', true );
 }
 add_action( 'init', 'register_acf_blocks' );

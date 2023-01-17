@@ -3,16 +3,57 @@
     "title": "Блок бренда",
     "fields": [
         {
+            "key": "field_63c69084ca3f1",
+            "label": "Фон логотипа и фон блока",
+            "name": "background-brand-screen-logo",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_63c6920440223",
+            "label": "Затемнение фона верхнего блока",
+            "name": "opacity-bg",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "Цвет берётся из фона логотипа",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "",
+            "min": 0,
+            "max": "0.6",
+            "step": "0.1",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_63c5666683556",
-            "label": "brand-screen-logo",
-            "name": "Логотип бренда",
+            "label": "Логотип бренда",
+            "name": "brand-screen-logo",
             "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -30,15 +71,15 @@
         },
         {
             "key": "field_63c56cbd84fe0",
-            "label": "brand-screen-top-title",
-            "name": "Наименование бренда",
+            "label": "Наименование бренда",
+            "name": "brand-screen-top-title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -51,8 +92,8 @@
         },
         {
             "key": "field_63c572f284fe1",
-            "label": "bonus",
-            "name": "Бонус",
+            "label": "Бонус",
+            "name": "bonus",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -74,8 +115,8 @@
             "sub_fields": [
                 {
                     "key": "field_63c5732384fe2",
-                    "label": "is_icon_bonus",
-                    "name": "Выбрать иконку",
+                    "label": "Выбрать иконку",
+                    "name": "is_icon_bonus",
                     "aria-label": "",
                     "type": "select",
                     "instructions": "",
@@ -102,8 +143,8 @@
                 },
                 {
                     "key": "field_63c576f484fe3",
-                    "label": "bonus_description",
-                    "name": "Описание бонуса",
+                    "label": "Описание бонуса",
+                    "name": "bonus_description",
                     "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
@@ -144,8 +185,8 @@
         },
         {
             "key": "field_63c57d5f84fe5",
-            "label": "pros",
-            "name": "Преимущества",
+            "label": "Преимущества",
+            "name": "pros",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -167,8 +208,8 @@
             "sub_fields": [
                 {
                     "key": "field_63c57e1784fe6",
-                    "label": "pros_text",
-                    "name": "Текст",
+                    "label": "Текст",
+                    "name": "pros_text",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -191,8 +232,8 @@
         },
         {
             "key": "field_63c57e5084fe7",
-            "label": "cons",
-            "name": "Недостатки",
+            "label": "Недостатки",
+            "name": "cons",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -214,8 +255,8 @@
             "sub_fields": [
                 {
                     "key": "field_63c57e5084fe8",
-                    "label": "cons_text",
-                    "name": "Текст",
+                    "label": "Текст",
+                    "name": "cons_text",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -238,7 +279,7 @@
         },
         {
             "key": "field_63c581ca0b14d",
-            "label": "highlights",
+            "label": "Highlights",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -256,8 +297,8 @@
         },
         {
             "key": "field_63c582420b14e",
-            "label": "highlights",
-            "name": "Highlights",
+            "label": "Highlights",
+            "name": "highlights",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -300,6 +341,193 @@
                     "parent_repeater": "field_63c582420b14e"
                 }
             ]
+        },
+        {
+            "key": "field_63c6d6c71344f",
+            "label": "Список",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63c6d8c508025",
+            "label": "Список",
+            "name": "lists",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_63c6d73837c7e",
+                    "label": "Список с заголовком",
+                    "name": "list",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_63c6d5455ff7c",
+                            "label": "Заголовок",
+                            "name": "list_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_63c6d73837c7e"
+                        },
+                        {
+                            "key": "field_63c6d55d5ff7d",
+                            "label": "Список внутри",
+                            "name": "list_items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "layout": "table",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_63c6d5885ff7e",
+                                    "label": "Иконка списка",
+                                    "name": "list_item_li_icon",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "choices": {
+                                        "plus": "Плюс",
+                                        "minus": "Минус",
+                                        "tick": "Галочка"
+                                    },
+                                    "default_value": "tick",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "parent_repeater": "field_63c6d55d5ff7d"
+                                },
+                                {
+                                    "key": "field_63c6d6105ff7f",
+                                    "label": "Пункты списка",
+                                    "name": "list_item_li",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 1,
+                                    "layout": "table",
+                                    "pagination": 0,
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "",
+                                    "button_label": "Add Row",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_63c6d62e5ff80",
+                                            "label": "Пункты",
+                                            "name": "list_item_li_text",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "wpml_cf_preferences": 3,
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_63c6d6105ff7f"
+                                        }
+                                    ],
+                                    "parent_repeater": "field_63c6d55d5ff7d"
+                                }
+                            ],
+                            "parent_repeater": "field_63c6d73837c7e"
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "location": [
@@ -320,5 +548,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673890413
+    "modified": 1673976116
 }

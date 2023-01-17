@@ -1,3 +1,5 @@
+@use "src/scss/base/mixins";
+
 .bonus {
   display: flex;
   flex-direction: column;
@@ -19,21 +21,14 @@
   }
 
   &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-font-icon);
+    @include mixins.sizeRatio(34px);
+    color: var(--color-icon);
+    margin: 0 auto;
     margin-bottom: 8px;
-
-    &:before {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 34px;
-      height: 34px;
-      background: var(--background-font-icon);
-      font-family: "fontello";
-      content: "\e804";
-      font-size: 14px;
-      color: var(--color-icon);
-      margin: 0 auto;
-    }
   }
 
   &__description {
