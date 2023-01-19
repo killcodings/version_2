@@ -6,6 +6,7 @@
             "key": "field_61baffa748e7f",
             "label": "Выберите бренд",
             "name": "brand",
+            "aria-label": "",
             "type": "post_object",
             "instructions": "",
             "required": 0,
@@ -15,19 +16,21 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 1,
             "post_type": [
                 "page"
             ],
             "taxonomy": "",
-            "allow_null": 0,
-            "multiple": 0,
             "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
             "ui": 1
         },
         {
             "key": "field_61bb1ea921c36",
             "label": "Включить ссылку на страницу бренда?",
             "name": "is_enable_page_link",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -47,6 +50,7 @@
             "key": "field_61bb1a5379fea",
             "label": "Заголовок кнопки бонуса",
             "name": "button_title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -66,6 +70,7 @@
             "key": "field_61bb001248e80",
             "label": "Включить таблицу с информацией о бренде?",
             "name": "is_enable_table",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -85,6 +90,7 @@
             "key": "field_61bb002a48e81",
             "label": "Заголовки таблицы",
             "name": "table_titles",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -108,6 +114,7 @@
                     "key": "field_61c062864e569",
                     "label": "Caption таблицы",
                     "name": "caption",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -127,6 +134,7 @@
                     "key": "field_61c062954e56a",
                     "label": "Заголовок первого столбца",
                     "name": "first_column_title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -146,6 +154,7 @@
                     "key": "field_61c062a94e56b",
                     "label": "Заголовок второго столбца",
                     "name": "second_column_title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -182,5 +191,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639998150
+    "modified": 1674090332
 }

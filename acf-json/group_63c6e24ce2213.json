@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_63c6e24e50f9d",
-            "label": "Настройки",
+            "label": "Депозитные методы",
             "name": "settings",
             "aria-label": "",
             "type": "group",
@@ -79,7 +79,7 @@
                     "layout": "table",
                     "pagination": 0,
                     "min": 0,
-                    "max": 0,
+                    "max": 5,
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
@@ -108,10 +108,31 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": "",
-                            "preview_size": "medium",
+                            "preview_size": "thumbnail",
                             "parent_repeater": "field_63c6e68937c9d"
                         }
                     ]
+                },
+                {
+                    "key": "field_63c81132a5c81",
+                    "label": "Стиль с обводкой",
+                    "name": "is_border",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 0
                 }
             ]
         }
@@ -122,6 +143,13 @@
                 "param": "block",
                 "operator": "==",
                 "value": "acf\/deposit-methods"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/brand-screen"
             }
         ]
     ],
@@ -134,5 +162,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673980834
+    "modified": 1674086240
 }

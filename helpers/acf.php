@@ -98,7 +98,7 @@ add_action( 'acf/init', function () {
 
 
 		acf_create_block( 'section', 'Секция', 'section', true );
-		acf_create_block( 'hidden-text', 'Скрытый текст (FAQ)', 'hidden-text', true );
+
 		acf_create_block( 'single-brand', 'Блок одного бренда', 'single-brand', true );
 		acf_create_block( 'link-block', 'Блок для перелинковки', 'link-block' );
 		acf_create_block( 'howto', 'How To', 'howto' );
@@ -122,7 +122,10 @@ function register_acf_blocks() {
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/lists' );
 
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/deposit-methods' );
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/hidden-text' );
 
+
+//	acf_create_block( 'hidden-text', 'Скрытый текст (FAQ)', 'hidden-text', true );
 //	acf_create_block( 'media-text', 'Текст и изображение', 'media-text', true );
 }
 add_action( 'init', 'register_acf_blocks' );

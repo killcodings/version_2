@@ -16,6 +16,7 @@
 @use "acf-blocks/brands/brands";
 @use "acf-blocks/brand-screen/brand-screen";
 @use "acf-blocks/lists/lists";
+@use "acf-blocks/hidden-text/hidden-text";
 
 
 @import "base/fontello";
@@ -31,7 +32,6 @@
 //@import "acf-blocks/brand-table/brand-table";
 //@import "acf-blocks/brand-table/simple-brand-table";
 @import "acf-blocks/section-tag";
-@import "acf-blocks/hidden-text";
 @import "acf-blocks/single-brand";
 @import "acf-blocks/link-block";
 //@import "acf-blocks/toc";
@@ -43,7 +43,6 @@
 
 @import "page-header";
 //@import "primary-nav";
-@import "flags-widget";
 //@import "burger";
 @import "header-mobile-buttons";
 @import "video";

@@ -19,13 +19,13 @@ foreach ( $text_items as $item ):
 	if ( $items_tag === 'details' ):
 		$is_opened = get_field( 'is_opened' ) ? "open" : '';
 		?>
-        <details class="<?= $item_class ?>" <?= $is_opened ?>>
+        <details class="max-width <?= $item_class ?>" <?= $is_opened ?>>
             <summary class="hidden-text__title"><?= $item['title'] ?></summary>
             <div class="hidden-text__content" id="<?= $answer_id ?>"><?= $item['text'] ?></div>
         </details>
 	<?php elseif ( $items_tag === 'div' ):
 		$is_opened = get_field( 'is_opened' ) ? $item_class .= ' hidden-text_open' : ''; ?>
-        <div class="<?= $item_class ?>">
+        <div class="max-width <?= $item_class ?>">
             <h3 class="hidden-text__title"><?= $item['title'] ?></h3>
             <div class="hidden-text__content" id="<?= $answer_id ?>"><?= $item['text'] ?></div>
         </div>

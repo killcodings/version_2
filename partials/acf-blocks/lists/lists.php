@@ -10,14 +10,11 @@ $lists = get_field( 'lists' );
 
 
 acf_block_before( 'Список', $is_preview );
-?>
 
-<?php
 $list_setting = [
 	'list' => $lists['list']
 ];
 
 echo get_component( 'lists/lists', $list_setting );
-?>
 
-<?php acf_block_after( $is_preview );
+acf_block_after( $is_preview );

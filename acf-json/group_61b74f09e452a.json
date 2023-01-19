@@ -6,6 +6,7 @@
             "key": "field_61b74f31be930",
             "label": "Добавить текст",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_61b74f49be931",
             "label": "Добавить текст",
             "name": "items",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -41,6 +43,7 @@
                     "key": "field_61b74f58be932",
                     "label": "Заголовок",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -54,12 +57,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_61b74f49be931"
                 },
                 {
                     "key": "field_61b74f78be933",
                     "label": "Текст",
                     "name": "text",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -73,14 +78,17 @@
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 0,
-                    "delay": 1
+                    "delay": 1,
+                    "parent_repeater": "field_61b74f49be931"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_61b75013be934",
             "label": "Настройки",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -97,6 +105,7 @@
             "key": "field_61b7501fbe935",
             "label": "Включить разметку FAQ?",
             "name": "is_enable_faq",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -116,6 +125,7 @@
             "key": "field_62d9607fdfa55",
             "label": "Микроразметка",
             "name": "current_microdata",
+            "aria-label": "",
             "type": "radio",
             "instructions": "",
             "required": 0,
@@ -148,6 +158,7 @@
             "key": "field_61b893d05293c",
             "label": "Тэг для элементов",
             "name": "items_tag",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -173,6 +184,7 @@
             "key": "field_61e67a1bef209",
             "label": "Оставить открытыми?",
             "name": "is_opened",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -207,5 +219,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658494679
+    "modified": 1674090236
 }

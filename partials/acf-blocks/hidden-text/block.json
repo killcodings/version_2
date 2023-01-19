@@ -1,0 +1,14 @@
+{
+  "name": "acf/hidden-text",
+  "title": "Скрытый текст (FAQ)",
+  "description": "deposit-methods",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "plus-alt2",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "hidden-text.php"
+  },
+  "align": "full"
+}
