@@ -3,7 +3,7 @@
   "title": "Кнопки Block",
   "description": "Buttons",
   "style": [ "file:./test.css" ],
-  "category": "formatting",
+  "category": "buttons",
   "icon": "button",
   "keywords": ["testimonial", "quote"],
   "acf": {

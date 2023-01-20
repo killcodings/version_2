@@ -3,7 +3,7 @@
   "title": "Бренды",
   "description": "brands",
   "style": [ "file:./style.css" ],
-  "category": "formatting",
+  "category": "brand",
   "icon": "editor-table",
   "keywords": ["testimonial", "quote"],
   "acf": {

@@ -3,7 +3,7 @@
   "title": "Media text Block",
   "description": "media-text",
   "style": [ "file:./style.css" ],
-  "category": "formatting",
+  "category": "media",
   "icon": "embed-photo",
   "keywords": ["testimonial", "quote"],
   "acf": {

@@ -62,6 +62,36 @@ function acf_filter_rest_api_preload_paths( $preload_paths ) {
 
 add_filter( 'block_editor_rest_api_preload_paths', 'acf_filter_rest_api_preload_paths', 10, 1 );
 
+
+add_filter( 'block_categories', 'add_gutenberg_block_categories', 10, 2 );
+function add_gutenberg_block_categories( $categories ) {
+	return array_merge( [
+		[
+			'slug'  => 'brand',
+			'title' => 'Бренд',
+			'icon'  => 'screenoptions',
+		],
+		[
+			'slug'  => 'toc',
+			'title' => 'TOC',
+			'icon'  => 'screenoptions'
+		],
+		[
+			'slug'  => 'container-blocks',
+			'title' => 'Обертки',
+			'icon'  => 'screenoptions'
+		],
+		[
+			'slug'  => 'buttons',
+			'title' => 'Кнопки',
+			'icon'  => 'screenoptions'
+		]
+
+	],
+		$categories
+	);
+}
+
 // Add gutenberg blocks
 add_action( 'acf/init', function () {
 

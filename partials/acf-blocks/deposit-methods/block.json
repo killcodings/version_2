@@ -3,7 +3,7 @@
   "title": "Депозитные методы",
   "description": "deposit-methods",
   "style": [ "file:./style.css" ],
-  "category": "formatting",
+  "category": "text",
   "icon": "money-alt",
   "keywords": ["testimonial", "quote"],
   "acf": {
