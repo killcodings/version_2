@@ -1,8 +1,19 @@
 <?php
 
-$brand_screen_logo = get_field('brand-screen-logo');
-$brand_screen_top_title = get_field('brand-screen-top-title');
-$background_brand_screen_logo = get_field('background-brand-screen-logo') ?: 'transparent';
+$chosen_brand        = get_field( 'is_brand' );
+$brand_setup         = get_field( 'brand_setup', $chosen_brand );
+//var_dump($brand_setup);
+
+
+$brand_screen_logo = $brand_setup['icon'];
+$background_brand_screen_logo = $brand_setup['icon_background'] ?: 'transparent';
+$brand_screen_top_title = $brand_setup['name'];
+
+
+//$brand_screen_logo = get_field('brand-screen-logo');
+//$brand_screen_top_title = get_field('brand-screen-top-title');
+//$background_brand_screen_logo = get_field('background-brand-screen-logo') ?: 'transparent';
+
 $opacity_bg = get_field('opacity-bg') ?? 0.2;
 $lists = get_field('lists');
 $brand_screen_color = get_field('brand-screen-color') ?? '#000';

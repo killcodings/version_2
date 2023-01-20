@@ -40,6 +40,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 1,
             "message": "",
             "default_value": 1,
             "ui": 0,
@@ -60,11 +61,12 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "default_value": "Claim Bonus",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_61bb001248e80",
@@ -108,6 +110,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "layout": "block",
             "sub_fields": [
                 {
@@ -124,11 +127,12 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 3,
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 },
                 {
                     "key": "field_61c062954e56a",
@@ -144,11 +148,12 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 3,
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 },
                 {
                     "key": "field_61c062a94e56b",
@@ -164,11 +169,12 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 3,
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 }
             ]
         }
@@ -191,5 +197,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674090332
+    "modified": 1674091348
 }

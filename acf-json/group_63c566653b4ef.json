@@ -3,8 +3,8 @@
     "title": "Блок бренда",
     "fields": [
         {
-            "key": "field_63c8228c70dc0",
-            "label": "Настройки верхнего блока",
+            "key": "field_63c9fcac67a42",
+            "label": "Бранд",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -21,23 +21,46 @@
             "endpoint": 0
         },
         {
-            "key": "field_63c69084ca3f1",
-            "label": "Фон логотипа и фон блока",
-            "name": "background-brand-screen-logo",
+            "key": "field_63c9fb6467a41",
+            "label": "Выберите бренд",
+            "name": "is_brand",
             "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
+            "type": "post_object",
+            "instructions": "Логотип и фон логотипа тянутся из настроек бренда на страницах.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 1,
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1
+        },
+        {
+            "key": "field_63c8228c70dc0",
+            "label": "Настройки верхнего блока",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_63c80d2fc2fdb",
@@ -77,53 +100,6 @@
             "min": 0,
             "max": "0.6",
             "step": "0.1",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_63c5666683556",
-            "label": "Логотип бренда",
-            "name": "brand-screen-logo",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 1,
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_63c56cbd84fe0",
-            "label": "Наименование бренда",
-            "name": "brand-screen-top-title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
             "prepend": "",
             "append": ""
         },
@@ -488,5 +464,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674063147
+    "modified": 1674182555
 }
