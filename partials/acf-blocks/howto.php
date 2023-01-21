@@ -26,11 +26,11 @@ acf_block_before( 'How To', $is_preview );
                 <span class="howto__counter"><?= $index + 1 ?></span>
                 <<?= $title_level ?> class="howto__title"><?= $item['title'] ?></<?= $title_level ?>>
             <div class="howto__text"><?= $item['text'] ?></div>
-            <? if ( $item['add_button'] ):?>
+            <?php if ( $item['add_button'] ):?>
                 <div class="howto__button">
 	                <?= app_get_button( $item['add_button'], '', null, $colors_btn); ?>
                 </div>
-            <? endif; ?>
+            <?php endif; ?>
         </div>
         <div class="howto__image">
             <?= app_get_image( [ 'id' => $item['image'] ] ) ?>

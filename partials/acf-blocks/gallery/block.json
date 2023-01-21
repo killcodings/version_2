@@ -1,0 +1,14 @@
+{
+  "name": "acf/gallery",
+  "title": "Галлерея",
+  "description": "deposit-methods",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "format-gallery",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "gallery.php"
+  },
+  "align": "full"
+}
