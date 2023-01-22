@@ -9,7 +9,9 @@
   }
 
   &__item {
-    margin-right: 5px;
+    padding: 0;
+    margin: 0 16px 0 0;
+    //margin-right: 5px;
 
     &:after {
       content: unset;
