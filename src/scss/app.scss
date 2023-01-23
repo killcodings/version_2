@@ -7,6 +7,7 @@
 @use "src/scss/components/button/button";
 @use "src/scss/components/wp-block-table/wp-block-table";
 @use "src/scss/components/logo-text/logo-text";
+@use "src/scss/components/nav-socials/nav-socials";
 
 
 // ACF Block
@@ -18,6 +19,7 @@
 @use "acf-blocks/lists/lists";
 @use "acf-blocks/hidden-text/hidden-text";
 @use "acf-blocks/gallery/gallery";
+
 
 
 @import "base/fontello";
@@ -67,7 +69,7 @@
 
 @import "page-footer";
 @import "footer-column";
-@import "social-list";
+//@import "social-list";
 @import "comments";
 @import "author-badge";
 @import "top-button";

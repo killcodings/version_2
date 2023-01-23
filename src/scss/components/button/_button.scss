@@ -11,7 +11,6 @@
   border-radius: var(--buttons-border-radius);
   text-align: center;
   text-decoration: none;
-  transition: 250ms all;
   cursor: pointer;
   border: none;
   position: relative;
@@ -25,6 +24,7 @@
   &:focus {
     color: var(--buttons-color-hover);
     background: var(--buttons-background-hover);
+
   }
 
   @media (max-width: 600px) {
@@ -40,30 +40,33 @@
     margin-right: 5px;
   }
 
-
   &__icon {
     display: flex;
     margin-left: 16px;
-  }
-
-  &:hover {
-    .button__icon-arrow {
-      path {
-        transition: 0.25s;
-        stroke: var(--buttons-color-hover);
-      }
+    use {
+      transition: 0.3s;
     }
   }
+
 
 
   &_gradient {
     background: linear-gradient(240.87deg, var(--buttons-gradiend-start) 34.31%, var(--buttons-gradiend-end) 141.87%);
     color: var(--buttons-gradiend-color);
 
+    .button__icon use {
+      stroke: var(--buttons-gradiend-color);
+    }
+
     &:hover, &:focus {
       color: var(--buttons-gradiend-color-hover);
       background: linear-gradient(240.87deg, var(--buttons-gradiend-start) 4.31%, var(--buttons-gradiend-end) 141.87%);
 
+      .button__icon {
+        use {
+          stroke: var(--buttons-gradiend-color-hover);
+        }
+      }
     }
   }
 
@@ -72,10 +75,20 @@
     border: 1px var(--buttons-border-style) var(--buttons-border);
     color: var(--buttons-color);
 
+    .button__icon use {
+      stroke: var(--buttons-color);
+    }
+
     &:hover, &:focus {
       background-color: var(--buttons-background-hover);
       color: var(--buttons-color-hover);
       border: 1px var(--buttons-border-style) var(--buttons-border-hover);
+
+      .button__icon {
+        use {
+          stroke: var(--buttons-color-hover);
+        }
+      }
     }
   }
 
@@ -84,14 +97,24 @@
     color: var(--color);
     border: 1px var(--border-style) var(--border);
 
+    .button__icon use {
+      stroke: var(--color);
+    }
+
     &:hover, &:focus {
       background-color: var(--background-color-hover);
       color: var(--color-hover);
       border: 1px var(--border-style) var(--border-hover);
+
+      .button__icon {
+        use {
+          stroke: var(--color-hover);
+        }
+      }
     }
   }
 
-  &_icon {
+/*  &_icon {
 
     &:after {
       content: "\e803";
@@ -100,5 +123,5 @@
       margin-left: 15px;
     }
 
-  }
+  }*/
 }

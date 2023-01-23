@@ -86,7 +86,8 @@ HTML;
 }
 
 function app_get_button( $button, $class = '', $relations = null, $custom_colors = null, $button_image = false, $button_icon = false ): string {
-	$partner_links_type = get_field( 'out_links_type', 'options' ) ?? 'link';
+
+    $partner_links_type = get_field( 'out_links_type', 'options' ) ?? 'link';
 	if ( $button['url'] === '' ) {
 		return false;
 	}
@@ -102,7 +103,7 @@ function app_get_button( $button, $class = '', $relations = null, $custom_colors
 		$border_style     = $custom_colors['border_style'] ?: 'solid';
 		$border_radius    = $custom_colors['border_radius'] ?? '5';
 		$style_string     = "style='--background-color:{$background};--background-color-hover:{$background_hover};--color:{$color};--color-hover:{$color_hover};--border:{$border};--border-hover:{$border_hover};--border-style:{$border_style};--border-radius:{$border_radius}px;'";
-	}
+    }
 
 	$relations_string = '';
 	if ( $relations ) {
@@ -344,7 +345,7 @@ function app_get_comment_list( $post ) {
 						<?= app_get_image( [ 'id' => $author_info['avatar'] ] ) ?>
                     </div>
                     <div class="comment__content">
-                        <h3 class="comment__author"><?= "{$author_info["name"]} {$author_info['last_name']}" ?></h3>
+                        <h3 class="comment__author"><?= "{$author_info["name"]} {$author_info['last_name']}" ?> <span class="comment__user">Admin</span></h3>
                         <p class="comment__content"><?= $child_comments[0]->comment_content ?></p>
                         <span class="comment__date">
                                 <time datetime="<?= $child_comments[0]->comment_date ?>"

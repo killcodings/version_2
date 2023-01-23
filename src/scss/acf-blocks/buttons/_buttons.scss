@@ -4,6 +4,8 @@
   display: flex;
   justify-content: var(--position-buttons, start);
   gap: 0 20px;
+  position: relative;
+  transition: 0.25s;
 
 
   @media (max-width: 600px) {
@@ -29,6 +31,7 @@
     padding: 20px;
     border: 1px solid #eaecf0;
     grid-template-columns: repeat(2, 1fr);
+
     @media (max-width: 1000px) {
       grid-template-columns: 1fr;
     }
@@ -60,9 +63,14 @@
       padding: 0 0 8px;
       border: none;
     }
+  }
 
-    .button {
-      min-width: var(--button-width, 100%);
+  .button {
+    width: var(--button-width, 100%);
+
+    @media (max-width: 1366px) {
+      width: unset;
+      max-width: var(--button-width, 100%);
     }
   }
 }

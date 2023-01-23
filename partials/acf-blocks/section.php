@@ -16,8 +16,8 @@ if ( $background_image ) {
 	$style_array['background_image'] = "--background-image: url({$bg_url_img});--opacity-bg:$opacity";
 }
 
-if ( get_field('padding_bottom') ) {
-	$section_class .= ' section-tag_pb';
+if ( get_field('divider_after') ) {
+	$container_class = ' container_divider-after';
 }
 
 if ( ! isset( $GLOBALS['breadcrumbs_showed'] ) ) {
@@ -31,7 +31,7 @@ $id_string    = $section_anchor ? "id='$section_anchor'" : '';
 acf_block_before( 'Секция', $is_preview );
 ?>
 <?= "<$tag class='$section_class' $id_string $style_string>" ?>
-    <div class="container">
+    <div class="container<?=$container_class?>">
 		<?php if ( ( ! isset( $GLOBALS['breadcrumbs_showed'] ) ) && function_exists( 'kama_breadcrumbs' ) ) {
 			$GLOBALS['breadcrumbs_showed'] = false;
 			$breadcrumbs_separator         = get_option( 'options_breadcrumbs_settings_separator' );

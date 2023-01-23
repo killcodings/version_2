@@ -34,17 +34,7 @@ if ( $is_enable_mobile_button || $is_enable_mobile_button_from_page ):
 				dynamic_sidebar( 'footer-menu-2' );
 				dynamic_sidebar( 'footer-menu-3' );
 
-				$social_links = get_field( 'social_footer', 'options' );
-				if ( $social_links ): ?>
-                    <div class="social-list page-footer__item">
-						<?php foreach ( $social_links as $link ): ?>
-                            <div class="social-list__item">
-                                <a href="<?= $link['link'] ?>" rel="nofollow"><span
-                                            class="icon-<?= $link['social'] ?>"></span></a>
-                            </div>
-						<?php endforeach; ?>
-                    </div>
-				<?php endif; ?>
+				?>
             </div>
         </div>
         <button type="button" class="top-button">&#8593;</button>
@@ -56,10 +46,10 @@ if ( $is_enable_mobile_button || $is_enable_mobile_button_from_page ):
 		<?php endif; ?>
         <svg class="button__icon-sprite" display="none">
             <symbol id="button__icon-item-arrow" viewBox="0 0 12 11">
-                <path d="M1.83526 9.22628L10.1649 0.890646M10.1649 0.890646L1.83154 0.892944M10.1649 0.890646L10.1686 9.22398" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.83526 9.22628L10.1649 0.890646M10.1649 0.890646L1.83154 0.892944M10.1649 0.890646L10.1686 9.22398" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
             </symbol>
             <symbol id="button__icon-item-comment" viewBox="0 0 17 18">
-                <path d="M16 11.2666C16 11.7086 15.8244 12.1326 15.5118 12.4451C15.1993 12.7577 14.7754 12.9333 14.3333 12.9333H4.33333L1 16.2666V2.93327C1 2.49124 1.17559 2.06732 1.48816 1.75476C1.80072 1.4422 2.22464 1.2666 2.66667 1.2666H14.3333C14.7754 1.2666 15.1993 1.4422 15.5118 1.75476C15.8244 2.06732 16 2.49124 16 2.93327V11.2666Z" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 11.2666C16 11.7086 15.8244 12.1326 15.5118 12.4451C15.1993 12.7577 14.7754 12.9333 14.3333 12.9333H4.33333L1 16.2666V2.93327C1 2.49124 1.17559 2.06732 1.48816 1.75476C1.80072 1.4422 2.22464 1.2666 2.66667 1.2666H14.3333C14.7754 1.2666 15.1993 1.4422 15.5118 1.75476C15.8244 2.06732 16 2.49124 16 2.93327V11.2666Z" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
             </symbol>
         </svg>
     </footer>

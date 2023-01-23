@@ -1,0 +1,54 @@
+@use "src/scss/base/mixins";
+
+.nav-socials {
+  --section-offsets: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__heading {
+    margin-bottom: 12px;
+
+    &-title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #344054;
+    }
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mixins.sizeRatio(40px);
+    border: 1px solid #D0D5DD;
+
+    &:not(:last-child) {
+      border-right: unset;
+    }
+
+    &-link {
+      use {
+        fill: #D02E4B;
+      }
+    }
+  }
+
+  &_divider {
+    padding: var(--section-offsets) 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: var(--offsets);
+      right: calc(var(--offsets) * 1);
+      border-bottom: 1px solid var(--divider-color);
+    }
+  }
+}

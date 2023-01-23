@@ -2,7 +2,6 @@
 
 $chosen_brand        = get_field( 'is_brand' );
 $brand_setup         = get_field( 'brand_setup', $chosen_brand );
-//var_dump($brand_setup);
 
 
 $brand_screen_logo = $brand_setup['icon'];
@@ -71,6 +70,8 @@ acf_block_before( 'Блок бренда', $is_preview );
 		</div>
         <InnerBlocks/>
 	</div>
+
+    <?php if (get_field('brand_screen_bottom')) : ?>
 	<div class="brand-screen-bottom">
 		<div class="brand-screen-bottom__content">
 
@@ -99,5 +100,6 @@ acf_block_before( 'Блок бренда', $is_preview );
             ?>
         </div>
     </div>
+    <?php endif;
 
-<?php acf_block_after( $is_preview );
+acf_block_after( $is_preview );

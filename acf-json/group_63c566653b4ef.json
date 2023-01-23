@@ -197,6 +197,45 @@
             ]
         },
         {
+            "key": "field_63cea106627ba",
+            "label": "Нижний блок",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63cea18a627bb",
+            "label": "Включить нижний блок (список, депозиты, изображение)",
+            "name": "brand_screen_bottom",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 0
+        },
+        {
             "key": "field_63c6d6c71344f",
             "label": "Список",
             "name": "",
@@ -464,5 +503,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674182555
+    "modified": 1674486553
 }
