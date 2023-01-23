@@ -26,7 +26,16 @@ else:
                               placeholder="<?= Translate::get('placeholder_comment') ?>"
                               aria-label="<?= Translate::get('placeholder_comment') ?>"></textarea>
                     <input type="hidden" name="post_ID" value="<?= $post->ID ?>">
-                    <button type="button" class="button button_gradient comment-form__button"><?= Translate::get('comment_button') ?></button>
+                    <?php
+                    echo app_get_button( [
+	                    'url'   => 'no-click',
+	                    'title' => Translate::get('comment_button')
+                    ], "buttons__item comment-form__button", null, null, false, "comment" );
+
+$buttons_main_setting = [ "add_buttons" => [0=>["image"=> false, "button" => ["title"=> Translate::get('comment_button'), "url"   => 'no-click',], "button_icon_use" => 'comment']]];
+                    echo get_component( 'buttons/buttons-main' , $buttons_main_setting);
+
+                    ?>
                     <span class="comment-form__alert"></span>
                 </form>
             </div>

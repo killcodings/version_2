@@ -3,6 +3,9 @@ $buttons       = $args['add_buttons'];
 $buttons_class = '';
 $buttons_class = "buttons_columns-{$args['columns']}";
 
+echo "<pre>";
+var_dump($args);
+echo "</pre>";
 
 $buttons_setting = $args['buttons_setting'];
 
@@ -43,7 +46,7 @@ $style = "style = '--position-buttons:$position_buttons;$button_width'";
 			$button_image = "<span class = 'button__image' style = 'background-image: url($icon_url);'></span>";
 		}
 
-		$is_button_icon = $button['button_icon'] ?? false;
+		$is_button_icon = $button['button_icon_use'] ?? false;
 
 		?>
         <div>

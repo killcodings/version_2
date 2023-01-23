@@ -20,7 +20,7 @@
             "layout": "table",
             "pagination": 0,
             "min": 0,
-            "max": 0,
+            "max": 2,
             "collapsed": "",
             "button_label": "Add Row",
             "rows_per_page": 20,
@@ -71,8 +71,8 @@
                     "parent_repeater": "field_63adb7e243eef"
                 },
                 {
-                    "key": "field_63bed3bd8b7df",
-                    "label": "Иконка",
+                    "key": "field_63cdee00eb65c",
+                    "label": "Включить иконку?",
                     "name": "button_icon",
                     "aria-label": "",
                     "type": "true_false",
@@ -80,16 +80,52 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "30",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 1,
+                    "wpml_cf_preferences": 3,
                     "message": "",
                     "default_value": 0,
                     "ui": 0,
                     "ui_on_text": "",
                     "ui_off_text": "",
+                    "parent_repeater": "field_63adb7e243eef"
+                },
+                {
+                    "key": "field_63bed3bd8b7df",
+                    "label": "Иконка",
+                    "name": "button_icon_use",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63cdee00eb65c",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "arrow": "Стрелочка",
+                        "comment": "Комментарии"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 1,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
                     "parent_repeater": "field_63adb7e243eef"
                 }
             ]
@@ -254,5 +290,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673454545
+    "modified": 1674441532
 }

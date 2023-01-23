@@ -4,7 +4,6 @@ $brand_setup         = get_field( 'brand_setup', $chosen_brand );
 $is_enable_table     = get_field( 'is_enable_table' ) ?? false;
 $is_enable_page_link = get_field( 'is_enable_page_link' ) ?? true;
 
-var_dump($chosen_brand );
 acf_block_before( 'Блок одного бренда', $is_preview );
 ?>
     <div class="single-brand">

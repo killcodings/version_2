@@ -1,7 +1,7 @@
 <?php
 $images        = get_field( 'images' );
-$columns       = get_field( 'columns' ) ?? '5';
-$columns_class = " gallery__item_col-$columns";
+//$columns       = get_field( 'columns' ) ?? '5'; Range 1-5
+//$columns_class = " gallery__item_col-$columns";
 
 acf_block_before( 'Галерея', $is_preview );
 ?>

@@ -109,13 +109,16 @@ function app_get_button( $button, $class = '', $relations = null, $custom_colors
 		$relations_string .= 'rel="' . implode( ', ', $relations ) . '"';
 	}
 
-	$button_icon_str    = '';
-	if ( $button_icon ) {
-		$button_icon_str = '
-        <span class ="button__icon">
-            <svg class="button__icon-arrow" width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83526 9.22628L10.1649 0.890646M10.1649 0.890646L1.83154 0.892944M10.1649 0.890646L10.1686 9.22398" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>';
-	}
+
+    if ($button_icon) {
+	    $button_icon_str    = '';
+	    $button_icon_use = match ($button_icon) {
+		    'arrow' => '<svg class="button__icon-item-arrow" width="12" height="11" fill="none"><use xlink:href="#button__icon-item-arrow"></use></svg>',
+		    'comment' => '<svg class="button__icon-item-comment" width="17" height="18"  fill="none"><use xlink:href="#button__icon-item-comment"></use></svg>',
+		    null => ''
+	    };
+	    $button_icon_str = "<span class ='button__icon'>$button_icon_use</span>";
+    }
 
 	if ( $button_url_parse['host'] === parse_url( home_url() )['host'] ) {
 		return "<a class='button $class' href='{$button['url']}' $style_string>$button_image{$button['title']}$button_icon_str</a>";
@@ -307,13 +310,15 @@ function app_get_comment_list( $post ) {
                 </script>
 			<?php endif; ?>
                 <article class="comment" id="<?= $comment_id ?>">
-                    <div class="comment__avatar"><i class="icon-user"></i></div>
-                    <h3 class="comment__author"><?= $comment_author ?></h3>
-                    <span class="comment__date">
+                    <div class="comment__avatar"><!--<i class="icon-user"></i>--></div>
+                    <div class="comment__content">
+                        <h3 class="comment__author"><?= $comment_author ?></h3>
+                        <p class="comment__content"><?= $comment_content ?></p>
+                        <span class="comment__date">
                                 <time datetime="<?= $comment_date ?>"
                                       data-val="<?= $comment_ref_date ?>"><?= $comment_date ?></time>
                             </span>
-                    <p class="comment__content"><?= $comment_content ?></p>
+                    </div>
                 </article>
 			<?php
 			if ( $child_comments ):
@@ -338,12 +343,14 @@ function app_get_comment_list( $post ) {
                     <div class="comment__avatar">
 						<?= app_get_image( [ 'id' => $author_info['avatar'] ] ) ?>
                     </div>
-                    <h3 class="comment__author"><?= "{$author_info["name"]} {$author_info['last_name']}" ?></h3>
-                    <span class="comment__date">
+                    <div class="comment__content">
+                        <h3 class="comment__author"><?= "{$author_info["name"]} {$author_info['last_name']}" ?></h3>
+                        <p class="comment__content"><?= $child_comments[0]->comment_content ?></p>
+                        <span class="comment__date">
                                 <time datetime="<?= $child_comments[0]->comment_date ?>"
                                       data-val="<?= $comment_ref_date ?>"><?= $child_comments[0]->comment_date ?></time>
                             </span>
-                    <p class="comment__content"><?= $child_comments[0]->comment_content ?></p>
+                    </div>
                 </article>
 			<?php endif; ?>
 			<?php endforeach; ?>

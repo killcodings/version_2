@@ -6,6 +6,7 @@
             "key": "field_61ee80e06aef7",
             "label": "Изображения",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_61ee80986aef4",
             "label": "Добавить изображение",
             "name": "images",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -31,16 +33,20 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "wpml_cf_preferences": 1,
+            "layout": "table",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "collapsed": "",
             "button_label": "Добавить изображение",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_61ee80ab6aef5",
                     "label": "Изображение",
                     "name": "image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -59,7 +65,8 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "parent_repeater": "field_61ee80986aef4"
                 }
             ]
         },
@@ -67,15 +74,24 @@
             "key": "field_61ee80cf6aef6",
             "label": "Настройки",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61ee80986aef4",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 1,
             "placement": "top",
             "endpoint": 0
         },
@@ -83,6 +99,7 @@
             "key": "field_61ee80ef6aef8",
             "label": "Столбцы",
             "name": "columns",
+            "aria-label": "",
             "type": "range",
             "instructions": "",
             "required": 0,
@@ -92,6 +109,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 1,
             "default_value": "",
             "min": 1,
             "max": 5,
@@ -118,5 +136,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1643021424
+    "modified": 1674435967
 }
