@@ -1,17 +1,25 @@
 // Base
 @use "src/scss/base/container";
-@use "src/scss/base/defaults";
-@use "src/scss/base/fonts";
-@use "src/scss/base/image-func";
+@use "base/defaults";
+@use "base/fonts";
+@use "base/image-func";
+
+@use "base/fontello";
+@use "base/body-changed-colors";
+
 
 // Components
-@use "src/scss/components/header/header";
+
 @use "src/scss/components/button/button";
-@use "src/scss/components/wp-block-table/wp-block-table";
-@use "src/scss/components/logo-text/logo-text";
-@use "src/scss/components/nav-socials/nav-socials";
-@use "src/scss/components/page-update/page-update";
-@use "src/scss/components/author-badge/author-badge";
+@use "components/wp-block-table/wp-block-table";
+@use "components/logo-text/logo-text";
+@use "components/nav-socials/nav-socials";
+@use "components/page-update/page-update";
+@use "components/author-badge/author-badge";
+@use "components/top-button/top-button";
+@use "components/header/header";
+@use "components/footer/footer";
+//@use "footer-column";
 
 
 // ACF Block
@@ -24,14 +32,13 @@
 @use "acf-blocks/hidden-text/hidden-text";
 @use "acf-blocks/gallery/gallery";
 @use "acf-blocks/section-tag";
+@use "acf-blocks/howto/howto";
 
 
 @use "comments";
 
 
-@import "base/fontello";
-@import "base/body";
-@import "base/body-changed-colors";
+
 
 
 
@@ -42,7 +49,7 @@
 //@import "acf-blocks/single-brand";
 @import "acf-blocks/link-block";
 //@import "acf-blocks/toc";
-@import "acf-blocks/howto";
+//@import "acf-blocks/howto";
 @import "acf-blocks/icon-block";
 
 
@@ -57,7 +64,7 @@
 @import "site-table";
 @import "breadcrumbs";
 
-@import "header-panel";
+//@import "header-panel";
 @import "author-section";
 @import "posts";
 @import "wp-block-columns";
@@ -70,11 +77,9 @@
 @import "acf-blocks/feedback-form";
 @import "acf-blocks/matches-cards";
 
-@import "page-footer";
-@import "footer-column";
+
 //@import "social-list";
 //@import "author-badge";
-@import "top-button";
-@import "footer-copyright";
+//@import "footer-copyright";
 @import "mobile-button/mobile-button";
 //@import "wpml";

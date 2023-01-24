@@ -27,15 +27,28 @@
     align-items: center;
     @include mixins.sizeRatio(40px);
     border: 1px solid #D0D5DD;
+    position: relative;
 
     &:not(:last-child) {
       border-right: unset;
     }
 
     &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
       use {
         fill: #D02E4B;
       }
+    }
+  }
+
+  .dashicons-before {
+    &:hover {
+      color: var(--accent-color);
     }
   }
 

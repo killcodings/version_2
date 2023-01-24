@@ -1,0 +1,14 @@
+{
+  "name": "acf/howto",
+  "title": "How To",
+  "description": "HowTo",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "excerpt-view",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "howto.php"
+  },
+  "align": "full"
+}

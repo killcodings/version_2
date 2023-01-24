@@ -131,7 +131,6 @@ add_action( 'acf/init', function () {
 
 		acf_create_block( 'single-brand', 'Блок одного бренда', 'single-brand', true );
 		acf_create_block( 'link-block', 'Блок для перелинковки', 'link-block' );
-		acf_create_block( 'howto', 'How To', 'howto' );
 
 		acf_create_block( 'icon-block', 'Блок с иконками', 'icon-block' );
 		acf_create_block( 'video', 'Видео', 'video' );
@@ -156,7 +155,11 @@ function register_acf_blocks() {
 
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/gallery' );
 
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/howto' );
 
+
+
+//	acf_create_block( 'howto', 'How To', 'howto' );
 //	acf_create_block( 'gallery', 'Галерея', 'gallery' );
 //	acf_create_block( 'hidden-text', 'Скрытый текст (FAQ)', 'hidden-text', true );
 //	acf_create_block( 'media-text', 'Текст и изображение', 'media-text', true );

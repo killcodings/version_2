@@ -34,9 +34,10 @@ body[data-change-theme] {
       border: 1px solid var(--accent-color);
 
       th, td {
+        background-color: rgba(239, 239, 239, 0.1);
 
         &:not(:last-of-type) {
-
+          border-right: 1px solid var(--accent-color);
         }
       }
     }
@@ -147,10 +148,6 @@ body[data-change-theme] {
 
     &_faq {
       background-color: transparent;
-    }
-
-    &__title {
-      border-bottom: 1px dotted var(--accent-color);
     }
   }
 

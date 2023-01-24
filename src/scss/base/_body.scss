@@ -1,9 +1,0 @@
-body {
-  hyphens: auto;
-
-  &.no-scroll {
-    height: calc(var(--vh, 1vh) * 100);
-    overflow: hidden !important;
-  }
-
-}

@@ -26,9 +26,18 @@ if ( $is_enable_mobile_button || $is_enable_mobile_button_from_page ):
 		?>
     </aside>
 <?php endif; ?>
-    <footer class="page-footer">
+    <footer class="footer">
         <div class="container">
-            <div class="page-footer__block">
+            <div class="footer__top">
+                <div class="footer__logo logo">
+                    <a class="logo__link" href="<?= home_url() ?>">
+				        <?php $header_logotype = get_field( 'header_logotype', 'options' );
+				        echo app_get_image( [ 'id' => $header_logotype, 'classes' => 'logo__image' ] ) ?>
+                    </a>
+                </div>
+                <div class="footer__age">18+</div>
+            </div>
+            <div class="footer__block">
 				<?php
 				dynamic_sidebar( 'footer-menu' );
 				dynamic_sidebar( 'footer-menu-2' );

@@ -1,0 +1,20 @@
+.menu {
+
+  .menu-item {
+
+    & {
+      padding: 12px 0;
+    }
+
+    a {
+      color: var(--footer-item-color);
+      text-decoration: none;
+      display: block;
+
+      &:hover, &:focus {
+        color: var(--footer-item-color-hover);
+      }
+    }
+
+  }
+}

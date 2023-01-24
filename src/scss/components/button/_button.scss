@@ -20,6 +20,7 @@
   padding-right: 8px;
   $this: &;
   width: var(--button-width);
+  background: var(--accent-color);
 
 
   &:hover,

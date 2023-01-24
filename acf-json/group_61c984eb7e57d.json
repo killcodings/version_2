@@ -6,6 +6,7 @@
             "key": "field_61c984ff4a8b4",
             "label": "Содержание",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_61c985234a8b5",
             "label": "Добавить howto",
             "name": "items",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -41,6 +43,7 @@
                     "key": "field_61c986374a8b6",
                     "label": "Заголовок",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -54,12 +57,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_61c985234a8b5"
                 },
                 {
                     "key": "field_61c9864d4a8b7",
                     "label": "Текст",
                     "name": "text",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -73,12 +78,14 @@
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 0,
-                    "delay": 1
+                    "delay": 1,
+                    "parent_repeater": "field_61c985234a8b5"
                 },
                 {
                     "key": "field_633d5dbf5a0cb",
                     "label": "Кнопка",
                     "name": "add_button",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -89,12 +96,14 @@
                         "id": ""
                     },
                     "wpml_cf_preferences": 1,
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_61c985234a8b5"
                 },
                 {
                     "key": "field_61c986624a8b8",
                     "label": "Изображение",
                     "name": "image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -113,14 +122,17 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "parent_repeater": "field_61c985234a8b5"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_61c986774a8b9",
             "label": "Настройки",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -137,6 +149,7 @@
             "key": "field_61c986824a8ba",
             "label": "Включить микроразметку?",
             "name": "is_enable_microdata",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -156,6 +169,7 @@
             "key": "field_61c9b3a8380b8",
             "label": "Заголовок для микроразметки",
             "name": "microdata_title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -183,6 +197,7 @@
             "key": "field_61c9ad86d479c",
             "label": "Уровень заголовков",
             "name": "title_level",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -212,6 +227,7 @@
             "key": "field_633d7735d2f51",
             "label": "Настроить цвет кнопки",
             "name": "is_colors_btn",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -232,6 +248,7 @@
             "key": "field_633d692592250",
             "label": "Цвет кнопки",
             "name": "colors_btn",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -256,6 +273,7 @@
                     "key": "field_633d6a4092251",
                     "label": "Фон",
                     "name": "background",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -274,6 +292,7 @@
                     "key": "field_633d6eaa7cff2",
                     "label": "Фон при наведении",
                     "name": "background_hover",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -292,6 +311,7 @@
                     "key": "field_633d743dba096",
                     "label": "Текст",
                     "name": "color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -310,6 +330,7 @@
                     "key": "field_633d745bba097",
                     "label": "Текст при наведении",
                     "name": "color_hover",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -328,6 +349,7 @@
                     "key": "field_633d74daba098",
                     "label": "Обводка",
                     "name": "border",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -346,6 +368,7 @@
                     "key": "field_633d74efba099",
                     "label": "Обводка при наведении",
                     "name": "border_hover",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -361,6 +384,45 @@
                     "wpml_cf_preferences": 1
                 }
             ]
+        },
+        {
+            "key": "field_63d009d11fe90",
+            "label": "Лейбл",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63d009e31fe91",
+            "label": "Заголовок",
+            "name": "howto_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -381,5 +443,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664973375
+    "modified": 1674580205
 }

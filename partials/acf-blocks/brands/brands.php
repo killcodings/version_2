@@ -80,8 +80,8 @@ if ( $brand_setup === 'custom' ) {
 
 acf_block_before( 'Таблица брендов', $is_preview );
 
-if ( ! $simple_table ): ?>
-    <div class="filters">
+if ( $table_arr ): ?>
+    <div class="filters" style="display: none">
         <select class="filter">
             <option class="filter__option">Filter 1</option>
             <option class="filter__option">Filter 2</option>

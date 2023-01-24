@@ -31,6 +31,12 @@ body {
   line-height: 1;
   hyphens: none;
   margin: unset;
+
+  &.no-scroll {
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden !important;
+  }
+
 }
 
 strong, b {

@@ -220,7 +220,7 @@
                     "label": "Ширина кнопки",
                     "name": "button_width",
                     "aria-label": "",
-                    "type": "number",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -231,10 +231,8 @@
                     },
                     "wpml_cf_preferences": 1,
                     "default_value": "",
-                    "min": 170,
-                    "max": 1238,
+                    "maxlength": "",
                     "placeholder": "",
-                    "step": "",
                     "prepend": "",
                     "append": ""
                 },
@@ -621,5 +619,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674484415
+    "modified": 1674560372
 }

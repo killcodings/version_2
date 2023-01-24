@@ -13,7 +13,7 @@ add_action( 'widgets_init', function () {
 		'id'            => 'footer-menu',
 		'before_title'  => '<span class="footer-column__title">',
 		'after_title'   => '</span>',
-		'before_widget' => '<nav id="%1$s" class="page-footer__item footer-column %2$s">',
+		'before_widget' => '<nav id="%1$s" class="footer__item footer-column %2$s">',
 		'after_widget'  => '</nav>'
 	] );
 } );

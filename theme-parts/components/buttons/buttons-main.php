@@ -17,9 +17,8 @@ if ( $buttons_border ) {
 	$buttons_class .= " buttons_border";
 }
 
-
 if ( $button_width ) {
-	$button_width = "--button-width:{$button_width}px";
+	$button_width = "--button-width:{$button_width}";
 }
 
 $style = "style = '--position-buttons:$position_buttons;$button_width'";
