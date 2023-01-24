@@ -16,8 +16,13 @@ export default class Widget {
                 if (e.textContent === "English") {
                     e.textContent = "En";
                 }
+                if (e.textContent === "Bengali") {
+                    e.textContent = "Bn";
+                }
+                if (e.textContent === "বাংলাদেশ") {
+                    e.textContent = "বা";
+                }
             })
-
 
             el.addEventListener('click', () => {
                 el.classList.toggle('open');

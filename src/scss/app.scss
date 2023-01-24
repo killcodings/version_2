@@ -1,6 +1,8 @@
 // Base
 @use "src/scss/base/container";
+@use "src/scss/base/defaults";
 @use "src/scss/base/fonts";
+@use "src/scss/base/image-func";
 
 // Components
 @use "src/scss/components/header/header";
@@ -8,6 +10,8 @@
 @use "src/scss/components/wp-block-table/wp-block-table";
 @use "src/scss/components/logo-text/logo-text";
 @use "src/scss/components/nav-socials/nav-socials";
+@use "src/scss/components/page-update/page-update";
+@use "src/scss/components/author-badge/author-badge";
 
 
 // ACF Block
@@ -19,32 +23,31 @@
 @use "acf-blocks/lists/lists";
 @use "acf-blocks/hidden-text/hidden-text";
 @use "acf-blocks/gallery/gallery";
+@use "acf-blocks/section-tag";
 
+
+@use "comments";
 
 
 @import "base/fontello";
-@import "base/reset";
-@import "base/defaults";
 @import "base/body";
 @import "base/body-changed-colors";
-@import "base/image-func";
+
 
 
 // ACF Blocks
 
 //@import "acf-blocks/brand-table/brand-table";
 //@import "acf-blocks/brand-table/simple-brand-table";
-@import "acf-blocks/section-tag";
-@import "acf-blocks/single-brand";
+//@import "acf-blocks/single-brand";
 @import "acf-blocks/link-block";
 //@import "acf-blocks/toc";
 @import "acf-blocks/howto";
-
 @import "acf-blocks/icon-block";
 
 
 
-@import "page-header";
+//@import "page-header";
 //@import "primary-nav";
 //@import "burger";
 @import "header-mobile-buttons";
@@ -70,8 +73,7 @@
 @import "page-footer";
 @import "footer-column";
 //@import "social-list";
-@import "comments";
-@import "author-badge";
+//@import "author-badge";
 @import "top-button";
 @import "footer-copyright";
 @import "mobile-button/mobile-button";

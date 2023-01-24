@@ -19,12 +19,19 @@
   padding-left: 8px;
   padding-right: 8px;
   $this: &;
+  width: var(--button-width);
+
 
   &:hover,
   &:focus {
     color: var(--buttons-color-hover);
     background: var(--buttons-background-hover);
 
+  }
+
+  @media (max-width: 1366px) {
+    width: unset;
+    max-width: var(--button-width, 100%);
   }
 
   @media (max-width: 600px) {

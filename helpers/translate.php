@@ -12,7 +12,8 @@
 				'placeholder_name'    => 'Name',
 				'placeholder_email'   => 'Email',
 				'placeholder_comment' => 'Comment',
-				'comment_button'      => 'Comment'
+				'comment_button'      => 'Comment',
+				'share_social_link_title' => 'Share'
 			],
 			'bn' => [
 				'toc_show'            => 'দেখান',
@@ -24,7 +25,8 @@
 				'placeholder_name'    => 'নাম',
 				'placeholder_email'   => 'ইমেইল',
 				'placeholder_comment' => 'মন্তব্য করুন',
-				'comment_button'      => 'মন্তব্য করুন'
+				'comment_button'      => 'মন্তব্য করুন',
+				'share_social_link_title' => 'ভাগ করুন'
 			],
 			'pt-br' => [
 				'toc_show'            => 'Mostrar',
@@ -36,7 +38,8 @@
 				'placeholder_name'    => 'Nome',
 				'placeholder_email'   => 'Email',
 				'placeholder_comment' => 'Comentário',
-				'comment_button'      => 'Comentário'
+				'comment_button'      => 'Comentário',
+				'share_social_link_title' => 'Compartilhar'
 			]
 		];
 

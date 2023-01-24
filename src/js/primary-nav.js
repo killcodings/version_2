@@ -16,29 +16,29 @@ export default class PrimaryNav {
 
             let scrollPosition = 0;
             const pageHeader = document.querySelector('.header');
-            // window.addEventListener('scroll', function () {
-            //     const scrollTop = document.documentElement.scrollTop;
-            //     if (scrollTop > scrollPosition) {
-            //         pageHeader.classList.remove('page-header_fixed_active');
-            //
-            //         if (scrollTop >= pageHeader.offsetHeight) {
-            //             pageHeader.classList.add('page-header_hidden');
-            //             pageHeader.classList.add('page-header_fixed');
-            //             document.body.style.paddingTop = pageHeader.offsetHeight + 'px';
-            //         }
-            //     } else if (scrollTop < scrollPosition) {
-            //         pageHeader.classList.remove('page-header_hidden');
-            //         pageHeader.classList.add('page-header_fixed_active');
-            //     }
-            //
-            //     if (scrollTop === 0) {
-            //         pageHeader.classList.remove('page-header_fixed_active');
-            //         pageHeader.classList.remove('page-header_hidden');
-            //         pageHeader.classList.remove('page-header_fixed');
-            //         document.body.style.paddingTop = '0';
-            //     }
-            //     scrollPosition = scrollTop;
-            // });
+            window.addEventListener('scroll', function () {
+                const scrollTop = document.documentElement.scrollTop;
+                if (scrollTop > scrollPosition) {
+                    pageHeader.classList.remove('header_fixed_active');
+
+                    if (scrollTop >= pageHeader.offsetHeight) {
+                        pageHeader.classList.add('header_hidden');
+                        pageHeader.classList.add('header_fixed');
+                        document.body.style.paddingTop = pageHeader.offsetHeight + 'px';
+                    }
+                } else if (scrollTop < scrollPosition) {
+                    pageHeader.classList.remove('header_hidden');
+                    pageHeader.classList.add('header_fixed_active');
+                }
+
+                if (scrollTop === 0) {
+                    pageHeader.classList.remove('header_fixed_active');
+                    pageHeader.classList.remove('header_hidden');
+                    pageHeader.classList.remove('header_fixed');
+                    document.body.style.paddingTop = '0';
+                }
+                scrollPosition = scrollTop;
+            });
 
             const primaryNavList = primaryNav.querySelector('.primary-nav__list');
             const burger = document.querySelector('.burger');

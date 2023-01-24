@@ -5,7 +5,7 @@ $author_setup = get_field( 'user_setup', "user_$author_id" );
 if ( $currentLang === 'en' ) {
 	$currentLang = '';
 } else {
-    $currentLang = "_$currentLang";
+	$currentLang = "_$currentLang";
 }
 ?>
 <div class="container">
@@ -22,4 +22,42 @@ if ( $currentLang === 'en' ) {
             <a href="<?= get_author_posts_url( $author_id ) ?>" class="author-badge__link"></a>
         </div>
     </section>
+	<?php $social_links = get_field( 'social_footer', 'options' );
+	if ( $social_links ): ?>
+        <div class="nav-socials">
+            <div class="nav-socials__items">
+				<?php foreach ( $social_links as $link ): ?>
+                    <div class="nav-socials__item">
+                        <a class="nav-socials__item-link" href="<?= $link['link'] ?>" rel="nofollow">
+							<?php if ( $link['social'] === 'facebook' ) : ?>
+                                <svg class="facebook" width="20" height="20" fill="none">
+                                    <use xlink:href="#nav-socials__item-facebook"></use>
+                                </svg>
+							<?php endif;
+							if ( $link['social'] === 'linkedin' ) : ?>
+                                <svg class="twitter" width="20" height="18" fill="none" ">
+                                    <use xlink:href="#nav-socials__item-twitter"></use>
+                                </svg>
+							<?php endif;
+							if ( $link['social'] === 'instagram' ) : ?>
+                                <svg class="twitter" width="20" height="18" fill="none" ">
+                                    <use xlink:href="#nav-socials__item-twitter"></use>
+                                </svg>
+							<?php endif;
+							if ( $link['social'] === 'pinterest' ) : ?>
+                                <svg class="twitter" width="20" height="18" fill="none" ">
+                                    <use xlink:href="#nav-socials__item-twitter"></use>
+                                </svg>
+							<?php endif;
+							if ( $link['social'] === 'twitter' ) : ?>
+                                <svg class="twitter" width="20" height="18" fill="none" ">
+                                    <use xlink:href="#nav-socials__item-twitter"></use>
+                                </svg>
+							<?php endif; ?>
+                        </a>
+                    </div>
+				<?php endforeach; ?>
+            </div>
+        </div>
+	<?php endif; ?>
 </div>

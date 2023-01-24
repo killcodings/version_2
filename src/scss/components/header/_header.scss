@@ -49,19 +49,9 @@
 
 
 
-/*
-@media (max-width: 1150px) {
-  .page-header {
-    position: relative;
-  }
-}
-
 @media (max-width: 1000px) {
-  .page-header {
-
-    &__block {
-      padding: 0;
-    }
+  .header {
+    position: relative;
 
     &_hidden {
       transform: translateY(calc(-100% - 47px));
@@ -73,7 +63,6 @@
       left: 0;
       width: 100%;
       z-index: 9999;
-      padding: 0;
 
       &_active {
         transform: translateY(0);
@@ -81,4 +70,4 @@
       }
     }
   }
-}*/
+}

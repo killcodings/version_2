@@ -38,14 +38,8 @@ $style = "style = '--position-buttons:$position_buttons;$button_width'";
 
 		$is_button_icon = $button['button_icon_use'] ?? false;
 
-		?>
-        <div>
+		echo app_get_button( $button['button'], "buttons__item $buttons_item_class button_{$button_style}", null, $buttons_custom_color, $button_image, $is_button_icon );
 
-			<?php
-
-			echo app_get_button( $button['button'], "buttons__item $buttons_item_class button_{$button_style}", null, $buttons_custom_color, $button_image, $is_button_icon ); ?>
-
-        </div>
-	<?php } ?>
+	} ?>
 </div>
 
