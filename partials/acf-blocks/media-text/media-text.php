@@ -14,6 +14,7 @@ $logo_text_size  = get_field('logo_text_size') ?? '50';
 $background_color_logo_text = get_field('background_color_logo_text') ?? '#000';
 $logo_text_image = get_field('logo_text_image');
 $logo_text_text  = get_field('logo_text_text');
+$swiper = get_field('swiper') ?? false;
 
 if ( $is_horizontally ) {
 	$main_class .= ' media-text_horizontal';
@@ -49,6 +50,7 @@ if ( $is_add_buttons ) {
 	}
 }*/
 
+
 acf_block_before( 'Изображение и текст', $is_preview );
 ?>
 
@@ -81,6 +83,18 @@ acf_block_before( 'Изображение и текст', $is_preview );
 					} else {
 						echo app_get_image( [ 'id' => $image ] );
 					}
+                elseif ('swiper') : ?>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+			                <?php foreach ($swiper as $swiper_slide) : ?>
+                                <div class="swiper-slide">
+					                <?= app_get_image( [ 'id' => $swiper_slide['swiper-slide'] ] ); ?>
+                                </div>
+			                <?php endforeach; ?>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                <?php
 				else:
 					$video = get_field( 'video' );
 					echo app_get_video( $video );

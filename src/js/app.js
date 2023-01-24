@@ -12,6 +12,7 @@ import MobileButton from './mobile-button';
 import BonusButton from "./bonus-button";
 import HeaderBonus from "./header-bonus";
 import Widget from "./widget";
+import Swipers from "./swipers";
 
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -64,6 +65,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             init: () => new Widget(),
             selectors: ['.widget']
         },
+        swipers: {
+            init: () => new Swipers(),
+            selectors: ['.swiper']
+        }
     }
 
     Object.keys(window.refs).forEach((ref) => {

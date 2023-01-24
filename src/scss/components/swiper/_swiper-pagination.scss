@@ -1,0 +1,29 @@
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+
+  &-bullets {
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+  }
+
+  &-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+    background: #984E5B;
+    opacity: 1;
+
+    &-active {
+      background: #fff;
+      opacity: 1;
+    }
+  }
+}

@@ -61,15 +61,17 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 1,
             "choices": {
                 "image": "Изображение",
+                "swiper": "Слайдер",
                 "video": "Видео"
             },
             "default_value": "image",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
             "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
             "ajax": 0,
             "placeholder": ""
         },
@@ -95,8 +97,8 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 1,
             "return_format": "id",
-            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -104,7 +106,68 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_63cf5a3bac794",
+            "label": "Слайды",
+            "name": "swiper",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61af166cd8e8a",
+                        "operator": "==",
+                        "value": "swiper"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63cf5a9eac795",
+                    "label": "Слайд",
+                    "name": "swiper-slide",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "thumbnail",
+                    "parent_repeater": "field_63cf5a3bac794"
+                }
+            ]
         },
         {
             "key": "field_61b1e3216fe4d",
@@ -1124,5 +1187,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673459472
+    "modified": 1674534759
 }
