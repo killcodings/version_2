@@ -85,18 +85,34 @@
         padding-right: 15px;
 
         &::after {
-          content: '\e802';
-          top: 1px;
-          right: 0;
+          font-family: dashicons;
+          content: "\f347";
+          top: 2px;
+          right: -5px;
           color: var(--primary-nav-submenu-arrow, #fff);
-          transform: rotate(180deg);
+          display: inline-block;
+          line-height: 1;
+          font-weight: 400;
+          font-style: normal;
+          speak: never;
+          text-decoration: inherit;
+          text-transform: none;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          width: 20px;
+          height: 20px;
+          font-size: 20px;
+          vertical-align: top;
+          text-align: center;
         }
       }
 
       @media (min-width: 1000px) {
         &:hover, &:focus {
           &::after {
-            transform: rotate(0deg);
+            transform: rotate(180deg);
+            color: var(--primary-nav-color-hover, #fff);
           }
 
           & .menu-depth-1 {
@@ -148,6 +164,9 @@
           right: 1rem;
           color: var(--primary-nav-submenu-color);
           transform: translateY(-50%);
+          background: red;
+          width: 10px;
+          height: 10px;
         }
 
         &::before {
@@ -276,10 +295,25 @@
       color: var(--primary-nav-color-mobile);
 
       &::after {
-        content: '\e800';
-        font-family: "fontello";
-        font-size: 12px;
         margin-right: 5px;
+        font-family: dashicons;
+        content: "\f347";
+        display: inline-block;
+        line-height: 1;
+        font-weight: 400;
+        font-style: normal;
+        speak: never;
+        text-decoration: inherit;
+        text-transform: none;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        vertical-align: top;
+        text-align: center;
+        transform: rotate(90deg);
       }
     }
 
@@ -307,15 +341,32 @@
           }
 
           &::after {
-            content: '\e801';
+            //line-height: 50px;
+            transform: rotate(-90deg);
+
+          }
+
+          &::after {
+            font-family: dashicons;
+            content: "\f347";
             top: 0;
             right: 0;
+            color: var(--primary-nav-color-mobile);
+            display: inline-block;
+            line-height: 1;
+            font-weight: 400;
+            font-style: normal;
+            speak: never;
+            text-decoration: inherit;
+            text-transform: none;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             height: 100%;
             width: 55px;
+            font-size: 20px;
+            vertical-align: top;
             text-align: center;
-            line-height: 50px;
-            transform: none;
-            color: var(--primary-nav-color-mobile);
           }
         }
       }

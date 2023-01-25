@@ -31,7 +31,7 @@ acf_block_before( 'How To', $is_preview );
 				$howto_steps[] = $howto_step;
 				?>
                 <article class="howto__item">
-                <span class="howto__counter"><span class="how-to__step">Step</span><?= $index + 1 ?></span>
+                <span class="howto__counter"><span class="howto__step">Step</span><?= $index + 1 ?></span>
                 <div class="howto__image">
 					<?= app_get_image( [ 'id' => $item['image'] ] ) ?>
                 </div>

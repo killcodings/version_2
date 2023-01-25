@@ -28,6 +28,8 @@
     @include mixins.sizeRatio(40px);
     border: 1px solid #D0D5DD;
     position: relative;
+    background-color: var(--footer-social-background);
+    color: var(--footer-social-color);
 
     &:not(:last-child) {
       border-right: unset;
@@ -41,14 +43,17 @@
       width: 100%;
       height: 100%;
       use {
-        fill: #D02E4B;
+        fill: var(--footer-social-color);
+      }
+      &:hover {
+        opacity: 0.8;
       }
     }
   }
 
   .dashicons-before {
     &:hover {
-      color: var(--accent-color);
+      opacity: 0.8;
     }
   }
 

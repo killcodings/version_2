@@ -380,7 +380,7 @@ function app_links( $apps_array, $title, $priopity_app ) {
 				<?php if ( ! empty( $relative_apps_main_title ) ): ?>
                     <h2 class="relative-items__main-title"><?= $relative_apps_main_title ?></h2>
 				<?php endif; ?>
-                <div class="title_image_text links-block">
+                <div class="image_title_text_arrow links-block">
 
 					<?php
 

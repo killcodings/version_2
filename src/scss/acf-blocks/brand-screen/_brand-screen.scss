@@ -29,12 +29,10 @@
 
   &__info {
     text-align: center;
-    color: var(--text-color);
   }
 
   &__title {
     text-align: center;
-    color: var(--text-color);
   }
 
   .bonus {
@@ -56,8 +54,6 @@
   gap: 0 64px;
   padding: 32px;
   border: 1px solid #EAECF0;
-
-
 
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;

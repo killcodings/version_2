@@ -41,7 +41,7 @@ else:
 									"button_icon_use" => 'comment'
 								]
 							],
-						"buttons_setting" => [ "button_width" => 800, "buttons_item_class" => "comment-form__button", "position_buttons" => "center" ]
+						"buttons_setting" => [ "button_width" => '100%', "buttons_item_class" => "comment-form__button", "position_buttons" => "center" ]
 
 					];
 					echo get_component( 'buttons/buttons-main', $buttons_main_setting );
@@ -50,7 +50,7 @@ else:
                     <span class="comment-form__alert"></span>
                 </form>
             </div>
-			<?php app_get_comment_list( $post ); ?>
         </section>
+        <section class="container"><?php app_get_comment_list( $post ); ?></section>
     </footer>
 <?php endif;

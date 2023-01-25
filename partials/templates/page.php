@@ -3,7 +3,7 @@
         <div class="container">
             <div class="page-update">
 			    <?php
-			    $update_date     = get_the_modified_date( 'Y.m.d' );
+			    $update_date     = get_the_modified_date( 'Y-m-d' );
 			    $update_time     = get_the_modified_time( 'h:i A' );
 			    $update_date_str = $update_date . ' ' . $update_time;
 			    ?>
@@ -30,22 +30,22 @@
                                     </svg>
                                 <?php endif;
                                 if ($link['social'] === 'linkedin') : ?>
-                                    <svg class="twitter" width="20" height="18"  fill="none" ">
+                                    <svg class="twitter" width="20" height="18"  fill="none">
                                         <use xlink:href="#nav-socials__item-twitter"></use>
                                     </svg>
                                 <?php endif;
                                 if ($link['social'] === 'instagram') : ?>
-                                    <svg class="twitter" width="20" height="18"  fill="none" ">
+                                    <svg class="twitter" width="20" height="18"  fill="none">
                                         <use xlink:href="#nav-socials__item-twitter"></use>
                                     </svg>
                                 <?php endif;
                                 if ($link['social'] === 'pinterest') : ?>
-                                    <svg class="twitter" width="20" height="18"  fill="none" ">
-                                    <use xlink:href="#nav-socials__item-twitter"></use>
+                                    <svg class="twitter" width="20" height="18"  fill="none">
+                                        <use xlink:href="#nav-socials__item-twitter"></use>
                                     </svg>
                                 <?php endif;
                                 if ($link['social'] === 'twitter') : ?>
-                                    <svg class="twitter" width="20" height="18"  fill="none" ">
+                                    <svg class="twitter" width="20" height="18"  fill="none">
                                     <use xlink:href="#nav-socials__item-twitter"></use>
                                     </svg>
                                 <?php endif; ?>

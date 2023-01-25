@@ -19,8 +19,7 @@
 
   &__form {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
   }
 
   &__field {
@@ -52,9 +51,14 @@
   }
 
   &__alert {
+    display: none;
     margin-top: 20px;
     color: red;
     font-weight: 600;
+
+    &.error {
+      display: block;
+    }
   }
 }
 

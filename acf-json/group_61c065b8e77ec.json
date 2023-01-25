@@ -6,6 +6,7 @@
             "key": "field_61c065c723450",
             "label": "Добавить записи",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_61c065e323451",
             "label": "Добавить записи",
             "name": "choose_posts",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -31,16 +33,20 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_61c066a723454",
-            "min": 0,
-            "max": 0,
+            "wpml_cf_preferences": 1,
             "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 3,
+            "collapsed": "field_61c066a723454",
             "button_label": "Добавить запись",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_61dd42925b66a",
                     "label": "Тип ссылки",
                     "name": "link_type",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -61,12 +67,14 @@
                     "ui": 0,
                     "return_format": "value",
                     "ajax": 0,
-                    "placeholder": ""
+                    "placeholder": "",
+                    "parent_repeater": "field_61c065e323451"
                 },
                 {
                     "key": "field_61c066a723454",
                     "label": "Ссылка на запись",
                     "name": "page_link",
+                    "aria-label": "",
                     "type": "page_link",
                     "instructions": "",
                     "required": 0,
@@ -91,12 +99,14 @@
                     "taxonomy": "",
                     "allow_null": 0,
                     "allow_archives": 0,
-                    "multiple": 0
+                    "multiple": 0,
+                    "parent_repeater": "field_61c065e323451"
                 },
                 {
                     "key": "field_61dd456b5b66b",
                     "label": "Выбрать партнерскую",
                     "name": "copy_select_link",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -114,22 +124,21 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": {
-                        "https:\/\/google.com": "Google",
-                        "https:\/\/ya.ru": "Yandex"
-                    },
+                    "choices": [],
                     "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
                     "return_format": "value",
                     "ajax": 0,
-                    "placeholder": ""
+                    "placeholder": "",
+                    "parent_repeater": "field_61c065e323451"
                 },
                 {
                     "key": "field_61dd45965b66c",
                     "label": "Ввести ссылку",
                     "name": "input_link",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -148,12 +157,14 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "parent_repeater": "field_61c065e323451"
                 },
                 {
                     "key": "field_61c066d823455",
                     "label": "Заголовок",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -167,12 +178,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_61c065e323451"
                 },
                 {
                     "key": "field_61c066e323456",
                     "label": "Текст",
                     "name": "text",
+                    "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -186,12 +199,14 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": 3,
-                    "new_lines": ""
+                    "new_lines": "",
+                    "parent_repeater": "field_61c065e323451"
                 },
                 {
                     "key": "field_61c06cc7daba7",
                     "label": "Изображение",
                     "name": "image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -210,7 +225,8 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "parent_repeater": "field_61c065e323451"
                 }
             ]
         },
@@ -218,6 +234,7 @@
             "key": "field_61c0662723452",
             "label": "Внешний вид",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -234,6 +251,7 @@
             "key": "field_61c0663823453",
             "label": "Внешний вид",
             "name": "template",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -243,17 +261,18 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 1,
             "choices": {
                 "title_image_text": "Заголовок - картинка - текст",
                 "image_title_text_arrow": "Картинка - текст - заголовок - кнопка со стрелкой",
                 "image_title_text_read_more": "Картинка - текст - заголовок - Read more"
             },
             "default_value": "title_image_text",
-            "allow_null": 0,
+            "return_format": "value",
             "multiple": 0,
+            "allow_null": 0,
             "ui": 1,
             "ajax": 0,
-            "return_format": "value",
             "placeholder": ""
         }
     ],
@@ -275,5 +294,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641891584
+    "modified": 1674618917
 }

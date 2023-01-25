@@ -11,11 +11,7 @@ $font                  = get_field( 'font', 'options' ) ?: 'Montserrat';
 <style>
     :root {
         --offsets: 64px;
-
-
         --section-offsets: 48px;
-
-
         --body-font: <?= $font ?>;
         --logo-max-width: <?= $logo_max_width - 20 ?: '140' ?>px;
         --accent-color: <?= $accent_color ?: '#000' ?>;
@@ -50,7 +46,7 @@ $font                  = get_field( 'font', 'options' ) ?: 'Montserrat';
         --footer-item-color: <?=  $footer_colors['item_color'] ?: '#FFF' ?>;
         --footer-item-color-hover: <?=  $footer_colors['item_color_hover'] ?: '#FFF' ?>;
         --footer-social-background: <?= $footer_colors['social_background'] ?: '#FFF' ?>;
-        --footer-social-color: <?= $footer_colors['social_color'] ?: '#000' ?>;
+        --footer-social-color: <?= $footer_colors['social_color'] ?: '--accent-color' ?>;
     <?php if ($is_change_body_colors):
      $body_colors = get_field('body_colors', 'options'); ?> --body-background: <?= $body_colors['background'] ?: '#000' ?>;
         --body-color: <?= $body_colors['color'] ?: '#fff' ?>;

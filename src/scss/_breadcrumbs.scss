@@ -1,5 +1,8 @@
 .breadcrumbs {
-  padding: 10px 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  color: #98A2B3;
 
   &__list {
     display: flex;

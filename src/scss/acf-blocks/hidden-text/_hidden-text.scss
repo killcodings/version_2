@@ -18,17 +18,30 @@
 
     &::after {
       content: '';
-      position: absolute;
       transform: translateY(0) rotateZ(0deg);
-      transition: 250ms all;
       margin-left: auto;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 1.01904L10 10.019L1 1.01904' stroke='%23D02E4B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
-      background-size: 100%;
-      background-repeat: no-repeat;
+      transition: 250ms all;
       position: absolute;
       right: 0;
-      width: 20px;
-      height: 11px;
+      font-family: dashicons;
+      content: "\f347";
+      display: inline-block;
+      line-height: 1;
+      font-weight: 400;
+      font-style: normal;
+      speak: never;
+      text-decoration: inherit;
+      text-transform: none;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+      vertical-align: top;
+      text-align: center;
+      transform: rotate(0deg);
+      color: var(--accent-color);
     }
   }
 
