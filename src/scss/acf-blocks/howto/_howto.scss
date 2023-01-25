@@ -6,10 +6,10 @@
   &__label {
     text-align: center;
     background: var(--accent-color);
+    color: var(--accent-color-text);
     margin: var(--label-position);
     width: max-content;
     padding: 2px 7px;
-    color: var(--color-text);
     font-size: 12px;
     line-height: 18px;
   }
@@ -36,6 +36,7 @@
     flex-direction: column;
     gap: 16px;
     max-width: 414px;
+    min-width: 100%;
     padding: 16px;
     border: 1px solid #EAECF0;
     margin-top: -1px;
@@ -73,6 +74,7 @@
     //color: var(--how-to-label-counter-color);
     //background: var(--how-to-label-counter-bg);
     background: var(--accent-color);
+    color: var(--accent-color-text);
   }
 
   &__step {

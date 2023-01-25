@@ -215,24 +215,6 @@ body[data-change-theme] {
     }
   }
 
-  .image_title_text_arrow.links-block,
-  .image_title_text_read_more.links-block {
-    .link-block {
-      background: transparent;
-      border: 1px solid var(--accent-color);
-    }
-  }
-
-  .image_title_text_read_more.links-block {
-
-    .link-block {
-
-      &__link {
-        color: var(--accent-color);
-      }
-    }
-  }
-
   .author-badge {
 
     &__block {

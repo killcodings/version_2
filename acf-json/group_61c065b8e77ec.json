@@ -229,51 +229,6 @@
                     "parent_repeater": "field_61c065e323451"
                 }
             ]
-        },
-        {
-            "key": "field_61c0662723452",
-            "label": "Внешний вид",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_61c0663823453",
-            "label": "Внешний вид",
-            "name": "template",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 1,
-            "choices": {
-                "title_image_text": "Заголовок - картинка - текст",
-                "image_title_text_arrow": "Картинка - текст - заголовок - кнопка со стрелкой",
-                "image_title_text_read_more": "Картинка - текст - заголовок - Read more"
-            },
-            "default_value": "title_image_text",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 1,
-            "ajax": 0,
-            "placeholder": ""
         }
     ],
     "location": [
@@ -294,5 +249,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674618917
+    "modified": 1674662635
 }

@@ -30,18 +30,18 @@
                                     </svg>
                                 <?php endif;
                                 if ($link['social'] === 'linkedin') : ?>
-                                    <svg class="twitter" width="20" height="18"  fill="none">
-                                        <use xlink:href="#nav-socials__item-twitter"></use>
+                                    <svg class="linkedin" width="18" height="18"  fill="none">
+                                        <use xlink:href="#nav-socials__item-linkedin"></use>
                                     </svg>
                                 <?php endif;
                                 if ($link['social'] === 'instagram') : ?>
-                                    <svg class="twitter" width="20" height="18"  fill="none">
-                                        <use xlink:href="#nav-socials__item-twitter"></use>
+                                    <svg class="instagram" width="18" height="19"  fill="none">
+                                        <use xlink:href="#nav-socials__item-instagram"></use>
                                     </svg>
                                 <?php endif;
                                 if ($link['social'] === 'pinterest') : ?>
-                                    <svg class="twitter" width="20" height="18"  fill="none">
-                                        <use xlink:href="#nav-socials__item-twitter"></use>
+                                    <svg class="pinterest" width="18" height="19"  fill="none">
+                                        <use xlink:href="#nav-socials__item-pinterest"></use>
                                     </svg>
                                 <?php endif;
                                 if ($link['social'] === 'twitter') : ?>

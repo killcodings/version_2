@@ -1,0 +1,14 @@
+{
+  "name": "acf/link-block",
+  "title": "Блок перелинковки",
+  "description": "linkBlock",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "admin-links",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "link-block.php"
+  },
+  "align": "full"
+}

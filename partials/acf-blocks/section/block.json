@@ -1,0 +1,14 @@
+{
+  "name": "acf/section",
+  "title": "Секция",
+  "description": "sectionBlock",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "block-default",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "section.php"
+  },
+  "align": "full"
+}

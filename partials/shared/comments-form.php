@@ -51,6 +51,6 @@ else:
                 </form>
             </div>
         </section>
-        <section class="container"><?php app_get_comment_list( $post ); ?></section>
+        <div class="container"><?php app_get_comment_list( $post ); ?></div>
     </footer>
 <?php endif;

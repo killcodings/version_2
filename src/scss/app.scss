@@ -33,21 +33,16 @@
 @use "acf-blocks/gallery/gallery";
 @use "acf-blocks/section-tag";
 @use "acf-blocks/howto/howto";
+@use "acf-blocks/link-block/link-block";
 
 
 @use "comments";
-
-
-
-
-
 
 // ACF Blocks
 
 //@import "acf-blocks/brand-table/brand-table";
 //@import "acf-blocks/brand-table/simple-brand-table";
 //@import "acf-blocks/single-brand";
-@import "acf-blocks/link-block";
 //@import "acf-blocks/toc";
 //@import "acf-blocks/howto";
 @import "acf-blocks/icon-block";

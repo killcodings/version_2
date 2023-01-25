@@ -125,13 +125,6 @@ add_action( 'acf/init', function () {
 
 	if ( function_exists( 'acf_register_block_type' ) ) {
 		acf_create_block( 'image', 'Изображение', 'image' );
-
-
-		acf_create_block( 'section', 'Секция', 'section', true );
-
-		acf_create_block( 'single-brand', 'Блок одного бренда', 'single-brand', true );
-		acf_create_block( 'link-block', 'Блок для перелинковки', 'link-block' );
-
 		acf_create_block( 'icon-block', 'Блок с иконками', 'icon-block' );
 		acf_create_block( 'video', 'Видео', 'video' );
 		acf_create_block( 'matches-cards', 'Карточки матчей', 'matches-cards' );
@@ -145,20 +138,19 @@ function register_acf_blocks() {
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/buttons' );
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/media-text' );
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/brands' );
-
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/brand-screen' );
-
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/lists' );
-
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/deposit-methods' );
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/hidden-text' );
-
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/gallery' );
-
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/howto' );
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/link-block' );
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/section' );
 
 
 
+//	acf_create_block( 'section', 'Секция', 'section', true );
+//	acf_create_block( 'link-block', 'Блок для перелинковки', 'link-block' );
 //	acf_create_block( 'howto', 'How To', 'howto' );
 //	acf_create_block( 'gallery', 'Галерея', 'gallery' );
 //	acf_create_block( 'hidden-text', 'Скрытый текст (FAQ)', 'hidden-text', true );
