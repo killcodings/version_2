@@ -20,7 +20,7 @@ if ( $brand_setup === 'custom' ) {
 		$table_item['cons']            = $item['cons'];
 		$table_item['brands-bonus-title']       = $item['brands-bonus-title'];
 		$table_item['brands-bonus-description'] = $item['brands-bonus-description'];
-		$table_item['button_icon']     = $item['button_icon'] ?? false;
+		$table_item['button_icon']     = $item['button_icon'] ? $item['button_icon_use'] : false;
 
 
 		if ( $item['choose_link'] === 'input_link' ) {
@@ -31,7 +31,7 @@ if ( $brand_setup === 'custom' ) {
 		$button                     = app_get_button( [
 			'url'   => $button_url,
 			'title' => $partner_link_title
-		], 'button_outline', $item['link_relations'], $custom_colors = null, $button_image = false, $button_icon = $item['button_icon'] );
+		], 'button_outline', $item['link_relations'], $custom_colors = null, $button_image = false, $button_icon = $table_item['button_icon'] );
 
 		$table_item['partner_link'] = $button ?? false;
 		$table_item['counter']      = $index + 1;
@@ -56,8 +56,7 @@ if ( $brand_setup === 'custom' ) {
 			$table_item['bonus']           = $brand_setup['bonus'];
 			$table_item['brands-bonus-title']       = $brand_setup['brands-bonus-title'];
 			$table_item['brands-bonus-description'] = $brand_setup['brands-bonus-description'];
-
-			$button_icon                = $brand_setup['button_icon'] ?? false;
+			$table_item['button_icon']     = $brand_setup['button_icon'] ? $brand_setup['button_icon_use'] : false;
 
 			$table_item['cons'] = $brand_setup['cons'];
 			if ( $brand_setup['choose_link'] === 'input_link' ) {
@@ -68,7 +67,7 @@ if ( $brand_setup === 'custom' ) {
 			$button                     = app_get_button(
 				[ 'url' => $button_url, 'title' => $partner_link_title ],
 				'button_outline',
-				$brand_setup['link_relations'], $custom_colors = null, $button_image = false, $button_icon
+				$brand_setup['link_relations'], $custom_colors = null, $button_image = false, $button_icon = $table_item['button_icon']
 			);
 
 			$table_item['partner_link'] = $button;
@@ -128,7 +127,7 @@ if ( $table_arr ): ?>
 					<?php if ( $is_enable_brand_title_link && $item['page_link'] ): ?>
                         <a href="<?= $item['page_link'] ?>" class="brands__icon-title"><?= $item['name'] ?></a>
 					<?php else: ?>
-                        <span class="brands__icon-title"></span>
+                        <span class="brands__icon-title"><?= $item['name'] ?></span>
 					<?php endif; ?>
                 </td>
                 <td class="brands__highlights">
@@ -138,10 +137,8 @@ if ( $table_arr ): ?>
                             <ul class="brands__highlights-lists list__items">
 								<?php foreach ( $item['cons'] as $con ): ?>
                                     <li class="list__item">
-                                        <svg class="list__icon" width="10" height="8" viewBox="0 0 10 8" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.57129 3.48926L4.07129 5.98926L8.07129 1.98926" stroke="white"
-                                                  stroke-width="2" stroke-linecap="round"/>
+                                        <svg class="list__icon list__item-icon-highlights" fill="none">
+                                            <use xlink:href="#list__item-icon-highlights-id"></use>
                                         </svg>
 										<?= $con['item'] ?>
                                     </li>
@@ -158,18 +155,9 @@ if ( $table_arr ): ?>
 					<?php if ( $item['bonus'] ) : ?>
                         <div class="brands__bonus-value">
                             <div class="brands__bonus-icon">
-                                <svg class="brands__bonus-resize" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_5585_42168_3)">
-                                        <path d="M13.2575 7.95447V14.5833H2.65144V7.95447M7.95447 14.5833V4.64008M7.95447 4.64008H4.97152C4.532 4.64008 4.11049 4.46548 3.7997 4.1547C3.48892 3.84391 3.31432 3.4224 3.31432 2.98288C3.31432 2.54336 3.48892 2.12185 3.7997 1.81107C4.11049 1.50028 4.532 1.32568 4.97152 1.32568C7.29159 1.32568 7.95447 4.64008 7.95447 4.64008ZM7.95447 4.64008H10.9374C11.3769 4.64008 11.7985 4.46548 12.1092 4.1547C12.42 3.84391 12.5946 3.4224 12.5946 2.98288C12.5946 2.54336 12.42 2.12185 12.1092 1.81107C11.7985 1.50028 11.3769 1.32568 10.9374 1.32568C8.61735 1.32568 7.95447 4.64008 7.95447 4.64008ZM1.32568 4.64008H14.5833V7.95447H1.32568V4.64008Z"
-                                              stroke="white" stroke-width="1.32841" stroke-linecap="round"
-                                              stroke-linejoin="round"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_5585_42168_4">
-                                            <rect width="15.9091" height="15.9091" fill="white"/>
-                                        </clipPath>
-                                    </defs>
+
+                                <svg class="brands__bonus-resize" fill="none">
+                                    <use xlink:href="#bonus__icon-item-present"></use>
                                 </svg>
                             </div>
 							<?= $item['bonus'] ?>

@@ -4,18 +4,6 @@ $lists = $args['list'];
 
 ?>
 
-<svg display="none">
-    <symbol id="list__item-icon-pros-id" viewBox="0 0 8 9">
-        <path d="M1 4.01898H7" stroke="var(--color-icon)" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4 7.01898L4 1.01898" stroke="var(--color-icon)" stroke-width="2" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="list__item-icon-cons-id" viewBox="0 0 8 3">
-        <path d="M1 1.01898H7" stroke="var(--color-icon)" stroke-width="2" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="list__item-icon-highlights-id" viewBox="0 0 9 7">
-        <path d="M1.5 2.51898L4 5.01898L8 1.01898" stroke="var(--color-icon)" stroke-width="2" stroke-linecap="round"/>
-    </symbol>
-</svg>
 
 <div class="lists">
 	<?php foreach ( $lists as $key => $list ) : ?>

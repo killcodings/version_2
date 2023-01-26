@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 1,
             "layout": "block",
             "sub_fields": [
                 {
@@ -59,11 +60,12 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 1,
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 },
                 {
                     "key": "field_61b31bc74f9e4",
@@ -515,6 +517,64 @@
                             "parent_repeater": "field_61b3107923ea5"
                         },
                         {
+                            "key": "field_63d25e00f0f9d",
+                            "label": "Включить иконку?",
+                            "name": "button_icon",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 0,
+                            "parent_repeater": "field_61b3107923ea5"
+                        },
+                        {
+                            "key": "field_63d25e65f0f9e",
+                            "label": "Иконка",
+                            "name": "button_icon_use",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_63d25e00f0f9d",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "arrow": "Стрелочка",
+                                "comment": "Комментарии"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "parent_repeater": "field_61b3107923ea5"
+                        },
+                        {
                             "key": "field_61b7064badf2a",
                             "label": "Выбрать партнерскую",
                             "name": "custom_table_setup_choose_link",
@@ -544,28 +604,6 @@
                             "return_format": "value",
                             "ajax": 0,
                             "placeholder": "",
-                            "parent_repeater": "field_61b3107923ea5"
-                        },
-                        {
-                            "key": "field_63c54a25e6cc2",
-                            "label": "Включить иконку в кнопке?",
-                            "name": "button_icon",
-                            "aria-label": "",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "wpml_cf_preferences": 1,
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": "",
                             "parent_repeater": "field_61b3107923ea5"
                         },
                         {
@@ -618,5 +656,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673880251
+    "modified": 1674733939
 }

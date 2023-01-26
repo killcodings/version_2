@@ -29,6 +29,10 @@
     color: var(--color-icon);
     margin: 0 auto;
     margin-bottom: 8px;
+
+    use {
+      stroke: #fff;
+    }
   }
 
   &__description {

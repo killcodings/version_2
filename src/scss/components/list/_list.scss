@@ -27,8 +27,8 @@
     padding: 2px;*/
     }
 
+
   &__icon {
-    --opacity-bg: 0.8;
     padding: 3px;
     width: 16px;
     height: 16px;
@@ -37,6 +37,7 @@
 
     use {
       transform: translate(0, 1px);
+      stroke: var(--color-icon);
     }
   }
 
@@ -47,7 +48,7 @@
   }
 
   &__item {
-    --opacity-bg: 0;
+    --opacity-bg: 0.8;
     display: flex;
     align-items: center;
     font-weight: 400;
