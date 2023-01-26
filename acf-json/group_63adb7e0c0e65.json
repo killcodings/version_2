@@ -138,15 +138,23 @@
             "type": "range",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63bd9d03260d7",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 1,
-            "default_value": "",
-            "min": "",
+            "default_value": 2,
+            "min": 1,
             "max": 2,
             "step": 1,
             "prepend": "",
@@ -221,9 +229,17 @@
                     "name": "button_width",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "px или %",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63bd9d03260d7",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "50",
                         "class": "",
@@ -244,7 +260,15 @@
                     "type": "select",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63bd9d03260d7",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -281,9 +305,9 @@
                     "wpml_cf_preferences": 1,
                     "message": "",
                     "default_value": 0,
+                    "ui": 0,
                     "ui_on_text": "",
-                    "ui_off_text": "",
-                    "ui": 0
+                    "ui_off_text": ""
                 },
                 {
                     "key": "field_63ce6b9f3caec",
@@ -619,5 +643,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674560372
+    "modified": 1674703869
 }

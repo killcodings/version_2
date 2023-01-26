@@ -1,11 +1,29 @@
 {
     "key": "group_63d1663434c94",
-    "title": "Логотип и изображение",
+    "title": "Блок с иконками",
     "fields": [
         {
-            "key": "field_63d167e11d045",
-            "label": "logo-text-group",
-            "name": "logo-text-group",
+            "key": "field_63d1e46662236",
+            "label": "Блок с иконками",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63d1e7867725f",
+            "label": "Блок с иконками group",
+            "name": "block_icon_group",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -20,11 +38,11 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_63d168481d046",
-                    "label": "Размер логотипа",
-                    "name": "logo_text_size",
+                    "key": "field_63d1e5737e328",
+                    "label": "Включить блок с иконкой",
+                    "name": "is_logo_text",
                     "aria-label": "",
-                    "type": "range",
+                    "type": "true_false",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -34,64 +52,18 @@
                         "id": ""
                     },
                     "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "min": 20,
-                    "max": 200,
-                    "step": 2,
-                    "prepend": "",
-                    "append": ""
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 },
                 {
-                    "key": "field_63d1689e1d047",
-                    "label": "Фон логотипа",
-                    "name": "background_color_logo_text",
+                    "key": "field_63d167e11d045",
+                    "label": "Блок с иконками",
+                    "name": "block_icon_group_settings",
                     "aria-label": "",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "30",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "enable_opacity": 0,
-                    "return_format": "string"
-                },
-                {
-                    "key": "field_63d1696e1d048",
-                    "label": "Изображение логотипа",
-                    "name": "logo_text_image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "30",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "return_format": "id",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "thumbnail"
-                },
-                {
-                    "key": "field_63d169f21d049",
-                    "label": "Текст",
-                    "name": "logo_text_text",
-                    "aria-label": "",
-                    "type": "text",
+                    "type": "group",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -101,16 +73,130 @@
                         "id": ""
                     },
                     "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63d168481d046",
+                            "label": "Размер логотипа",
+                            "name": "logo_text_size",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "min": 20,
+                            "max": 200,
+                            "step": 2,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_63d1689e1d047",
+                            "label": "Фон логотипа",
+                            "name": "background_color_logo_text",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_63d1696e1d048",
+                            "label": "Изображение логотипа",
+                            "name": "logo_text_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_63d169f21d049",
+                            "label": "Текст",
+                            "name": "logo_text_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_63d1ff6f37e79",
+                            "label": "Класс",
+                            "name": "class",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ]
                 }
             ]
         }
     ],
     "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/logo-text"
+            }
+        ],
         [
             {
                 "param": "block",
@@ -128,5 +214,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674668657
+    "modified": 1674708047
 }

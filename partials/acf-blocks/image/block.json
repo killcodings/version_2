@@ -1,0 +1,14 @@
+{
+  "name": "acf/image",
+  "title": "Изображение",
+  "description": "image acf block",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "format-image",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "image.php"
+  },
+  "align": "full"
+}

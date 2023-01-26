@@ -1,0 +1,14 @@
+{
+  "name": "acf/logo-text",
+  "title": "Блок с логотипом и текстом",
+  "description": "logo-text",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "editor-contract",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "logo-text.php"
+  },
+  "align": "full"
+}

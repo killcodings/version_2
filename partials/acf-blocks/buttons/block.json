@@ -1,6 +1,6 @@
 {
   "name": "acf/buttons",
-  "title": "Кнопки Block",
+  "title": "Кнопки",
   "description": "Buttons",
   "style": [ "file:./test.css" ],
   "category": "buttons",

@@ -26,7 +26,7 @@ if ( $reverse ) {
 	$main_class .= ' media-text_reverse';
 }
 
-if (!$is_logo_text && $is_horizontally) {
+if ($block['data']['is_logo_text']) {
 	$main_class .= ' media-text_no-logo-text';
 }
 
@@ -52,10 +52,9 @@ acf_block_before( 'Изображение и текст', $is_preview );
 
     <div class="<?= $main_class ?>" style="<?= $style_string ?>">
 
-        <?php if ($is_logo_text) : ?>
-        <?php   $logo_text_group = get_field('logo-text-group');
-            echo get_component( 'logo-text/logo-text', $logo_text_group ); ?>
-        <?php endif; ?>
+        <?php
+            $icon_block_args = get_field('block_icon_group');
+            echo get_component( 'icon-block/icon-block', $icon_block_args ); ?>
         <div class="media-text__content">
             <InnerBlocks/>
         </div>
@@ -73,7 +72,7 @@ acf_block_before( 'Изображение и текст', $is_preview );
 					} else {
 						echo app_get_image( [ 'id' => $image ] );
 					}
-                elseif ('swiper') : ?>
+                elseif ( $is_add_image_video ==='swiper') : ?>
                     <div class="swiper">
                         <div class="swiper-wrapper">
 			                <?php foreach ($swiper as $swiper_slide) : ?>

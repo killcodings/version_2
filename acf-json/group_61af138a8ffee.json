@@ -1040,73 +1040,9 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
-        },
-        {
-            "key": "field_63beefd8eb1d9",
-            "label": "Логотип изображение",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 1,
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_63bef12feb1da",
-            "label": "Включить логотип и изображение",
-            "name": "is_logo_text",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 1,
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_63d16da004a1a",
-            "label": "Настройки \"логотип текст\"",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 1,
-            "placement": "top",
-            "endpoint": 0
         }
     ],
     "location": [
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/media-text"
-            }
-        ],
         [
             {
                 "param": "block",
@@ -1124,5 +1060,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674671009
+    "modified": 1674700461
 }

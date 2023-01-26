@@ -86,7 +86,6 @@ HTML;
 }
 
 function app_get_button( $button, $class = '', $relations = null, $custom_colors = null, $button_image = false, $button_icon = false ): string {
-
     $partner_links_type = get_field( 'out_links_type', 'options' ) ?? 'link';
 	if ( $button['url'] === '' ) {
 		return false;

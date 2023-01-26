@@ -124,8 +124,7 @@ add_action( 'acf/init', function () {
 	}
 
 	if ( function_exists( 'acf_register_block_type' ) ) {
-		acf_create_block( 'image', 'Изображение', 'image' );
-		acf_create_block( 'icon-block', 'Блок с иконками', 'icon-block' );
+
 		acf_create_block( 'video', 'Видео', 'video' );
 		acf_create_block( 'matches-cards', 'Карточки матчей', 'matches-cards' );
 	}
@@ -134,6 +133,7 @@ add_action( 'acf/init', function () {
 
 
 function register_acf_blocks() {
+
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/banner' );
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/buttons' );
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/media-text' );
@@ -145,10 +145,21 @@ function register_acf_blocks() {
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/gallery' );
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/howto' );
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/link-block' );
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/image' );
+
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/section' );
 
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/logo-text' );
 
 
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/icon-block2' );
+
+
+
+
+
+//	acf_create_block( 'image', 'Изображение', 'image' );
+//	acf_create_block( 'icon-block', 'Блок с иконками', 'icon-block' );
 //	acf_create_block( 'section', 'Секция', 'section', true );
 //	acf_create_block( 'link-block', 'Блок для перелинковки', 'link-block' );
 //	acf_create_block( 'howto', 'How To', 'howto' );

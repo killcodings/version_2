@@ -8,4 +8,4 @@ echo app_get_image( [
 	'classes' => 'image test'
 ] );
 
-acf_block_after($is_preview);
+acf_block_after($is_preview); ?>

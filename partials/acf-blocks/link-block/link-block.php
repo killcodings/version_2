@@ -12,14 +12,9 @@ $chosen_posts = get_field( 'choose_posts' );
                 <div class="link-block__content">
                     <h3 class="link-block__title"><?= $post['title'] ?></h3>
                     <div class="link-block__text"><?= $post['text'] ?></div>
-                    <!--                    <div class="link-block__logo logo-text">-->
-                    <!--                        <div class="link-block__image logo-text__logo">-->
-                    <!--                            <div class="image-func" style="--background-color: #000000">-->
-                    <!--                                <img src="./images/content/brand2.png">-->
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="relative__text logo-text__text">Parimatch</div>-->
-                    <!--                    </div>-->
+	                <?php
+	                $icon_block_args = $post['block_icon_group'];
+	                echo get_component( 'icon-block/icon-block', $icon_block_args ); ?>
                 </div>
 
                 <a href="<?= $post[$link_type] ?>" class="link-block__link" title="Read the post"></a>
