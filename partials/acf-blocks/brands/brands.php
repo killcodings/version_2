@@ -113,10 +113,8 @@ if ( $table_arr ): ?>
             <tr class="brands__row" style="">
                 <td class="brands__counter">
 					<?= $item['counter'] ?>
-                    <svg class="brands__counter-icon" width="9" height="13" viewBox="0 0 9 13" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.605 7.445L2 12L4.5 10.5L7 12L6.395 7.44M8 4.5C8 6.433 6.433 8 4.5 8C2.567 8 1 6.433 1 4.5C1 2.567 2.567 1 4.5 1C6.433 1 8 2.567 8 4.5Z"
-                              stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg class="brands__counter-icon" width="9" height="13" fill="none">
+                        <use xlink:href="#badge__icon"></use>
                     </svg>
                 </td>
                 <td class="brands__icon">
@@ -155,7 +153,6 @@ if ( $table_arr ): ?>
 					<?php if ( $item['bonus'] ) : ?>
                         <div class="brands__bonus-value">
                             <div class="brands__bonus-icon">
-
                                 <svg class="brands__bonus-resize" fill="none">
                                     <use xlink:href="#bonus__icon-item-present"></use>
                                 </svg>

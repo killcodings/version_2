@@ -92,6 +92,10 @@
 
     &-icon {
       margin-left: 5px;
+
+      use {
+        stroke: #fff;
+      }
     }
 
 /*    &:after {

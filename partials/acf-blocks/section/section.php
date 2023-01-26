@@ -32,14 +32,17 @@ $style_string_breadcrumbs = implode( ';', $style_array_breadcrumbs ) ? 'style="'
 $id_string    = $section_anchor ? "id='$section_anchor'" : '';
 
 acf_block_before( 'Секция', $is_preview );
-?>
-    <div class="container<?=$container_class?>" <?=$style_string_breadcrumbs?>>
-		<?php if ( ( ! isset( $GLOBALS['breadcrumbs_showed'] ) ) && function_exists( 'kama_breadcrumbs' ) ) {
-			$GLOBALS['breadcrumbs_showed'] = false;
-			$breadcrumbs_separator         = get_option( 'options_breadcrumbs_settings_separator' );
-			kama_breadcrumbs( $breadcrumbs_separator );
-		} ?>
+
+if ( ( ! isset( $GLOBALS['breadcrumbs_showed'] ) ) && function_exists( 'kama_breadcrumbs' ) ) { ?>
+    <div class="container" <?= $style_string_breadcrumbs ?>>
+		<?php
+		$GLOBALS['breadcrumbs_showed'] = false;
+		$breadcrumbs_separator         = get_option( 'options_breadcrumbs_settings_separator' );
+		kama_breadcrumbs( $breadcrumbs_separator );
+		?>
     </div>
+<?php } ?>
+
 <?= "<$tag class='$section_class' $id_string $style_string>" ?>
     <div class="container<?=$container_class?>">
         <InnerBlocks/>
