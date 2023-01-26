@@ -1,5 +1,5 @@
 <?php the_content(); ?>
-    <section class='section-tag'>
+    <div class='section-tag'>
         <div class="container">
             <div class="page-update">
 			    <?php
@@ -8,8 +8,6 @@
 			    $update_date_str = $update_date . ' ' . $update_time;
 			    ?>
 			    <?= Translate::get('post_updated') ?>: <time datetime="<?= $update_date ?>"><?= $update_date_str ?></time>
-
-
             </div>
         </div>
 	    <?php
@@ -56,7 +54,7 @@
             </div>
         </div>
         <?php endif; ?>
-    </section>
+    </div>
 <?php
 $is_enabled_author             = get_field( 'is_enabled_author', 'options' ) ?? false;
 $is_disabled_author_page_setup = get_field( 'is_disabled_author' ) ?? false;

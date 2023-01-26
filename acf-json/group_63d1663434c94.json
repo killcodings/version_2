@@ -185,6 +185,36 @@
                             "append": ""
                         }
                     ]
+                },
+                {
+                    "key": "field_63d2b101faa35",
+                    "label": "Tag",
+                    "name": "tag",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "div, h2, h3, h4, h5",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "div": "div",
+                        "h2": "h2",
+                        "h3": "h3",
+                        "h4": "h4",
+                        "h5": "h5"
+                    },
+                    "default_value": "h3",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
                 }
             ]
         }
@@ -214,5 +244,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674708047
+    "modified": 1674752773
 }

@@ -111,13 +111,13 @@ if ( $table_arr ): ?>
         <tbody class="brands__body">
 		<?php foreach ( $table_arr as $item ): ?>
             <tr class="brands__row" style="">
-                <td class="brands__counter">
-					<?= $item['counter'] ?>
-                    <svg class="brands__counter-icon" width="9" height="13" fill="none">
-                        <use xlink:href="#badge__icon"></use>
-                    </svg>
-                </td>
                 <td class="brands__icon">
+                    <div class="brands__counter">
+                        <?= $item['counter'] ?>
+                        <svg class="brands__counter-icon" width="9" height="13" fill="none">
+                            <use xlink:href="#badge__icon"></use>
+                        </svg>
+                    </div>
                     <div class="brands__icon-image"
                          style="--brands-icon-background-color:<?= $item['icon_background'] ?>">
 						<?= app_get_image( [ 'id' => $item['icon'] ] ) ?>
