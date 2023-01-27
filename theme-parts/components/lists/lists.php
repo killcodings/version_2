@@ -8,7 +8,7 @@ $lists = $args['list'];
 <div class="lists">
 	<?php foreach ( $lists as $key => $list ) : ?>
         <div class="list" style="--background-font-icon:#F0CFD5;">
-            <h3 class="list__title"><?= $list['list_title'] ?></h3>
+            <h4 class="list__title"><?= $list['list_title'] ?></h4>
 			<?php foreach ( $list['list_items'] as $key => $list_item ) :
 				$li_icon = $list_item['list_item_li_icon'];
                 ?>
