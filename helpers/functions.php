@@ -463,12 +463,18 @@ function app_links( $apps_array, $title, $priopity_app ) {
 					foreach ( $relative_apps as $relative_app ):
 						$page_setup = get_field( 'meta_fields', $relative_app );
 						?>
+
                         <article class="link-block">
-                            <div class="link-block__image"><?= app_get_image( [ 'id' => $page_setup['image'] ] ) ?></div>
-                            <h3 class="link-block__title"><?= get_the_title( $relative_app ) ?></h3>
-                            <div class="link-block__text"><?= $page_setup['description'] ?></div>
-                            <a href="<?= get_permalink( $relative_app ) ?>" class="link-block__link"
-                               title="Read the post"></a>
+                            <?= app_get_image( [ 'id' => $page_setup['image'] ] ) ?>
+                            <div class="link-block__content">
+                                <h3 class="link-block__title"><?= get_the_title( $relative_app ) ?></h3>
+                                <div class="link-block__text"><?= $page_setup['description'] ?></div>
+<!--	                            --><?php
+//	                            $icon_block_args = $post['block_icon_group'];
+//	                            echo get_component( 'icon-block/icon-block', $icon_block_args ); ?>
+
+                            </div>
+                            <a href="<?= get_permalink( $relative_app ) ?>" class="link-block__link" title="Read the post"></a>
                         </article>
 					<?php endforeach; ?>
                 </div>

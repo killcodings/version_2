@@ -6,6 +6,7 @@ $chosen_posts = get_field( 'choose_posts' );
 	<div class="links-block">
 		<?php
 		foreach ( $chosen_posts as $post ):
+			$link_type = $post['link_type'];
         ?>
             <div class="link-block">
                 <?= app_get_image(['id' => $post['image']]) ?>

@@ -63,6 +63,12 @@
       height: 100%;
     }
   }
+}
 
-
+.links-block {
+  &:has(.link-block:nth-child(4)) {
+      .link-block {
+        flex-basis: 23%;
+      }
+    }
 }
