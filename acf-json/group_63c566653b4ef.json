@@ -45,6 +45,39 @@
             "ui": 1
         },
         {
+            "key": "field_63d3a8e43ca00",
+            "label": "Логотип бренда",
+            "name": "brand-screen-logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63c9fb6467a41",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
             "key": "field_63d3a8893c9ff",
             "label": "Заголовок",
             "name": "brand-screen-top-title",
@@ -77,7 +110,7 @@
             "label": "Фон логотипа",
             "name": "background-brand-screen-logo",
             "aria-label": "",
-            "type": "text",
+            "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -89,23 +122,21 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 1,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "default_value": "rgb(0 0 0 \/ 0%)",
+            "enable_opacity": 1,
+            "return_format": "string"
         },
         {
-            "key": "field_63d3a8e43ca00",
-            "label": "Логотип бренда",
-            "name": "brand-screen-logo",
+            "key": "field_63d3b7f48276e",
+            "label": "Фон блока",
+            "name": "background-brand-screen-block",
             "aria-label": "",
-            "type": "text",
+            "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -123,10 +154,8 @@
             },
             "wpml_cf_preferences": 1,
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "enable_opacity": 1,
+            "return_format": "string"
         },
         {
             "key": "field_63c8228c70dc0",
@@ -587,5 +616,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674816144
+    "modified": 1674819827
 }

@@ -6,12 +6,11 @@ $brand_screen_logo = $brand_setup['icon'];
 $background_brand_screen_logo = $brand_setup['icon_background'] ?: 'transparent';
 $brand_screen_top_title = $brand_setup['name'];
 
-
-var_dump($chosen_brand);
-if($chosen_brand ) {
-    $brand_screen_logo = get_field('brand-screen-logo');
+if(!$chosen_brand ) {
+	$brand_screen_logo = get_field('brand-screen-logo');
     $brand_screen_top_title = get_field('brand-screen-top-title');
     $background_brand_screen_logo = get_field('background-brand-screen-logo') ?: 'transparent';
+    $background_brand_screen_block = get_field('background-brand-screen-block') ?: '#fff';
 }
 
 $opacity_bg = get_field('opacity-bg') ?? 0.2;
@@ -24,7 +23,7 @@ acf_block_before( 'Блок бренда', $is_preview );
 ?>
 
 <div class="brand-screen">
-	<div class="brand-screen-top" style="--background-brand-screen-logo:<?=$background_brand_screen_logo?>;--opacity-bg:<?=$opacity_bg?>;<?= $brand_screen_color ?>;">
+	<div class="brand-screen-top" style="background:<?=$background_brand_screen_block ?: 'transparent'?>;--background-brand-screen-logo:<?=$background_brand_screen_logo?>;--opacity-bg:<?=$opacity_bg?>;<?= $brand_screen_color ?>;">
 		<div class="brand-screen-top__logo">
             <?= app_get_image( [ 'id' => $brand_screen_logo ] ) ?>
 		</div>
