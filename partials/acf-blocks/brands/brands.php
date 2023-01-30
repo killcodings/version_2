@@ -99,14 +99,14 @@ if ( $table_arr ): ?>
         </select>
     </div>
     <table class="brands">
-        <thead class="brand-head">
-        <tr class="brands-head__row">
-            <th class="brands__icon brands-head__icon">Brand</th>
-            <th class="brands__highlights brands-head__highlights">Highlights</th>
-            <th class="brands__bonus brands-head__bonus">Bonus</th>
-            <th class="brands__rating brands-head__rating">Rating</th>
-            <th class="brands__download brands-head__download">Link</th>
-        </tr>
+        <thead class="brands-head">
+            <tr class="brands-head__row">
+                <th class="brands__icon brands-head__icon">Brand</th>
+                <th class="brands__highlights brands-head__highlights">Highlights</th>
+                <th class="brands__bonus brands-head__bonus">Bonus</th>
+                <th class="brands__rating brands-head__rating">Rating</th>
+                <th class="brands__download brands-head__download">Link</th>
+            </tr>
         </thead>
         <tbody class="brands__body">
 		<?php foreach ( $table_arr as $item ): ?>
