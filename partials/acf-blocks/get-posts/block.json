@@ -1,0 +1,14 @@
+{
+  "name": "acf/get-posts",
+  "title": "Вывод постов",
+  "description": "get-posts",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "admin-post",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "get-posts.php"
+  },
+  "align": "full"
+}

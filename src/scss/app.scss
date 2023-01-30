@@ -34,6 +34,7 @@
 @use "acf-blocks/section-tag";
 @use "acf-blocks/howto/howto";
 @use "acf-blocks/link-block/link-block";
+@use "acf-blocks/get-posts/get-posts";
 
 
 @use "comments";
@@ -61,7 +62,6 @@
 
 //@import "header-panel";
 @import "author-section";
-@import "posts";
 @import "wp-block-columns";
 @import "404";
 @import "bonus-button";

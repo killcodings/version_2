@@ -1,0 +1,25 @@
+@use "src/scss/components/post/post";
+
+.posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 16px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* if post > 1*/
+.container {
+  &:has(.posts .post:nth-child(2)) {
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

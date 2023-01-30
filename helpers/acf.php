@@ -151,13 +151,10 @@ function register_acf_blocks() {
 
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/logo-text' );
 
-
-	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/icon-block2' );
-
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/get-posts' );
 
 
-
-
+//	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/icon-block2' );
 //	acf_create_block( 'image', 'Изображение', 'image' );
 //	acf_create_block( 'icon-block', 'Блок с иконками', 'icon-block' );
 //	acf_create_block( 'section', 'Секция', 'section', true );

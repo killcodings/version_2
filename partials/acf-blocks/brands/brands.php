@@ -169,7 +169,9 @@ if ( $table_arr ): ?>
                         <div class="brands__rating-value"><?= $item['rating'] ?></div>
                         <div class="brands__rating-stars" style="--rating: <?= $item['rating'] ?>">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     </div>
+	                <?php if($item['page_link']) { ?>
                     <a href="<?= $item['page_link'] ?>" class="brands__rating-title">Read review</a>
+                    <?php } ?>
                 </td>
 				<?php
 				if ( $item['partner_link'] ): ?>
