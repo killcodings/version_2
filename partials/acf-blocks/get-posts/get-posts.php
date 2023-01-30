@@ -19,7 +19,6 @@ acf_block_before( 'Вывод постов', $is_preview );
 	        $page_setup = get_field( 'meta_fields', $post_id );
 	        $author_id    = $post->post_author;
 	        	        $author_id    = get_the_author_meta( 'ID' );
-	        $currentLang  = Translate::getLang();
 	        $author_setup = get_field( 'user_setup', "user_$author_id" );
 	        if ( $currentLang === 'en' ) {
 		        $currentLang = '';

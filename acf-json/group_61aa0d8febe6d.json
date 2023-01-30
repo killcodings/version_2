@@ -1304,7 +1304,7 @@
             "name": "mobile_button_type",
             "aria-label": "",
             "type": "select",
-            "instructions": "Версия 1 - Контент слева - кнопка справа, заливка градиентом; <br\/>\r\nВерсия 2 - Логотип, бонус, рейтинг кнопка снизу;<br\/>\r\nВерсия 3 - Логотип, кнопка;<br\/>\r\nВерсия 4 - Горизонтальные блоки, кнопка;<br\/>\r\nВерсия 5 - Текст, кнопка снизу;<br\/>\r\nВерсия 6 - Заголовок, подзаголовок, кнопка\r\nВерсия 6 - Заголовок, подзаголовок, кнопка",
+            "instructions": "Версия 1 - Контент слева - кнопка справа, заливка градиентом; <br\/>\r\nВерсия 2 - Логотип, бонус, рейтинг кнопка снизу;<br\/>\r\nВерсия 3 - Логотип, кнопка;<br\/>\r\nВерсия 4 - Горизонтальные блоки, кнопка;<br\/>\r\nВерсия 5 - Текст, кнопка снизу;<br\/>\r\nВерсия 6 - Заголовок, подзаголовок, кнопка<br\/>\r\nВерсия 7 - Логотип слева, кнопка справа.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -1328,13 +1328,14 @@
                 "version_3": "Версия 3",
                 "version_4": "Версия 4",
                 "version_5": "Версия 5",
-                "version_page_app": "Версия 6"
+                "version_page_app": "Версия 6",
+                "version_7": "Версия 7"
             },
             "default_value": "main",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
             "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
             "ajax": 0,
             "placeholder": ""
         },
@@ -1598,6 +1599,13 @@
                                 "operator": "==",
                                 "value": "version_5"
                             }
+                        ],
+                        [
+                            {
+                                "field": "field_6347da7e40d9e",
+                                "operator": "==",
+                                "value": "version_7"
+                            }
                         ]
                     ],
                     "wrapper": {
@@ -1607,7 +1615,6 @@
                     },
                     "wpml_cf_preferences": 1,
                     "return_format": "id",
-                    "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -1615,7 +1622,8 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "preview_size": "thumbnail"
                 },
                 {
                     "key": "field_6349555e1fc42",
@@ -1653,6 +1661,13 @@
                                 "operator": "==",
                                 "value": "version_page_app"
                             }
+                        ],
+                        [
+                            {
+                                "field": "field_6347da7e40d9e",
+                                "operator": "==",
+                                "value": "version_page_app"
+                            }
                         ]
                     ],
                     "wrapper": {
@@ -1662,10 +1677,10 @@
                     },
                     "wpml_cf_preferences": 3,
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 },
                 {
                     "key": "field_634d3b69bef0a",
@@ -1814,10 +1829,10 @@
                     },
                     "wpml_cf_preferences": 3,
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 },
                 {
                     "key": "field_634d605318749",
@@ -1967,6 +1982,13 @@
                                 "field": "field_6347da7e40d9e",
                                 "operator": "==",
                                 "value": "version_page_app"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6347da7e40d9e",
+                                "operator": "==",
+                                "value": "version_7"
                             }
                         ]
                     ],
@@ -2394,6 +2416,28 @@
                             "return_format": "value",
                             "ajax": 0,
                             "placeholder": ""
+                        },
+                        {
+                            "key": "field_63d7f357fce5d",
+                            "label": "Радиус обводки",
+                            "name": "border_radius",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 0,
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
                         }
                     ]
                 }
@@ -2906,5 +2950,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674608654
+    "modified": 1675097102
 }

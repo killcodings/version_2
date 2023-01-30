@@ -4,6 +4,7 @@
 @use "../../scss/mobile-button/version_4/version_4";
 @use "../../scss/mobile-button/version_5";
 @use "../../scss/mobile-button/version-page-app";
+@use "../../scss/mobile-button/version_7";
 
 .mobile-button {
   position: fixed;
@@ -26,5 +27,9 @@
 
   &__button {
     width: 100%;
+  }
+
+  &:has(.version_7) {
+    display: block;
   }
 }

@@ -6,7 +6,6 @@ $style_array = [
 	'bg_icon' => $args['background'] ? "--bg-icon:{$args['bg_icon']}" : ''
 ];
 
-
 $style_array = app_array_filter_recursive($style_array);
 $style_str = implode(';', $style_array);
 

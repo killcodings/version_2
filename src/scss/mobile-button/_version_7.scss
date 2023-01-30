@@ -1,0 +1,75 @@
+@use "src/scss/base/mixins";
+
+.version_7 {
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  grid-template-rows: auto;
+  grid-template-areas:
+        "logo content button";
+  gap: 8px 16px;
+  align-items: center;
+  background: var(--background);
+  padding: 8px;
+
+  &__logo {
+    @include mixins.sizeRatio(48px);
+    overflow: hidden;
+    grid-area: logo;
+
+    .image-func {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    grid-area: content;
+
+    &>*:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+
+    &-stars {
+      background: #D4540C;
+      background: linear-gradient(90deg, #FEC84B 100%, #FEC84B 100%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-size: 20px;
+      line-height: 20px;
+      margin-right: 4px;
+    }
+
+    &-value {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__button {
+    padding: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 5px;
+    grid-area: button;
+  }
+}
