@@ -59,6 +59,7 @@
 
 
   &_gradient {
+    --buttons-border-radius: var(--border-radius);
     background: linear-gradient(240.87deg, var(--buttons-gradiend-start) 34.31%, var(--buttons-gradiend-end) 141.87%);
     color: var(--buttons-gradiend-color);
 
@@ -101,6 +102,7 @@
   }
 
   &_custom_color {
+    --buttons-border-radius: var(--border-radius);
     background-color: var(--background-color);
     color: var(--color);
     border: 1px var(--border-style) var(--border);
