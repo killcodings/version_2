@@ -78,11 +78,6 @@
                         "field": "field_6346bc699a3b6",
                         "operator": "==",
                         "value": "1"
-                    },
-                    {
-                        "field": "field_6362abb1de351",
-                        "operator": "!=",
-                        "value": "version_7"
                     }
                 ]
             ],
@@ -699,6 +694,13 @@
                                 "operator": "==",
                                 "value": "version_page_app"
                             }
+                        ],
+                        [
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "==",
+                                "value": "version_7"
+                            }
                         ]
                     ],
                     "wrapper": {
@@ -844,6 +846,11 @@
                                 "field": "field_6363ed3a2ba6b",
                                 "operator": "==",
                                 "value": "input_link"
+                            },
+                            {
+                                "field": "field_6362abb1de351",
+                                "operator": "!=",
+                                "value": "version_7"
                             }
                         ]
                     ],
@@ -852,9 +859,9 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 1,
                     "default_value": "",
-                    "placeholder": "",
-                    "wpml_cf_preferences": 1
+                    "placeholder": ""
                 },
                 {
                     "key": "field_6363ee042ba6d",
@@ -878,7 +885,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": [],
+                    "choices": {
+                        "http:\/\/localhost\/linebet-bd_net.loc\/1": "part 1",
+                        "http:\/\/localhost\/linebet-bd_net.loc\/2": "part 2",
+                        "http:\/\/localhost\/linebet-bd_net.loc\/3": "part 3"
+                    },
                     "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
@@ -1175,5 +1186,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675100271
+    "modified": 1675163108
 }
