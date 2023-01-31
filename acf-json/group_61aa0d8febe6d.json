@@ -1718,6 +1718,13 @@
                                 "operator": "==",
                                 "value": "version_page_app"
                             }
+                        ],
+                        [
+                            {
+                                "field": "field_6347da7e40d9e",
+                                "operator": "==",
+                                "value": "version_7"
+                            }
                         ]
                     ],
                     "wrapper": {
@@ -1751,6 +1758,13 @@
                                 "field": "field_6347da7e40d9e",
                                 "operator": "==",
                                 "value": "version_page_app"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6347da7e40d9e",
+                                "operator": "==",
+                                "value": "version_7"
                             }
                         ]
                     ],
@@ -1855,6 +1869,13 @@
                                 "field": "field_6347da7e40d9e",
                                 "operator": "==",
                                 "value": "version_2"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6347da7e40d9e",
+                                "operator": "==",
+                                "value": "version_7"
                             }
                         ]
                     ],
@@ -2950,5 +2971,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675097102
+    "modified": 1675134647
 }

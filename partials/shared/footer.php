@@ -10,17 +10,25 @@ if ( $is_enable_mobile_button || $is_enable_mobile_button_from_page ):
     <aside class="mobile-button showed">
 		<?php
 		if ( ! $is_enable_mobile_button_from_page ) {
-            $choises_version = get_field( 'mobile_button_type', 'options' ) ?? 'main';
-            get_template_part( "mobile-button", null, array(
-                'version'  => $choises_version,
-                'settings' => $mobile_button
-            ) );
-		} else {
-			$choises_version = get_field( 'mobile_button_type', $post->ID ) ?? 'main';
-			$option_page = [
+			$choises_version = get_field( 'mobile_button_type', 'options' ) ?? 'main';
+			get_template_part( "mobile-button", null, array(
 				'version'  => $choises_version,
 				'settings' => $mobile_button
-			];
+			) );
+		} else {
+			$choises_version = get_field( 'mobile_button_type', $post->ID ) ?? 'main';
+            if ($choises_version === 'version_7') {
+	            $option_page = [
+		            'version'  => $choises_version,
+		            'brand_setup' => get_field('brand_setup') ?: false,
+		            'settings' => $mobile_button
+	            ];
+            } else {
+	            $option_page = [
+		            'version'  => $choises_version,
+		            'settings' => $mobile_button
+	            ];
+            }
 			get_template_part( "mobile-button", null, $option_page );
 		}
 		?>

@@ -18,6 +18,7 @@
 
 	$version = $args['version'];
 	$args_version = [
+		'brand_setup' => $args['brand_setup'],
 		'button' => $button,
 		'button_style' => $button_style,
 		'relations' => $settings['relations'],
