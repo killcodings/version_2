@@ -2,6 +2,7 @@
 require_once 'helpers/acf.php';
 require_once 'helpers/acf-copy-select.php';
 require_once 'helpers/ajax-comments.php';
+require_once 'helpers/ajax_feedbacks.php';
 require_once 'helpers/assets.php';
 require_once 'helpers/filters.php';
 require_once 'helpers/breadcrumbs.php';

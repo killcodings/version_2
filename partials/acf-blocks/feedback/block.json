@@ -1,0 +1,14 @@
+{
+  "name": "acf/feedback",
+  "title": "Отзывы",
+  "description": "feedback",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "feedback",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "feedback.php"
+  },
+  "align": "full"
+}

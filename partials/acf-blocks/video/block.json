@@ -1,0 +1,14 @@
+{
+  "name": "acf/video",
+  "title": "Видео",
+  "description": "videoBlock",
+  "style": [ "file:./style.css" ],
+  "category": "formatting",
+  "icon": "format-video",
+  "keywords": ["testimonial", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "video.php"
+  },
+  "align": "full"
+}

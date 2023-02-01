@@ -36,6 +36,8 @@
 @use "acf-blocks/howto/howto";
 @use "acf-blocks/link-block/link-block";
 @use "acf-blocks/get-posts/get-posts";
+@use "acf-blocks/video/video";
+@use "acf-blocks/feedback/feedback";
 
 
 @use "comments";
@@ -55,9 +57,8 @@
 //@import "primary-nav";
 //@import "burger";
 @import "header-mobile-buttons";
-@import "video";
+
 @import "table-rating";
-@import "pros-list";
 @import "site-table";
 @import "breadcrumbs";
 
@@ -70,7 +71,7 @@
 
 
 // ACF Blocks
-@import "acf-blocks/feedback-form";
+
 @import "acf-blocks/matches-cards";
 
 

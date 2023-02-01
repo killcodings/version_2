@@ -35,7 +35,6 @@ if ($settings_brand_setup) {
 	    $link = $settings_brand_setup['brand_setup_choose_link'];
     }
 	$link = ['url' => $link, 'title' => $args['button']['title']];
-//	var_dump($settings_brand_setup);
 }
 
 $style_array = app_array_filter_recursive($style_array);

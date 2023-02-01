@@ -137,10 +137,6 @@ body[data-change-theme] {
     &__lists {
       flex: 0 0 300px;
 
-      .pros-list__item::before {
-        background-color: var(--accent-color);
-        color: var(--accent-color-text);
-      }
     }
   }
 

@@ -11,6 +11,10 @@
 
     .image-func {
       background: var(--background-color-logo-text);
+
+      img {
+        height: 100%;
+      }
     }
 
   }

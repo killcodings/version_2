@@ -5,6 +5,7 @@ import Video from "./video";
 import Faq from './faq';
 import Toc from "./toc";
 import Comments from "./comments";
+import Feedback from "./feedback";
 import TopButton from "./top-button";
 import ClickButton from "./click-button";
 import FeedbackForm from "./feedback-form";
@@ -36,6 +37,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         comments: {
             init: () => new Comments,
             selectors: ['.comments-container']
+        },
+        feedback: {
+            init: () => new Feedback,
+            selectors: ['.feedback-container']
         },
         topButton: {
             init: () => new TopButton,

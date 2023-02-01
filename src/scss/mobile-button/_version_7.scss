@@ -95,6 +95,10 @@
   @media (min-width: 850px) {
     width: 90%;
     margin: 0 auto;
+    padding: 8px 24px;
+    &__logo {
+      @include mixins.sizeRatio(64px);
+    }
     &__rating {
       &-stars:first-child {
         display: none;
