@@ -19,30 +19,13 @@
 
     &::after {
       content: '';
-      transform: translateY(0) rotateZ(0deg);
       margin-left: auto;
       transition: 250ms all;
-      position: absolute;
-      right: 0;
-      font-family: dashicons;
-      content: "\f347";
+      border: solid var(--accent-color, #000);
+      border-width: 0 2px 2px 0;
       display: inline-block;
-      line-height: 1;
-      font-weight: 400;
-      font-style: normal;
-      speak: never;
-      text-decoration: inherit;
-      text-transform: none;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      width: 30px;
-      height: 30px;
-      font-size: 30px;
-      vertical-align: top;
-      text-align: center;
-      transform: rotate(0deg);
-      color: var(--accent-color);
+      padding: 3px;
+      transform: rotate(45deg);
     }
   }
 
@@ -84,7 +67,7 @@
 
   &[open], &_open {
     .hidden-text__title::after {
-      transform: translateY(0) rotateZ(180deg);
+      transform: translateY(0) rotateZ(-135deg);
     }
 
     .hidden-text__content {

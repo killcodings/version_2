@@ -84,12 +84,19 @@
         position: relative;
         padding-right: 15px;
 
+
+
+
+
+
+
         &::after {
-          font-family: dashicons;
+      /*    font-family: dashicons;
           content: "\f347";
           top: 2px;
           right: -5px;
           color: var(--primary-nav-submenu-arrow, #fff);
+          color: red;
           display: inline-block;
           line-height: 1;
           font-weight: 400;
@@ -104,15 +111,25 @@
           height: 20px;
           font-size: 20px;
           vertical-align: top;
-          text-align: center;
+          text-align: center;*/
+          content: '';
+          margin-top: 7px;
+          margin-left: 4px;
+          border: solid var(--primary-nav-submenu-arrow, #fff);
+          border-width: 0 2px 2px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(45deg);
         }
       }
 
       @media (min-width: 1000px) {
         &:hover, &:focus {
           &::after {
-            transform: rotate(180deg);
-            color: var(--primary-nav-color-hover, #fff);
+            transform: rotate(-135deg);
+            border: solid var(--primary-nav-color-hover, #fff);
+            border-width: 0 2px 2px 0;
+            margin-top: 9px;
           }
 
           & .menu-depth-1 {
@@ -159,14 +176,15 @@
         padding-right: 15px;
 
         &::after {
-          content: '\e801';
-          top: 50%;
-          right: 1rem;
-          color: var(--primary-nav-submenu-color);
-          transform: translateY(-50%);
-          background: red;
-          width: 10px;
-          height: 10px;
+          content: "";
+          position: absolute;
+          top: 30%;
+          right: 25px;
+          border: solid var(--primary-nav-submenu-color, #fff);
+          border-width: 0 2px 2px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(-45deg);
         }
 
         &::before {
@@ -236,6 +254,36 @@
       height: 100%;
     }
   }
+
+  .menu-item.wpml-ls-item {
+    width: unset;
+
+    .sub-menu {
+      top: 100%;
+      left: 0;
+      right: unset;
+      min-width: unset;
+      background-color: unset;
+      box-shadow: unset;
+      border-bottom: unset;
+      padding: 0;
+      border-radius: unset;
+
+      &:before {
+        all: unset;
+      }
+
+      .wpml-ls-item {
+        padding: 0;
+        border-bottom: unset;
+        border-style: unset;
+
+        .sub-menu-link {
+          padding: 0;
+        }
+      }
+    }
+  }
 }
 
 
@@ -295,25 +343,13 @@
       color: var(--primary-nav-color-mobile);
 
       &::after {
-        margin-right: 5px;
-        font-family: dashicons;
-        content: "\f347";
+        content: '';
+        border: solid var(--primary-nav-color-mobile, #fff);
+        border-width: 0 2px 2px 0;
         display: inline-block;
-        line-height: 1;
-        font-weight: 400;
-        font-style: normal;
-        speak: never;
-        text-decoration: inherit;
-        text-transform: none;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        width: 20px;
-        height: 20px;
-        font-size: 20px;
-        vertical-align: top;
-        text-align: center;
-        transform: rotate(90deg);
+        padding: 3px;
+        transform: rotate(135deg);
+        margin-right: 5px;
       }
     }
 
@@ -347,26 +383,11 @@
           }
 
           &::after {
-            font-family: dashicons;
-            content: "\f347";
-            top: 0;
-            right: 0;
-            color: var(--primary-nav-color-mobile);
-            display: inline-block;
-            line-height: 1;
-            font-weight: 400;
-            font-style: normal;
-            speak: never;
-            text-decoration: inherit;
-            text-transform: none;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            height: 100%;
-            width: 55px;
-            font-size: 20px;
-            vertical-align: top;
-            text-align: center;
+            position: absolute;
+            top: 30%;
+            right: 25px;
+            content: '';
+            transform: rotate(-45deg);
           }
         }
       }

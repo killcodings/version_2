@@ -14,7 +14,6 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_enqueue_style( 'fonts', get_template_directory_uri() . '/dist/css/roboto.css', null, $assets_ver );
 	}*/
 	wp_enqueue_style( 'index', get_template_directory_uri() . '/dist/css/app.css', null, $assets_ver );
-	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_script( 'index', get_template_directory_uri() . '/dist/js/app.js', null, $assets_ver, true );
 	wp_localize_script( 'index', 'jsVars', [ 'ajaxurl' => admin_url( 'admin-ajax.php' ) ] );
 } );
