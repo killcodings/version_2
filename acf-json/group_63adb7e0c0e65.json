@@ -3,166 +3,8 @@
     "title": "Buttons",
     "fields": [
         {
-            "key": "field_63adb7e243eef",
-            "label": "Добавить кнопки",
-            "name": "add_buttons",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 1,
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 2,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_63adb8ff43ef0",
-                    "label": "Изображение в кнопке",
-                    "name": "image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "30",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "return_format": "id",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "thumbnail",
-                    "parent_repeater": "field_63adb7e243eef"
-                },
-                {
-                    "key": "field_63adb91f43ef1",
-                    "label": "Кнопка",
-                    "name": "button",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "30",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "return_format": "array",
-                    "parent_repeater": "field_63adb7e243eef"
-                },
-                {
-                    "key": "field_63cdee00eb65c",
-                    "label": "Включить иконку?",
-                    "name": "button_icon",
-                    "aria-label": "",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 3,
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 0,
-                    "ui_on_text": "",
-                    "ui_off_text": "",
-                    "parent_repeater": "field_63adb7e243eef"
-                },
-                {
-                    "key": "field_63bed3bd8b7df",
-                    "label": "Иконка",
-                    "name": "button_icon_use",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_63cdee00eb65c",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "30",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "choices": {
-                        "arrow": "Стрелочка",
-                        "comment": "Комментарии"
-                    },
-                    "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 1,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "parent_repeater": "field_63adb7e243eef"
-                }
-            ]
-        },
-        {
-            "key": "field_63bd51871bc1e",
-            "label": "Колонки",
-            "name": "columns",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_63bd9d03260d7",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 1,
-            "default_value": 2,
-            "min": 1,
-            "max": 2,
-            "step": 1,
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_63ce8765c9ce3",
-            "label": "Настройки",
+            "key": "field_63dc4d328b1a5",
+            "label": "Buttons tab",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -179,9 +21,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_63bd51cc1bc1f",
-            "label": "Настройки",
-            "name": "buttons_setting",
+            "key": "field_63dc4d4b8b1a6",
+            "label": "Buttons group",
+            "name": "buttons_group",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -196,37 +38,173 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_63bd6c2ee772f",
-                    "label": "Стиль кнопки",
-                    "name": "button_style",
+                    "key": "field_63dc4d978b1a7",
+                    "label": "Button repeater",
+                    "name": "",
                     "aria-label": "",
-                    "type": "select",
+                    "type": "tab",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
                     "wpml_cf_preferences": 1,
-                    "choices": {
-                        "outline": "Cплошной цвет",
-                        "gradient": "Градиент",
-                        "custom_color": "Выбрать цвет"
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_63adb7e243eef",
+                    "label": "Button repeater",
+                    "name": "button_repeater",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
                     },
-                    "default_value": "outline",
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": ""
+                    "wpml_cf_preferences": 1,
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 2,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_63adb8ff43ef0",
+                            "label": "Image",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "thumbnail",
+                            "parent_repeater": "field_63adb7e243eef"
+                        },
+                        {
+                            "key": "field_63adb91f43ef1",
+                            "label": "Button",
+                            "name": "button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "return_format": "array",
+                            "parent_repeater": "field_63adb7e243eef"
+                        },
+                        {
+                            "key": "field_63cdee00eb65c",
+                            "label": "Icon",
+                            "name": "is_button_icon",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "parent_repeater": "field_63adb7e243eef"
+                        },
+                        {
+                            "key": "field_63bed3bd8b7df",
+                            "label": "Иконка",
+                            "name": "button_icon_use",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_63cdee00eb65c",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "arrow": "Стрелочка",
+                                "comment": "Комментарии"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 1,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "parent_repeater": "field_63adb7e243eef"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_63dc4dfd8b1a9",
+                    "label": "Settings",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "placement": "top",
+                    "endpoint": 0
                 },
                 {
                     "key": "field_63bd73d3f9509",
-                    "label": "Ширина кнопки",
-                    "name": "button_width",
+                    "label": "Width",
+                    "name": "buttons_width",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "px или %",
@@ -254,8 +232,8 @@
                 },
                 {
                     "key": "field_63bd754c4a2f3",
-                    "label": "Расположение кнопок",
-                    "name": "position_buttons",
+                    "label": "Position buttons",
+                    "name": "buttons_position",
                     "aria-label": "",
                     "type": "select",
                     "instructions": "",
@@ -289,50 +267,84 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_63bd9d03260d7",
-                    "label": "Обводка кнопок",
-                    "name": "buttons_border",
+                    "key": "field_63bd51871bc1e",
+                    "label": "Columns",
+                    "name": "columns",
                     "aria-label": "",
-                    "type": "true_false",
+                    "type": "range",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63bd9d03260d7",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
-                        "width": "",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
                     "wpml_cf_preferences": 1,
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 0,
-                    "ui_on_text": "",
-                    "ui_off_text": ""
-                },
-                {
-                    "key": "field_63ce6b9f3caec",
-                    "label": "Дополнительный класс",
-                    "name": "buttons_item_class",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
+                    "default_value": 2,
+                    "min": 1,
+                    "max": 2,
+                    "step": 1,
                     "prepend": "",
                     "append": ""
                 },
                 {
+                    "key": "field_63dc5259f5c28",
+                    "label": "Custom color",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_63bd6c2ee772f",
+                    "label": "Button style",
+                    "name": "button_style",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "outline": "Cплошной цвет",
+                        "gradient": "Градиент",
+                        "custom_color": "Выбрать цвет"
+                    },
+                    "default_value": "outline",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
                     "key": "field_63ce6f8cee473",
-                    "label": "Настройки",
+                    "label": "Buttons setup",
                     "name": "buttons_setup",
                     "aria-label": "",
                     "type": "group",
@@ -621,6 +633,48 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "key": "field_63bd9d03260d7",
+                    "label": "Border",
+                    "name": "buttons_border",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Две кнопки на всю ширину с обводкой",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_63dc5bd8d26e5",
+                    "label": "Buttons item class",
+                    "name": "buttons_item_class",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         }
@@ -643,5 +697,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674703869
+    "modified": 1675390374
 }

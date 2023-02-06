@@ -519,7 +519,7 @@
                         {
                             "key": "field_63d25e00f0f9d",
                             "label": "Включить иконку?",
-                            "name": "button_icon",
+                            "name": "is_button_icon",
                             "aria-label": "",
                             "type": "true_false",
                             "instructions": "",
@@ -533,9 +533,9 @@
                             "wpml_cf_preferences": 1,
                             "message": "",
                             "default_value": 0,
+                            "ui": 0,
                             "ui_on_text": "",
                             "ui_off_text": "",
-                            "ui": 0,
                             "parent_repeater": "field_61b3107923ea5"
                         },
                         {
@@ -596,7 +596,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": [],
+                            "choices": {
+                                "http:\/\/localhost\/linebet-bd_net.loc\/1": "part 1",
+                                "http:\/\/localhost\/linebet-bd_net.loc\/2": "part 2",
+                                "http:\/\/localhost\/linebet-bd_net.loc\/3": "part 3"
+                            },
                             "default_value": false,
                             "allow_null": 0,
                             "multiple": 0,
@@ -656,5 +660,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674733939
+    "modified": 1675387382
 }

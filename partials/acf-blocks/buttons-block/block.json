@@ -8,7 +8,7 @@
   "keywords": ["testimonial", "quote"],
   "acf": {
     "mode": "preview",
-    "renderTemplate": "buttons.php"
+    "renderTemplate": "buttons-block.php"
   },
   "align": "full"
 }

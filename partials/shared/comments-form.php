@@ -29,22 +29,26 @@ else:
                     <input type="hidden" name="post_ID" value="<?= $post->ID ?>">
 					<?php
 
-					$buttons_main_setting = [
-						"add_buttons"     =>
-							[
-								0 => [
-									"image"           => false,
-									"button"          => [
-										"title" => Translate::get( 'comment_button' ),
-										"url"   => 'no-click'
-									],
-									"button_icon_use" => 'comment'
-								]
-							],
-						"buttons_setting" => [ "button_width" => '100%', "buttons_item_class" => "comment-form__button", "position_buttons" => "center" ]
+                    $buttons_main_setting = [
+                      "buttons_group"=>
+                      [
+                        ""=> NULL,
+                        "button_repeater"=>
+                        [
+                          0 =>
+                          [
+                            "button"=>
+                            ["title"=>"Register", "url"=>"http://bettingonlinebd2410.loc/"],
+                            "button_icon_use"=> "comment"
+                          ]
+                        ],
+                        "buttons_width"=>"100%",
+                        "button_style"=> "outline",
+                        "buttons_item_class"=> "comment-form__button"
+                      ]
+                    ];
 
-					];
-					echo get_component( 'buttons/buttons-main', $buttons_main_setting );
+					echo get_component( 'buttons/buttons', $buttons_main_setting );
 
 					?>
                     <span class="comment-form__alert"></span>
@@ -52,7 +56,6 @@ else:
             </div>
         </section>
         <div class="container"><?php
-            var_dump($post);
             app_get_comment_list( $post ); ?></div>
     </footer>
 <?php endif;

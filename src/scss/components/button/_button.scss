@@ -60,20 +60,20 @@
 
   &_gradient {
     --buttons-border-radius: var(--border-radius);
-    background: linear-gradient(240.87deg, var(--buttons-gradiend-start) 34.31%, var(--buttons-gradiend-end) 141.87%);
-    color: var(--buttons-gradiend-color);
+    background: linear-gradient(240.87deg, var(--buttons-gradient-start) 34.31%, var(--buttons-gradient-end) 141.87%);
+    color: var(--buttons-gradient-color);
 
     .button__icon use {
-      stroke: var(--buttons-gradiend-color);
+      stroke: var(--buttons-gradient-color);
     }
 
     &:hover, &:focus {
-      color: var(--buttons-gradiend-color-hover);
-      background: linear-gradient(240.87deg, var(--buttons-gradiend-start) 4.31%, var(--buttons-gradiend-end) 141.87%);
+      color: var(--buttons-gradient-color-hover);
+      background: linear-gradient(240.87deg, var(--buttons-gradient-start) 4.31%, var(--buttons-gradient-end) 141.87%);
 
       .button__icon {
         use {
-          stroke: var(--buttons-gradiend-color-hover);
+          stroke: var(--buttons-gradient-color-hover);
         }
       }
     }

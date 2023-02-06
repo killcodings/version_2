@@ -132,7 +132,7 @@ add_action( 'acf/init', function () {
 
 function register_acf_blocks() {
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/banner' );
-	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/buttons' );
+	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/buttons-block' );
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/media-text' );
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/brands' );
 	register_block_type_from_metadata ( get_template_directory() . '/partials/acf-blocks/brand-screen' );

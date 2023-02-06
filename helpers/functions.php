@@ -100,18 +100,20 @@ function app_get_button( $button, $class = '', $relations = null, $custom_colors
 		$border           = $custom_colors['border'] ?: '#000';
 		$border_hover     = $custom_colors['border_hover'] ?: '#fff';
 		$border_style     = $custom_colors['border_style'] ?: 'solid';
-		$border_radius    = $custom_colors['border_radius'] ?? '5';
-		$style_string     = "style='--background-color:{$background};--background-color-hover:{$background_hover};--color:{$color};--color-hover:{$color_hover};--border:{$border};--border-hover:{$border_hover};--border-style:{$border_style};--border-radius:{$border_radius}px;'";
+		$border_radius    = $custom_colors['border_radius'] ?? '0';
+		$background_gradient_start    = $custom_colors['gradient_colors']['start_color'] ?: 'transparent';
+		$background_gradient_end    = $custom_colors['gradient_colors']['end_color'] ?: 'transparent';
+		$background_gradient_color    = $custom_colors['gradient_colors']['color'] ?: '#000';
+		$background_gradient_color_hover   = $custom_colors['gradient_colors']['color_hover'] ?: '#fff';
+		$style_string     = "style='--background-color:{$background};--background-color-hover:{$background_hover};--color:{$color};--color-hover:{$color_hover};--border:{$border};--border-hover:{$border_hover};--border-style:{$border_style};--border-radius:{$border_radius}px;--buttons-gradient-start:$background_gradient_start;--buttons-gradient-end:$background_gradient_end;--buttons-gradient-color-hover:{$background_gradient_color_hover};--buttons-gradient-color:{$background_gradient_color}'";
     }
-
 	$relations_string = '';
 	if ( $relations ) {
 		$relations_string .= 'rel="' . implode( ', ', $relations ) . '"';
 	}
 
-
+	$button_icon_str    = '';
     if ($button_icon) {
-	    $button_icon_str    = '';
 	    $button_icon_use = match ($button_icon) {
 		    'arrow' => '<svg class="button__icon-item-arrow" width="12" height="11" fill="none"><use xlink:href="#button__icon-item-arrow"></use></svg>',
 		    'comment' => '<svg class="button__icon-item-comment" width="17" height="18"  fill="none"><use xlink:href="#button__icon-item-comment"></use></svg>',

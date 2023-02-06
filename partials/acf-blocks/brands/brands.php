@@ -20,8 +20,7 @@ if ( $brand_setup === 'custom' ) {
 		$table_item['cons']            = $item['cons'];
 		$table_item['brands-bonus-title']       = $item['brands-bonus-title'];
 		$table_item['brands-bonus-description'] = $item['brands-bonus-description'];
-		$table_item['button_icon']     = $item['button_icon'] ? $item['button_icon_use'] : false;
-
+		$table_item['is_button_icon']     = $item['is_button_icon'] ? $item['button_icon_use'] : false;
 
 		if ( $item['choose_link'] === 'input_link' ) {
 			$button_url = $item['input_link'];
@@ -31,7 +30,7 @@ if ( $brand_setup === 'custom' ) {
 		$button                     = app_get_button( [
 			'url'   => $button_url,
 			'title' => $partner_link_title
-		], 'button_outline', $item['link_relations'], $custom_colors = null, $button_image = false, $button_icon = $table_item['button_icon'] );
+		], 'button_outline', $item['link_relations'], $custom_colors = null, $button_image = false, $button_icon = $table_item['is_button_icon'] );
 
 		$table_item['partner_link'] = $button ?? false;
 		$table_item['counter']      = $index + 1;
@@ -56,7 +55,7 @@ if ( $brand_setup === 'custom' ) {
 			$table_item['bonus']           = $brand_setup['bonus'];
 			$table_item['brands-bonus-title']       = $brand_setup['brands-bonus-title'];
 			$table_item['brands-bonus-description'] = $brand_setup['brands-bonus-description'];
-			$table_item['button_icon']     = $brand_setup['button_icon'] ? $brand_setup['button_icon_use'] : false;
+			$table_item['is_button_icon']     = $brand_setup['is_button_icon'] ? $brand_setup['button_icon_use'] : false;
 
 			$table_item['cons'] = $brand_setup['cons'];
 			if ( $brand_setup['choose_link'] === 'input_link' ) {
@@ -67,7 +66,7 @@ if ( $brand_setup === 'custom' ) {
 			$button                     = app_get_button(
 				[ 'url' => $button_url, 'title' => $partner_link_title ],
 				'button_outline',
-				$brand_setup['link_relations'], $custom_colors = null, $button_image = false, $button_icon = $table_item['button_icon']
+				$brand_setup['link_relations'], $custom_colors = null, $button_image = false, $button_icon = $table_item['is_button_icon']
 			);
 
 			$table_item['partner_link'] = $button;

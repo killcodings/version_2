@@ -1,6 +1,6 @@
 {
   "name": "acf/media-text",
-  "title": "Изображение и текст",
+  "title": "Медиа и текст",
   "description": "media-text",
   "style": [ "file:./style.css" ],
   "category": "media",

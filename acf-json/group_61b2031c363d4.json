@@ -350,7 +350,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": [],
+                    "choices": {
+                        "http:\/\/localhost\/linebet-bd_net.loc\/1": "part 1",
+                        "http:\/\/localhost\/linebet-bd_net.loc\/2": "part 2",
+                        "http:\/\/localhost\/linebet-bd_net.loc\/3": "part 3"
+                    },
                     "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
@@ -388,7 +392,7 @@
                 {
                     "key": "field_63c531f3f7255",
                     "label": "Включить иконку в кнопке?",
-                    "name": "button_icon",
+                    "name": "is_button_icon",
                     "aria-label": "",
                     "type": "true_false",
                     "instructions": "",
@@ -706,5 +710,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674733412
+    "modified": 1675387003
 }
